@@ -84,7 +84,7 @@ section {
     letter-spacing: 0.5px;
 }
 
-#messageError {
+#messageError { /*mensagem de senha ou usuário incorreta*/
     color: rgb(228, 163, 163);
     display: none;
 }
