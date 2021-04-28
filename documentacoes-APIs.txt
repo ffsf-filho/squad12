@@ -1,0 +1,7 @@
+
+Link da documentação da API (Banco de Dados dos videos):
+https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/#!/api_videos/videos
+
+
+Link da documentação da API (Banco de Dados dos usuários):
+https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_usuarios/#!/api_usuarios/usuarios

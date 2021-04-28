@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* { /*reseta as configurações padrão do navegador*/
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body {
+    font: bold 1em 'Noto Sans', sans-serif;
+    background-image: url(images/home-background.png);
+    min-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+main {
+    background-color: #353d40ad;
+    max-width: 300px;
+    min-width: 200px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px #1a1b1b65;
+    border-radius: 15px;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h1::before {
+    content:'';
+    position: absolute; /*para o before ser absolute, o elemento pai (h1) tem que ser relative*/
+    height: 4px;
+    width: 78px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: #f2b138be;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.sigin {
+    position: relative;
+}
+
+.sigin input:first-child {
+    margin-bottom: 0.9rem;
+}
+
+.sigin input {
+    outline: none;
+    font-size: 1rem;
+    color: #1a1b1bfa;
+    border-radius: 5px;
+}
+
+.sigin input::placeholder {
+    color: #1a1b1b86;
+}
+
+.btn {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: #033857ab;
+    cursor: pointer;
+    color: #f2b138be;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    letter-spacing: 0.5px;
+}
+
+#messageError {
+    color: rgb(228, 163, 163);
+    display: none;
+}
