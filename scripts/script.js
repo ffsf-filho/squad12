@@ -71,7 +71,25 @@ listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme;
 //   })
 // }  
 
+fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos").then(
+  response => {
+    return response.json();
+  }).then(jsonBody => {
+    jsonBody.forEach(function(valorAtual, indice) {
+     
+     let filme = jsonBody[indice].url
+     filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
+     filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+         
+     let resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>` 
+    listarFilmesNaTela(resultado);})})
+
+
+  
 function btnPesquisar (){
+  var listaFilmes = document.querySelector('#listaFilmes');
+  listaFilmes.innerHTML = ""
+
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos").then(
   response => {
     return response.json();
