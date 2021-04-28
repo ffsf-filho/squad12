@@ -3,24 +3,21 @@ html {
 }
 
 body {
-    font: bold 1em 'Noto Sans', sans-serif;
-    background-image: url(images/home-background.png);
-    min-height: 100vh;
-    min-height: 100vh;
+    font-family: 'Press Start 2P', monospace;
+    background-color: #122432;;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
 }
 
 main {
-    background-color: #353d40ad;
-    max-width: 300px;
-    min-width: 200px;
-    min-height: 40vh;
+    background-color: #404679;
+    width: 720px;
+    height: 100vh;
     padding: 2rem;
     box-shadow: 5px 5px 15px #1a1b1b65;
-    border-radius: 15px;
+    border-left: 0.5rem solid #FBB248;
+    border-right: 0.5rem solid #FBB248;
 }
 
 h1 {
