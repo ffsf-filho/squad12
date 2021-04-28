@@ -1,0 +1,24 @@
+
+/*tablets*/
+@media screen and (max-width: 768px) {
+    main {
+        max-width: 400px;
+    }
+}
+
+
+/*celulares maiores*/
+@media screen and (max-width: 425px) {
+    main {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        max-width: 320px;
+    }
+}
+
+/*celulares menores*/
+@media screen and (max-width: 320px) {
+    main {
+        max-width: 320px;
+    }
+}

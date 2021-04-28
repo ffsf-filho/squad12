@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/normalize.css"> <!--Normalize e reset para uniformizar o css dos navegadores-->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="styles/responsive.css"
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
         <section>
             <h1>LOGIN</h1>
             <div class="sigin">
-                <input type="email" name="userAdress" id="userAdress" placeholder="Usuário: 'Squad-12'">
+                <label for="userAdress" class="sigin__label">Usuário: 'Squad-12'</label>
+                <input type="email" name="userAdress" id="userAdress" placeholder="Squad-12">
             </div>
             <div class="sigin">
-                <input type="password" name="userPass" id="userPass" placeholder="Senha: '123450'">
+                <label for="userPass" class="sigin__label">Senha: '123450'</label>
+                <input type="password" name="userPass" id="userPass" placeholder="123450">
             </div>
             <span id="messageError">
                 Verifique se há erros com o nome de usuário ou senha.
