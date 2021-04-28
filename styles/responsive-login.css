@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+    main {
+        width: 410px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    main {
+        width: 100vw;
+    }
+
+    h1 {
+        margin: 3rem;
+    }
+    
+    .sigin input {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    main {
+        width: 100vw;
+    }
+
+    .user__sigin {
+        font-size: 0.9rem;
+    }
+    
+}
