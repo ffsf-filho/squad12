@@ -17,15 +17,17 @@
         <section>
             <h1>LOGIN</h1>
             <div class="sigin">
-                <input type="email" name="userAdress" id="userAdress" placeholder="Usuário: 'Squad-12'">
+                <label for="userAdress" class="user">Usuário: 'Squad-12'</label>
+                <input type="email" name="userAdress" id="userAdress" placeholder="Squad-12">
             </div>
             <div class="sigin">
-                <input type="password" name="userPass" id="userPass" placeholder="Senha: '123450'">
+                <label for="userPass" class="user">Senha: '123450'</label>
+                <input type="password" name="userPass" id="userPass" placeholder="123450">
             </div>
             <span id="messageError">
                 Verifique se há erros com o nome de usuário ou senha.
             </span>
-            <button class="btn" onclick="login()">ENTRAR</button>
+            <button class="btn" onClick="login()">ENTRAR</button>
         </section>
     </main>
 </body>
