@@ -24,6 +24,7 @@ main {
 
 h1 {
   color: #FFAF50;
+  line-height: 3rem;
   margin: 5rem;
   position: relative;
   text-align: center;
