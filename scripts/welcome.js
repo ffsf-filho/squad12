@@ -2,8 +2,7 @@ const goToRegister = () => {
     let register = document.getElementById('register');
 
     if (register.onclick) {
-        //vai levar para página de cadastro que o Francisco está criando
-        //location.href = ""
+        location.href = "login-cadastro.html"
     }
 }
 
