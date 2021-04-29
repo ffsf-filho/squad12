@@ -53,23 +53,9 @@ function listarFilmesNaTela(filme){
 var listaFilmes = document.querySelector('#listaFilmes');
 var elementoFilme = filme;
 listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme;
+listaFilmes.innerHTML += 
 };
 
-
-// function btnPesquisar (){
-//   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos").then(
-//   response => {
-//     return response.json();
-//   }).then(jsonBody => {
-//     console.log(jsonBody[jsonBody.indexOf(document.querySelector("#pesquisaFilme").value)].url;
-//     filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
-//     filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
-    
-//     var resultado = "<div id='cartao' class='cartao'><iframe width='280' height='157' src='" + filme + "title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>" 
-//     listarFilmesNaTela(resultado);
-//     console.log(filme)
-//   })
-// }  
 
 fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos").then(
   response => {
@@ -78,15 +64,15 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
     jsonBody.forEach(function(valorAtual, indice) {
      
      let filme = jsonBody[indice].url
+     let filmeId = jsonBody[indice].Id
      filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
      filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
          
      let resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>` 
-    listarFilmesNaTela(resultado);})})
-
-
-  
-function btnPesquisar (){
+    listarFilmesNaTela(resultado)})})
+    
+    
+    function btnPesquisar(){
   var listaFilmes = document.querySelector('#listaFilmes');
   listaFilmes.innerHTML = ""
 
@@ -111,3 +97,48 @@ function btnPesquisar (){
   }}
   )})
 }
+
+
+
+
+
+
+
+
+function adicionarVideo(){
+  location.href="cadastro-video.html"
+}
+
+
+
+var dadosInsereVideo = {
+  Nome: "string",
+  Categoria: "string",
+  url: "string"
+}
+
+function btnInserirVideo(){
+  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
+    method: POST, 
+    headers:{
+      "Content-type": "application/json"
+    },
+    body: JSON.stringify(dadosInsereVideo),
+  })};
+
+
+
+  
+var dadosDeletaVideo = {
+  Id: "string"
+}
+
+function btnDeletaVideo(){
+  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
+    method: DELETE, 
+    headers:{
+      "Content-type": "application/json"
+    },
+    body: JSON.stringify(dadosDeletaVideo),
+  })};
+
