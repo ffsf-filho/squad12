@@ -75,7 +75,26 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
      resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
      title='YouTube video player' frameborder='0' 
      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
-     </iframe><div><button onclick='btnDeletaVideo(${filmeId})' id='btnDeletaVideo'>Excluir vídeo</button></div></div>`   
+     </iframe><div><button type='button' id='btnDeletaVideo' class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Excluir vídeo</button>
+    
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Excluir vídeo</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Deseja deletar o vídeo?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                  <button onclick='btnDeletaVideo(${filmeId})' type="button" class="btn btn-primary">Deletar</button>
+                </div>
+              </div>
+            </div>
+          </div>   
+     </div></div>`   
     //  let resultado = "<div id='cartao' class='cartao'><iframe width='280' height='157' src=" + filme + "title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><div><button onclick='btnDeletaVideo(" + filmeId + ")' id='btnDeletaVideo'>Excluir vídeo</button></div></div>" 
     listarFilmesNaTela(resultado)})})
     
