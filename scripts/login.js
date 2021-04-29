@@ -59,7 +59,6 @@ function loginCadastro(){
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify(newUser)
                 })
-                //.then(response => {return response.json()})  
                 .then(response => {
                     if(response.ok){
                         login(userName.value)
@@ -71,10 +70,10 @@ function loginCadastro(){
 }
 
 //código para a página de perfil do usuário
-document.getElementById('study').onclick = function timeToStudy () {
+/* document.getElementById('study').onClick = function timeToStudy () {
     location.href="index.html"
 }
 
-document.getElementById('fun').onclick = function timeToPlay() {
+document.getElementById('fun').onClick = function timeToPlay() {
     location.href="index.html"
-}
+} */
