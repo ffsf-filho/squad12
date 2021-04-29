@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo</title>
-    <link rel="stylesheet" href="styles/welcome.css">
-   
-</head>
-<body>
-    <main class="welcome">
-        <section class="welcomeMessage">
-            <h1>Seja bem-vindo ao AluraFlix. <br> Sua plataforma de estudos e lazer.</h1>
-            <h3>Viu um vídeo super legal, mas você não pode assitir agora? <br> Nós salvamos para você assitir quando e onde quiser.</h3>
-            <div class="joinUS">
-                <label for="register">Criar conta.</label>
-                <button class="btn" id="register" onclick="goToRegister()">Cadastrar</button>
-                <label for="login">Já é usuário?</label>
-                <button class="btn" id="login" onclick="goToLogin()">Login</button>
-            </div>
-        </section>
-    </main>
-</body>
-<script src="scripts/welcome.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bem-vindo</title>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/welcome.css">
+    
+    </head>
+    <body>
+        <main class="welcome">
+            <section class="welcomeMessage">
+                <h1>Seja bem-vindo ao AluraFlix</h1>
+                <h2 class="subtitle">Sua plataforma de estudos e lazer</h2>
+                <h3 class="description">Viu um vídeo super legal, mas não pode assistir agora?<br>Nós salvamos para você assitir quando e onde quiser!</h3>
+                <div class="joinUS">
+                    <label for="register" class="joinUS__label">Criar conta</label>
+                    <button class="btn" id="register" onClick="goToRegister()">Cadastrar</button>
+                    <label for="login" class="joinUS__label">Já é usuário?</label>
+                    <button class="btn" id="login" onClick="goToLogin()">Login</button>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script src="scripts/welcome.js"></script>
 </html>
