@@ -68,12 +68,3 @@ function loginCadastro(){
         }
     )    
 }
-
-//código para a página de perfil do usuário
-/* document.getElementById('study').onClick = function timeToStudy () {
-    location.href="index.html"
-}
-
-document.getElementById('fun').onClick = function timeToPlay() {
-    location.href="index.html"
-} */
