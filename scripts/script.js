@@ -53,9 +53,9 @@ function listarFilmesNaTela(filme){
 var listaFilmes = document.querySelector('#listaFilmes');
 var elementoFilme = filme;
 listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme;
-listaFilmes.innerHTML += 
 };
 
+var resultado;
 
 fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos").then(
   response => {
@@ -63,12 +63,20 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
   }).then(jsonBody => {
     jsonBody.forEach(function(valorAtual, indice) {
      
-     let filme = jsonBody[indice].url
+     let filmeUrl = jsonBody[indice].url
      let filmeId = jsonBody[indice].Id
-     filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
-     filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
-         
-     let resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>` 
+     console.log(filmeUrl)
+     filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
+     filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+    //  let resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
+    //  title='YouTube video player' frameborder='0' 
+    //  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
+    //  </iframe></div>`  
+     resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
+     title='YouTube video player' frameborder='0' 
+     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
+     </iframe><div><button onclick='btnDeletaVideo(${filmeId})' id='btnDeletaVideo'>Excluir vídeo</button></div></div>`   
+    //  let resultado = "<div id='cartao' class='cartao'><iframe width='280' height='157' src=" + filme + "title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><div><button onclick='btnDeletaVideo(" + filmeId + ")' id='btnDeletaVideo'>Excluir vídeo</button></div></div>" 
     listarFilmesNaTela(resultado)})})
     
     
@@ -119,7 +127,7 @@ var dadosInsereVideo = {
 
 function btnInserirVideo(){
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
-    method: POST, 
+    method: "POST", 
     headers:{
       "Content-type": "application/json"
     },
@@ -128,17 +136,17 @@ function btnInserirVideo(){
 
 
 
-  
-var dadosDeletaVideo = {
-  Id: "string"
-}
 
-function btnDeletaVideo(){
+function btnDeletaVideo(id){
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
-    method: DELETE, 
+    method: "DELETE", 
     headers:{
       "Content-type": "application/json"
     },
-    body: JSON.stringify(dadosDeletaVideo),
-  })};
+    body: JSON.stringify({
+      Id: id
+    }),
+  }).then(response => {if (response.ok){console.log(response.status)}
+  setTimeout(document.location.reload(true), 1000)})
+};
 
