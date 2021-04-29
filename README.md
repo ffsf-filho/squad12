@@ -15,8 +15,9 @@ Content
 <div id="About">    
 
 ## About
-### This is a project done by @ ffsf-filho, @gabrielasertori, @lucasnsouza, @marcelonader and @LuizGVM for the Dev Alura Training & Immersion Program, sponsored by (FCamara)
-### The project is an quiz about Flash
+### This is a project done by @ ffsf-filho, @gabrielasertori, @lucasnsouza, 
+### @marcelonader and @LuizGVM for the Dev Alura Training & Immersion Program, sponsored by (FCamara)
+### The project is a repository of films and study videos
 
 </div>
 
@@ -68,7 +69,7 @@ OR
 - [x] Components
 - [x] Eslint
 
-### Autor
+### Autores
 ---
 
 <a href="https://github.com/ffsf-filho">
@@ -78,3 +79,4 @@ OR
     <b>Francisco F S Filho</b>
   </sub>
 </a>
+
