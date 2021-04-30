@@ -132,3 +132,15 @@ margin-left: -300px;
 #btnDeletaVideo{
   
 }
+
+.nes-select.is-dark {
+background-color: none;
+
+width: calc(100% + -2px);
+}
+
+.nes-input.is-dark{
+  background-color: none;
+
+width: calc(100% + -2px);
+}

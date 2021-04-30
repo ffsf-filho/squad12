@@ -1,10 +1,10 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de adição de videos</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
             <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
             <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <header> -->
-      <!-- menu superior escondido -->
-      <!-- <div class="pos-f-t">
+    <header>
+      <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4">
 
@@ -58,49 +57,66 @@
           </button>
         </nav>
       </div>
-        <!-- fim do menu superior escondido -->
     </header>
         
-    <a href="https://alura.com.br/" target="_blank">
-      <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-    </a>
-    <div class="container">
-      <h1 class="page-title">Aluraflix - Trailers</h1>
-      <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
-      <div class="form-wrapper">
-        <p class="page-subtitle">Qual seu filme favorito?</p>
-        
-      
-        <!-- campo input pesquisa video -->
-      <div style="background-color:#212529; padding: .2rem;" class="nes-field is-inline">
-        <label for="dark_field" style="color:#fff;">...</label>
-        <input type="text" id="pesquisaFilme" class="nes-input is-dark" placeholder="Qual video você está procurando?">
-      </div>
-              <!-- fim do campo input pesquisa video -->
 
     
-        <button onclick="btnPesquisar()">Pesquisar</button>
-        <!-- <button onClick="adicionarFilme('')">Adicionar Filme</button> -->
+          <i class="nes-bcrikko"></i>
+          <!-- Balloon -->
+          <div class="nes-balloon from-left">
+            <p>Olá!!! Bons estudos!</p>
+          </div>
+        
+    <!-- <a href="https://alura.com.br/" target="_blank">
+      <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a> -->
+    <div class="container">
+      <!-- <h1 class="page-title">Aluraflix - Trailers</h1>
+      <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt=""> -->
+      <div class="form-wrapper">
+        <p class="page-subtitle">Qual o filme você gostaria de inserir?</p>
+        
+
+      </div>
+      
+        <!-- campo input -->
+     
+        <div style="background-color:none" class="nes-field is-inline">
+           <input type="text" id="inputNomeVideoEstudo" class="nes-input is-dark" placeholder="Escolha um nome para o vídeo...">
+        </div>
+        
+     
+      <div style="background-color:none" class='nes-field is-inline'></div>
+            <div class="nes-select is-dark">
+         <select required id="selectCategoriaVideoEstudo">
+            <option value="" disabled selected hidden>Selecione a categoria do vídeo...</option>
+            <option value="Programação">Programação</option>
+            <option value="Inglês">Inglês</option>
+            <option value="Diversos">diversos</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div style="background-color:none" class="nes-field is-inline">
+        <input type="url" id="inputUrlVideoLazer" class="nes-input is-dark" placeholder="Insira a url do vídeo...">
+     </div>
+
+     <button onclick="adicionarVideoEstudo()" id="btnAdicionarVideoEstudo">Adicionar vídeo à seção de estudo</button>
+     
+  
+        
+      </div>
+
+<!-- <button onclick="btnPesquisar()">Localizar</button>
+         -->
+        
       </div>
     </div>
-    <div id="listaFilmes" class="listaFilmes"></div>
 
-
-
-
-
-
-    
-
-
-    
     <script type="text/javascript" src="scripts/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
- </html> -->
-
-
-
-
+ </html>

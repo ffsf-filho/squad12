@@ -77,14 +77,39 @@
         <p class="page-subtitle">Qual o filme você gostaria de inserir?</p>
         
 
-        
+      </div>
       
         <!-- campo input -->
-      <div style="background-color:#212529; padding: .2rem;" class="nes-field is-inline">
-        <label for="dark_field" style="color:#fff;">...</label>
-        <input type="text" id="pesquisaFilme" class="nes-input is-dark" placeholder="Dê um nome para o video...">
-        <input type=>
+     
+        <div style="background-color:none" class="nes-field is-inline">
+           <input type="text" id="inputNomeVideoLazer" class="nes-input is-dark" placeholder="Escolha um nome para o vídeo...">
+        </div>
+        
+     
+      <div style="background-color:none" class='nes-field is-inline'></div>
+            <div class="nes-select is-dark">
+         <select required id="selectCategoriaVideoLazer">
+            <option value="" disabled selected hidden>Selecione a categoria do vídeo...</option>
+            <option value="Podcasts">Podcasts</option>
+            <option value="Vlogs">Vlogs</option>
+            <option value="Música">Música</option>
+            <option value="Games">Games</option>
+            <option value="Diversos">diversos</option>
+          </select>
+        </div>
       </div>
+
+
+      <div style="background-color:none" class="nes-field is-inline">
+        <input type="url" id="inputUrlVideoLazer" class="nes-input is-dark" placeholder="Insira a url do vídeo...">
+     </div>
+
+     <button onclick="adicionarVideoLazer()" id="btnAdicionarVideoLazer">Adicionar vídeo à seção de lazer</button>
+     
+  
+        
+      </div>
+
 <!-- <button onclick="btnPesquisar()">Localizar</button>
          -->
         
