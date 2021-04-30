@@ -15,12 +15,16 @@ body {
 
 .userStatus {
   background-color: #FBB248;
-  border: 5px solid #F1605A;
+  border: 2px solid #F1605A;
+  box-shadow: 4px 4px 0 #122432;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   margin: 0 auto;
+  position: relative;
   width: 70%;
 }
+
 
 .userStatus__img {
   background-image: url("./images/avatar-removebg-preview.png");
