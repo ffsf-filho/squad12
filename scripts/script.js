@@ -1,3 +1,27 @@
+let usuario = ""
+let id
+
+let camaraRoll = localStorage.getItem("@camaraRoll-Users");// Recupera os dados armazenados
+camaraRoll = JSON.parse(camaraRoll); // Converte string para objeto
+
+if(camaraRoll== null){
+    //Se existir o objeto e ele não estiver vazio redirecionamos para a  página de usuário 
+    location.href="index.html" 
+} else {
+    //Pega os dados do usuário
+    for(var i in camaraRoll){
+        usuario = camaraRoll[i].Users
+        id = camaraRoll[i].Id
+    }
+}
+
+function sair() { 
+    localStorage.removeItem("@camaraRoll-Users");// Remove o item
+    location.href="index.html"
+}
+
+console.log("Usuario: " + usuario + " | id: " + id);
+
 var filmes = [
   {nome:"Star Wars: Episode IV - A New Hope",ano:1977,genero:"Action,Adventure,Fantasy",urlSite:"https://www.youtube.com/embed/vZ734NWnAHA",urlImg:"https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"}, 
   {nome:"Toy Story",ano:1995,genero:"Comedy,Drama",urlSite:"https://www.youtube.com/embed/4KPTXpQehio",urlImg:"https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_UX182_CR0,0,182,268_AL_.jpg"}, 
