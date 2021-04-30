@@ -13,6 +13,38 @@ body {
   height: 100vh;
 }
 
+.userStatus {
+  background-color: #FBB248;
+  border: 5px solid #F1605A;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.userStatus__img {
+  background-image: url("./images/avatar-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  transform: translate(0, -5px);
+  width: 100px;
+}
+
+.userStatus__text {
+  padding-left: 2rem;
+  transform: translate(0, -5px);
+}
+
+.userStatus__text___label {
+  color: #122432;
+}
+
+a.userStatus__text___sair{
+  color: #122432;
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;;
+}
+
 main {
   background-color: #404679;
   box-shadow: 0.5rem 0.5rem 0 #041420;
@@ -29,7 +61,7 @@ h1 {
   margin: 5rem;
   position: relative;
   text-align: center;
-  text-shadow: 2px 2px tomato;
+  text-shadow: 2px 2px #F1605A;
 }
 
 .botoes {
