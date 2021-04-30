@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Categorias</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="styles/responsive-categorias.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/perfil.css">
+    </head>
+    <body>
+        <main class="userPage">
+            <div class="userStatus">
+                <div class="userStatus__img"></div>
+                <div class="userStatus__text">
+                    <p class="userStatus__text___label">Nick:</p>
+                    
+                    
+                    
+                </div>
+                <a class="userStatus__text___sair" id="sair" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><u>Sair</u></a>
+            </div>
+
+            
+            <h1>O que você quer assistir?</h1>
+            <div class="botoes">
+                <section class="perfil">
+                    <button class="escolhaUsuario" id="study" onClick="timeToStudy()">Estudos</button>
+                </section>
+                <section class="perfil">
+                    <button class="escolhaUsuario" id="fun" onClick="timeToPlay()">Lazer</button>
+                </section>
+            </div>
+        </main>
+          
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button onClick='sair()' type="button" class="btn btn-primary">Understood</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <script type="text/javascript" src="scripts/user-page.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+<!--data-bs-toggle="modal" data-bs-target="#staticBackdrop"-->

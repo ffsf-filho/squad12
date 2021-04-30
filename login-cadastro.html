@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="styles/normalize.css"> <!--Normalize e reset para uniformizar o css dos navegadores-->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/responsive-login.css"> <!--arquivo para ficar todos os layouts responsivos-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>CADASTRO</h1>
+            <div class="sigin">
+                <label for="userName" class="user__sigin">Nome:</label>
+                <input type="text" name="userName" id="userName" placeholder="Digite seu Nome">
+            </div>
+            <div class="sigin">
+                <label for="userAdress" class="user__sigin">Usuário:</label>
+                <input type="email" name="userAdress" id="userAdress" placeholder="Digite seu usuário">
+            </div>
+            <div class="sigin">
+                <label for="userPass" class="user__sigin">Senha:</label>
+                <input type="password" name="userPass" id="userPass" placeholder="Digite sua senha">
+            </div>
+            <span id="messageError">
+                Usuário já existente, use outra opção de nome.
+            </span>
+            <button class="btn" onClick="loginCadastro()">ENTRAR</button>
+        </section>
+    </main>
+</body>
+<script src="scripts/login.js"></script>
+</html>
