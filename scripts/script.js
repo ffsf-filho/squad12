@@ -75,8 +75,9 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
      resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
      title='YouTube video player' frameborder='0' 
      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
-     </iframe><div><button type='button' id='btnDeletaVideo' class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Excluir vídeo</button>
+     </iframe><div><button type='button' id='btnDeletaVideo' data-bs-toggle="modal" data-bs-target="#staticBackdrop">Excluir vídeo</button>
     
+          
           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -89,7 +90,7 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-                  <button onclick='btnDeletaVideo(${filmeId})' type="button" class="btn btn-primary">Deletar</button>
+                  <button onclick='btnDeletaVideo(${filmeId})' type="button">Deletar</button>
                 </div>
               </div>
             </div>

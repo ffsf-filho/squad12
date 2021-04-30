@@ -13,12 +13,8 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <header>
-      
-    </header>
-    
-    
-    <section class="addFilme">
+   
+    <header class="addFilme">
 
       <div class="balao">
         <i class="nes-bcrikko"></i>
@@ -30,23 +26,19 @@
 
       <div class="addFilme__container">
         <div class="addFilme__container___form-wrapper">
-          <p class="addFilme__container___page-subtitle">Qual seu filme favorito?</p>
+          <p class="addFilme__container___page-subtitle">O que vamos assistir agora?</p>
                 
           <!-- campo input -->
           <div style="background-color:#212529; padding: .2rem;" class="nes-field is-inline">
-            <label for="dark_field" style="color:#fff;">...</label>
             <input type="text" id="pesquisaFilme" class="nes-input is-dark" placeholder="Qual video você está procurando?">
           </div>
-          <button onClick="btnPesquisar()">Localizar</button>
+          <button class="addFilme__container___button" onClick="btnPesquisar()">Localizar</button>
+          <button class="addFilme__container___button" onClick="adicionarVideo()">Adicionar novo vídeo</button>
         </div>
-      </div>
-
-      <div>
-        <button onClick="adicionarVideo()">Adicionar novo vídeo</button>
       </div>
   
       <div id="listaFilmes" class="addFilme__listaFilmes"></div>
-    </section>
+    </header>
         
 
     
