@@ -153,11 +153,11 @@ function adicionarVideoEstudo(){
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
     method: "POST", 
     headers:{
-      "Content-type": "application/json"
+      "Content-type": "application/json"  
     },
-    body: JSON.stringify(dadosVideoLazer),
+    body: JSON.stringify(dadosVideoEstudo),
   }).then(response => {if (response.ok){console.log(response.status)} 
-  console.log(dadosVideoLazer)
+  console.log(dadosVideoEstudo)
   
 })};
 
@@ -179,8 +179,8 @@ function btnDeletaVideo(id){
   setTimeout(document.location.reload(true), 1000)})
 };
 
-function listarFilmesNaTela(filme){
-var listaFilmes = document.querySelector('#listaFilmes');
-var elementoFilme = filme;
-listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme;
-};
+// function listarFilmesNaTela(filme){
+// var listaFilmes = document.querySelector('#listaFilmes');
+// var elementoFilme = filme;
+// listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme;
+// };
