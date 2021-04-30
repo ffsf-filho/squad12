@@ -10,8 +10,10 @@
     }
 
     main {
-        min-height: 670px;
-        max-height: 767px;
+        min-height: 720px;
+        max-height: 867px;
+        min-width: 320px;
+        max-width: 540px;
     }
   }
 
