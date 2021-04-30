@@ -6,7 +6,7 @@ body {
   font-family: 'Roboto Mono',monospace;
   margin:0 auto;
   text-align:center;
-  background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-04-aluraflix-e-filmes.png');
+  background-image: url(../images/imagem-background.jpg);
   background-color: #000000;
   background-size: cover;
   background-position: center top;
@@ -95,4 +95,58 @@ border-style:double;
 border-color:red;
 border-radius:10px;
 box-shadow:3px 3px 3px 2px #996633;
+}
+
+
+.nes-field.is-inline {
+width: 600px;
+position: relative; 
+left: 50%; 
+margin-left: -300px;
+
+/* display: block; */
+
+  }
+
+
+  html {
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/
+    0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/
+    dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/
+    Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;
+}
+
+.nes-bcrikko {
+  position: relative;
+    display: inline-block;
+    width: 96px;
+    height: 25px;
+    margin-left: -360px;
+    margin-top: 52px;
+}
+}
+
+/* #btnPesquisar{
+  position: relative;
+    display: inline-block;
+    margin-left: 22px;
+    width: 119px;
+    height: 49px;
+    margin-top: 0px;
+} */
+
+#btnDeletaVideo{
+  
+}
+
+.nes-select.is-dark {
+background-color: none;
+
+width: calc(100% + -2px);
+}
+
+.nes-input.is-dark{
+  background-color: none;
+
+width: calc(100% + -2px);
 }
