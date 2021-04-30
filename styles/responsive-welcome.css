@@ -1,4 +1,4 @@
-/*@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
     html {
       transform: rotate(-90deg);
       transform-origin: left top;
@@ -10,11 +10,11 @@
     }
 
     main {
-        min-height: 680px;
+        min-height: 670px;
         max-height: 767px;
     }
   }
-*/
+
 @media screen and (max-width: 768px) {
     main {
         width: 410px;
