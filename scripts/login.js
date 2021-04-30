@@ -9,6 +9,7 @@ function login(nomeDoUsuario = "") {
             for(var i =0; i < data.length; i++){
                 if(nomeDoUsuario.length == 0){
                     if(data[i].Usuario == userName.value && data[i].Senha == userPassWord.value){
+                        postUsers(data[i].Usuario, data[i].Id)
                         location.href=`user-page.html?user=${userName.value + "," + data[i].Id}`
                         break
                     } else {
@@ -17,6 +18,7 @@ function login(nomeDoUsuario = "") {
                     }
                 } else {
                     if(data[i].Usuario == nomeDoUsuario){
+                        postUsers(data[i].Usuario, data[i].Id)
                         location.href=`user-page.html?user=${data[i].Usuario + "," + data[i].Id}`
                         break
                     }                    
@@ -68,3 +70,32 @@ function loginCadastro(){
         }
     )    
 }
+
+function validUsers(userLogado = true, urlRedirect = "user-page.html"){
+    let camaraRoll = localStorage.getItem("@camaraRoll-Users");// Recupera os dados armazenados
+    camaraRoll = JSON.parse(camaraRoll); // Converte string para objeto
+    
+    if(camaraRoll== ""){ // Caso não haja conteúdo, iniciamos um vetor vazio
+        camaraRoll = [];
+        localStorage.setItem("@camaraRoll-Users", JSON.stringify(camaraRoll))//inicializa o storage
+    } else {
+        if(userLogado){
+            location.href=`${urlRedirect}` 
+        } else {
+            getUsers(camaraRoll)
+        }
+    }
+}
+
+
+
+function postUsers(nomeUsuario, idUsuario){
+    let camaraRoll = [{
+        "Users": nomeUsuario,
+        "Id": idUsuario
+    }]
+    console.log(camaraRoll)
+    localStorage.setItem("@camaraRoll-Users", JSON.stringify(camaraRoll))
+}
+
+
