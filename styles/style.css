@@ -158,3 +158,11 @@ width: calc(100% + -2px);
   margin: 0 auto;
   display: none;
 }
+
+/*Gatinha do github*/
+.github{
+  position: absolute;
+  margin:0 0 0 0;
+  right: 0;
+  top: 0;
+}
