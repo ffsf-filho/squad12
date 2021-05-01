@@ -47,6 +47,10 @@ git clone  https://github.com/ffsf-filho/squad12
   <code>
     <img height="50" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="JavaScript">
   </code>
+  <code>
+    <img height="50" src="https://img.pngio.com/filebootstrap-logosvg-wikimedia-commons-bootstrap-png-480_480.png" alt="Bootstrap">
+    <imge>
+  </code>
 </div>
 
 <div id="Starting">
@@ -64,18 +68,33 @@ OR
 ### Features
 
 - [x] Homepage
-- [x] Quiz Page
-- [x] Endpoint of db.json
-- [x] Components
-- [x] Eslint
+- [x] Login
+- [x] Cadastro Login
+- [x] Endpoint of outsystem Rest API
+- [x] Tela de Features de Estudo
+- [x] Tela de Features de Lazer  
 
 ### Autores
 ---
-
-<a href="https://github.com/ffsf-filho">
-  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/70358338?v=4" width="100px;" alt="Francisco F S Filho">
-  <br />
-  <sub>
-    <b>Francisco F S Filho</b>
-  </sub>
-</a>
+<table>
+  <tr>
+      <td>
+        <a href="https://github.com/ffsf-filho">
+          <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/70358338?v=4" width="100px;" alt="Francisco F S Filho">
+          <br />
+          <sub>
+            <b>Francisco F S Filho</b>
+          </sub>
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/ffsf-filho">
+          <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/70358338?v=4" width="100px;" alt="Francisco F S Filho">
+          <br />
+          <sub>
+            <b>Francisco F S Filho</b>
+          </sub>
+        </a>
+     </td>
+  </tr>
+</table>
