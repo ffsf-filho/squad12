@@ -104,8 +104,30 @@ section {
 
 /*Gatinha do github*/
 .github{
-    position: absolute;
+    position:absolute;
     margin:0 0 0 0;
-    right: 0;
-    top: 0;
+    right:0;
+    top:0;
+}
+
+/*Avatar*/
+.divAvatar{
+    display:flex;
+    flex-flow:row nowrap;
+}
+
+.labelAvatar{
+    display:flex;
+    flex-flow:column wrap;
+    align-items: center;
+    padding: 5px;
+}
+
+.labelAvatar input{
+    margin-bottom: 5px;
+}
+
+.imgAvatar{
+    width:50px;
+    height:50px;
 }
