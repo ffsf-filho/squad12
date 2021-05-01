@@ -78,15 +78,16 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
 
        var getModal = 
        `<div style="display: block" class="modalBox" id="modalBoxId">
-          <h5 class="modalBox__titulo">Teste</h5>
-          <p class="modalBox__descrição">Teste</p>
+          <h5 class="modalBox__titulo">Deletando...</h5>
+          <p class="modalBox__descrição">Tem certeza que quer deletar esse vídeo?</p>
           <button type="button" class="modalBox__botao">Não</button>
           <button type="button" class="modalBox__botaoDeleta" onClick="btnDeletaVideo(${filmeId})">Deletar</button>
         </div>`
 
         var modalHtml = document.getElementById('modalHtml')
-        modalHtml.innerHTML = modalHtml.innerHTML + getModal
+        modalHtml.insertAdjacentHTML("afterbegin", getModal)
      }
+
 
     function btnPesquisar(){
   var listaFilmes = document.querySelector('#listaFilmes');
