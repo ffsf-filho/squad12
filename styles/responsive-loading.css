@@ -1,0 +1,29 @@
+@media screen and (max-width: 768px) {
+    .loading {
+        width: 410px;
+    }
+
+    .loading__img {
+        background-position-y: -20px;
+        height: 200px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .loading {
+        width: 100vw;
+    }
+
+    .loading__img {
+        height: 150px;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .loading {
+        width: 100vw;
+    }
+    
+}

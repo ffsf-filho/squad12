@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body {
+    background-color: #122432;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.loading {
+    display: flex;
+    background-color: #404679;
+    border-left: 0.2rem solid #FBB248;
+    border-right: 0.2rem solid #FBB248;
+    height: 100vh;
+    justify-content: space-around;
+    padding: 2rem;
+    width: 720px;
+}
+
+.loading__content {
+    justify-content: center;
+}
+
+.loading__img {
+    background-image: url("./images/logo-squad12.png");
+    background-repeat: no-repeat;
+    background-position-y: -50px;
+    background-size: cover;
+    height: 200px;
+    width: 500px;
+}
+
+.loading__content___progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 200px - 2rem);
+    justify-content: center;
+}
+
+.loading__animation {
+    background-color: transparent;
+    border: 3px solid #F1605A;
+    border-radius: 20px;
+    box-shadow: 2px 2px #122432;
+    height: 2rem;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.loading__animation___bar {
+    background-color: #FBB248;
+    border-radius: 15px;
+    height: 1.75rem;
+    transform: translate(-1px, -1px);
+    width: 0px;
+    animation: progres 2s infinite linear;
+}
+
+@keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+.loading__quotes {
+    color: #FBB248;
+    font-family: monospace;
+    margin-top: 0.5rem;
+    text-align: center;
+}

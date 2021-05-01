@@ -13,6 +13,16 @@ body {
   height: 100vh;
 }
 
+main {
+  background-color: #404679;
+  box-shadow: 0.5rem 0.5rem 0 #041420;
+  border-left: 0.2rem solid #FBB248;
+  border-right: 0.2rem solid #FBB248;
+  height: 100vh;
+  padding: 2rem;
+  width: 720px;
+}
+
 .userStatus {
   background-color: #FBB248;
   border: 2px solid #F1605A;
@@ -49,15 +59,6 @@ a.userStatus__text___sair{
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;;
 }
 
-main {
-  background-color: #404679;
-  box-shadow: 0.5rem 0.5rem 0 #041420;
-  border-left: 0.2rem solid #FBB248;
-  border-right: 0.2rem solid #FBB248;
-  height: 100vh;
-  padding: 2rem;
-  width: 720px;
-}
 
 h1 {
   color: #FFAF50;

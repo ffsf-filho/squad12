@@ -1,0 +1,3 @@
+function prxTela() {
+    location.href=''
+}
