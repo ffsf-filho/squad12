@@ -16,7 +16,7 @@ Content
 
 ## About
 ### This is a project done by @ ffsf-filho, @gabrielasertori, @lucasnsouza, 
-### @marcelonader and @LuizGVM for the Dev Alura Training & Immersion Program, sponsored by (FCamara)
+### @marcelonader and @LuizGVM for the Dev Alura Training & Immersion Program, sponsored by (<strong><a href="https://www.fcamara.com.br/">FCamara</a></strong>)
 ### The project is a repository of films and study videos
 
 </div>

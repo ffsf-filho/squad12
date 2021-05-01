@@ -6,7 +6,7 @@ console.log(camaraRoll)
 if(camaraRoll== null){
     //Caso não haja conteúdo, iniciamos um vetor vazio
     camaraRoll = [];
-    localStorage.setItem("@camaraRoll-Users", JSON.stringify(camaraRoll))//inicializa o storage
+    //localStorage.setItem("@camaraRoll-Users", JSON.stringify(camaraRoll))//inicializa o storage
 } else {
     //Se existir o objeto e ele não estiver vazio redirecionamos para a  página de usuário 
     location.href="user-page.html" 
