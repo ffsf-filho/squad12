@@ -17,20 +17,49 @@
         <section>
             <h1>CADASTRO</h1>
             <div class="sigin">
-                <label for="userName" class="user__sigin">Nome:</label>
-                <input type="text" name="userName" id="userName" placeholder="Digite seu Nome">
+                <label for="userName" class="user__sigin" >Nome:</label>
+                <input type="text" name="userName" id="userName" aria-required="true" placeholder="Digite seu Nome">
             </div>
             <div class="sigin">
                 <label for="userAdress" class="user__sigin">Usuário:</label>
-                <input type="email" name="userAdress" id="userAdress" placeholder="Digite seu usuário">
+                <input type="email" name="userAdress" id="userAdress" aria-required="true" placeholder="Digite seu usuário">
             </div>
             <div class="sigin">
                 <label for="userPass" class="user__sigin">Senha:</label>
-                <input type="password" name="userPass" id="userPass" placeholder="Digite sua senha">
+                <input type="password" name="userPass" id="userPass" aria-required="true" placeholder="Digite sua senha">
             </div>
             <span id="messageError">
                 Usuário já existente, use outra opção de nome.
             </span>
+
+            <div>
+                <label for="avatar1">
+                    <input type="radio" name="avatar" id="avatar-touro" value="avatar-touro">
+                    <img src="img/avatar-touro.png" alt="avatar-touro">
+                </label>
+                <label for="avatar2">
+                    <input type="radio" name="avatar" id="avatar-tubarao" value="avatar-tubarao">
+                    <img src="img/avatar-tubarao.png" alt="avatar-tubarao">
+                </label>
+                <label for="avatar3">
+                    <input type="radio" name="avatar" id="avatar-porco" value="avatar-porco">
+                    <img src="img/avatar-porco.png" alt="avatar-porco">
+                </label>
+                 <label for="avatar4">
+                    <input type="radio" name="avatar" id="avatar-raposa" value="avatar-raposa">
+                    <img src="img/avatar-raposa.png" alt="avatar-raposa">
+                </label>
+                <label for="avatar5">
+                    <input type="radio" name="avatar" id="avatar-pinguim" value="avatar-pinguim">
+                    <img src="img/avatar-pinguim.png" alt="avatar-pinguim">
+                </label>
+                <label for="avatar6">
+                    <input type="radio" name="avatar" id="avatar-guaxinim" value="avatar-guaxinim">
+                    <img src="img/avatar-guaxinim.png" alt="avatar-guaxinim">
+                </label>
+            </div>
+
+
             <button class="btn" onClick="loginCadastro()">ENTRAR</button>
         </section>
     </main>
