@@ -88,11 +88,38 @@ OR
         </a>
       </td>
       <td>
-        <a href="https://github.com/ffsf-filho">
-          <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/70358338?v=4" width="100px;" alt="Francisco F S Filho">
+        <a href="https://github.com/gabrielasertori">
+          <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/64798344?v=4" width="100px;" alt="Gabriela Costa Sertori">
           <br />
           <sub>
-            <b>Francisco F S Filho</b>
+            <b>Gabriela Costa Sertori</b>
+          </sub>
+        </a>
+     </td>
+     <td>
+        <a href="https://github.com/lucasnsouza">
+          <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/80481689?v=4" width="100px;" alt="Lucas Souza">
+          <br />
+          <sub>
+            <b>Lucas Souza</b>
+          </sub>
+        </a>
+     </td>
+     <td>
+        <a href="https://github.com/marcelonader">
+          <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/80595683?v=4" width="100px;" alt="Marcelo Nader">
+          <br />
+          <sub>
+            <b>Marcelo Nader</b>
+          </sub>
+        </a>
+     </td>
+     <td>
+        <a href="https://github.com/LuizGVM">
+          <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/83261651?v=4" width="100px;" alt="Luiz G. V. M.">
+          <br />
+          <sub>
+            <b>Luiz G. V. M.</b>
           </sub>
         </a>
      </td>
