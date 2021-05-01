@@ -39,7 +39,7 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
     jsonBody.forEach(function(valorAtual, indice) {
      
      let filmeUrl = jsonBody[indice].url
-     let filmeId = jsonBody[indice].Id
+     var filmeId = jsonBody[indice].Id
      console.log(filmeUrl)
      filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
      filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
@@ -47,9 +47,9 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
      resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
      title='YouTube video player' frameborder='0' 
      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
-     </iframe><div><button type='button' id='btnDeletaVideo' class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Excluir vídeo</button>`
+     </iframe><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
           //Modal 
-          resultado = resultado + `<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          /* resultado = resultado + `<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -66,11 +66,28 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
               </div>
             </div>
           </div>   
-     </div></div>`   
-  
+     </div></div>`  */  
+
      listarFilmesNaTela(resultado)})})
-    
-    
+     
+     
+     function abreModal(filmeId){
+/*        var getModal = document.getElementById("modalBoxId")
+       getModal.style.display = "block"; */
+       
+
+       var getModal = 
+       `<div style="display: block" class="modalBox" id="modalBoxId">
+          <h5 class="modalBox__titulo">Teste</h5>
+          <p class="modalBox__descrição">Teste</p>
+          <button type="button" class="modalBox__botao">Não</button>
+          <button type="button" class="modalBox__botaoDeleta" onClick="btnDeletaVideo(${filmeId})">Deletar</button>
+        </div>`
+
+        var modalHtml = document.getElementById('modalHtml')
+        modalHtml.innerHTML = modalHtml.innerHTML + getModal
+     }
+
     function btnPesquisar(){
   var listaFilmes = document.querySelector('#listaFilmes');
   listaFilmes.innerHTML = ""
@@ -163,24 +180,20 @@ function adicionarVideoEstudo(){
 
 
 
-
-
-
 function btnDeletaVideo(id){
+
+  console.log(id, "true")
+  
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
     method: "DELETE", 
     headers:{
       "Content-type": "application/json"
     },
     body: JSON.stringify({
-      Id: id
+      "Id": id
     }),
   }).then(response => {if (response.ok){console.log(response.status)}
   setTimeout(document.location.reload(true), 1000)})
 };
 
-// function listarFilmesNaTela(filme){
-// var listaFilmes = document.querySelector('#listaFilmes');
-// var elementoFilme = filme;
-// listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme;
-// };
+
