@@ -1,7 +1,7 @@
 //faz a validação do usuário e redireciona para página princial, caso não seja validado irá mostrar uma mensagem de erro
 function login(nomeDoUsuario = "") {
-    let userName = document.getElementById('userAdress');
-    let userPassWord = document.getElementById('userPass');
+    const userName = document.getElementById('userAdress');
+    const userPassWord = document.getElementById('userPass');
 
     fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_usuarios/usuarios", {method: "GET"})
         .then(response => {return response.json()})
@@ -32,9 +32,9 @@ function login(nomeDoUsuario = "") {
 //Se não existir será cadastrado
 //Se existir será informado uma mensagem
 function loginCadastro(){
-    let userFullName = document.getElementById('userName');
-    let userName = document.getElementById('userAdress');
-    let userPassWord = document.getElementById('userPass');
+    const userFullName = document.getElementById('userName');
+    const userName = document.getElementById('userAdress');
+    const userPassWord = document.getElementById('userPass');
     
     const newUser = {
         "Nome": userFullName.value,
@@ -71,31 +71,11 @@ function loginCadastro(){
     )    
 }
 
-function validUsers(userLogado = true, urlRedirect = "user-page.html"){
-    let camaraRoll = localStorage.getItem("@camaraRoll-Users");// Recupera os dados armazenados
-    camaraRoll = JSON.parse(camaraRoll); // Converte string para objeto
-    
-    if(camaraRoll== ""){ // Caso não haja conteúdo, iniciamos um vetor vazio
-        camaraRoll = [];
-        localStorage.setItem("@camaraRoll-Users", JSON.stringify(camaraRoll))//inicializa o storage
-    } else {
-        if(userLogado){
-            location.href=`${urlRedirect}` 
-        } else {
-            getUsers(camaraRoll)
-        }
-    }
-}
-
-
-
+//faz a gravação do usuário no localstorage
 function postUsers(nomeUsuario, idUsuario){
     let camaraRoll = [{
         "Users": nomeUsuario,
         "Id": idUsuario
     }]
-    console.log(camaraRoll)
     localStorage.setItem("@camaraRoll-Users", JSON.stringify(camaraRoll))
 }
-
-
