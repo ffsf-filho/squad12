@@ -138,9 +138,48 @@ margin-left: -300px;
   background-color: #fdfdfd;
   border-radius: 10px;
   border: 3px solid #F1605A;
-  height: 100%;
-  margin: 0 auto;
-  width: 80%;
+  box-shadow: 0.5rem 0.5rem 0 #041420;
+  padding: 1rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 999;
 }
 
+.modalBox__titulo {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.modalBox__titulo::after {
+  position: absolute;
+  content: "";
+  background-color: #c4c4c4;
+  display: block;
+  height: 2px;
+  margin-top: 0.5rem;
+  width: 90%;
+
+}
+
+.modalBox__descrição {
+  margin: 2rem;
+}
+
+.modalBox__botao {
+  border: 2px solid #F1605A;
+  border-radius: 5px;
+  box-shadow: 2px 2px #041420;
+  color: #122432;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+.modalBox__botaoDeleta {
+  background-color: #FBB248;
+  border: 2px solid #F1605A;
+  border-radius: 5px;
+  box-shadow: 2px 2px #041420;
+  color: #122432;
+  padding: 1rem;
+}
 /* fim dos estilos no js */
