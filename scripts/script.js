@@ -25,10 +25,11 @@ console.log("Usuario: " + usuario + " | id: " + id);
 
 
 function listarFilmesNaTela(filme){
-var listaFilmes = document.querySelector('#listaFilmes');
-var elementoFilme = filme;
-listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme;
-};
+  var listaFilmes = document.querySelector('#listaFilmes');
+  var elementoFilme = filme;
+  listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme;
+  };
+
 
 var resultado;
 
@@ -37,56 +38,63 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
     return response.json();
   }).then(jsonBody => {
     jsonBody.forEach(function(valorAtual, indice) {
-     
-     let filmeUrl = jsonBody[indice].url
-     var filmeId = jsonBody[indice].Id
-     console.log(filmeUrl)
-     filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
-     filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+    
+    let filmeUrl = jsonBody[indice].url
+    var filmeId = jsonBody[indice].Id
+    console.log(filmeUrl)
+    filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
+    filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
   
-     resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
-     title='YouTube video player' frameborder='0' 
-     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
-     </iframe><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
-          //Modal 
-          /* resultado = resultado + `<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Excluir vídeo</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Deseja deletar o vídeo?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-                  <button onclick='btnDeletaVideo(${filmeId})' type="button" class="btn btn-primary">Deletar</button>
-                </div>
-              </div>
-            </div>
-          </div>   
-     </div></div>`  */  
+    resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
+    title='YouTube video player' frameborder='0' 
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
+    </iframe><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
 
-     listarFilmesNaTela(resultado)})})
+    listarFilmesNaTela(resultado)})})
      
      
-     function abreModal(filmeId){
-/*        var getModal = document.getElementById("modalBoxId")
-       getModal.style.display = "block"; */
-       
+    
+function abreModal(filmeId){
+  //cria o modal
+  const getModal = 
+  `<div class="modal" id="modal">
+    <div class="modalBox" id="modalBoxId">
+      <h5 class="modalBox__titulo">Deletando...</h5>
+      <p class="modalBox__descricao">Tem certeza que quer deletar esse vídeo?</p>
+      <button type="button" class="modalBox__botao">Não</button>
+      <button type="button" class="modalBox__botaoDeleta" onClick="btnDeletaVideo(${filmeId})">Deletar</button>
+    </div>
+  </div>`
+  
+  //pega a div modal no html
+  const modalHtml = document.getElementById("modalHtml")
+  
+  //insere e tira do html
+  modalHtml.innerHTML = modalHtml.innerHTML + getModal
+  modalHtml.addEventListener("click", function(evento) {
+    if (evento.target.id == "modal" || evento.target.className == "modalBox__botao") {
+      modalHtml.innerHTML = ""
+    }
+  })
+}
 
-       var getModal = 
-       `<div style="display: block" class="modalBox" id="modalBoxId">
-          <h5 class="modalBox__titulo">Teste</h5>
-          <p class="modalBox__descrição">Teste</p>
-          <button type="button" class="modalBox__botao">Não</button>
-          <button type="button" class="modalBox__botaoDeleta" onClick="btnDeletaVideo(${filmeId})">Deletar</button>
-        </div>`
+//link para página de videos de lazer
+function videoLazer() {
+  location.href="page-videos-lazer.html"
+}
 
-        var modalHtml = document.getElementById('modalHtml')
-        modalHtml.innerHTML = modalHtml.innerHTML + getModal
-     }
+//mensagem de erro no cadastro de videos
+function exibeAlerta() {
+  const exibeAlerta = document.getElementById("videoError")
+  exibeAlerta.style.display = "inline"
+}
+
+//link para página de videos de estudo
+function videoEstudo() {
+  location.href="page-videos-estudo.html"
+}
+
+
 
     function btnPesquisar(){
   var listaFilmes = document.querySelector('#listaFilmes');
