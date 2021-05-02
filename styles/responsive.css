@@ -1,0 +1,52 @@
+@media screen and (max-width: 768px) {
+    body {
+        width: 410px;
+    }
+
+    .balao {
+        margin-top: 2rem
+    }
+    
+    .nes-bcrikko {
+        left: 0px;
+        bottom: 0px;
+      }
+
+    .nes-balloon.from-left {
+        width: 60%;
+    }
+
+    .container {
+        margin: 0;
+      }
+
+    .addFilme__listaFilmes {
+        display: block;
+    }
+
+    .cartao {
+        margin: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    body {
+        width: 100vw;
+        padding: 0.5rem
+    }
+
+    .balao {
+        display: none;
+    }
+
+    #pesquisaFilme {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        width: 100vw;
+        padding: 0;
+    }
+}
