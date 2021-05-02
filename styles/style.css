@@ -134,15 +134,26 @@ margin-left: -300px;
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
 
+.modal {
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+}
+
 .modalBox {
   background-color: #fdfdfd;
   border-radius: 10px;
   border: 3px solid #F1605A;
   box-shadow: 0.5rem 0.5rem 0 #041420;
   padding: 1rem;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  z-index: 999;
+  width: 60%;
 }
 
 .modalBox__titulo {
@@ -151,18 +162,25 @@ margin-left: -300px;
 }
 
 .modalBox__titulo::after {
-  position: absolute;
   content: "";
   background-color: #c4c4c4;
   display: block;
-  height: 2px;
+  height: 1px;
   margin-top: 0.5rem;
-  width: 90%;
-
+  width: 100%;
 }
 
-.modalBox__descrição {
-  margin: 2rem;
+.modalBox__descricao {
+  margin-bottom: 2rem;
+}
+
+.modalBox__descricao::after {
+  content: "";
+  background-color: #c4c4c4;
+  display: block;
+  height: 1px;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 .modalBox__botao {
