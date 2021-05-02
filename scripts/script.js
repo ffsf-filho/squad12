@@ -72,12 +72,8 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
      
      
      function abreModal(filmeId){
-/*        var getModal = document.getElementById("modalBoxId")
-       getModal.style.display = "block"; */
-       
-
        var getModal = 
-       `<div class="modal">
+       `<div class="modal" id="modal">
           <div class="modalBox" id="modalBoxId">
             <h5 class="modalBox__titulo">Deletando...</h5>
             <p class="modalBox__descricao">Tem certeza que quer deletar esse vídeo?</p>
@@ -88,7 +84,21 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
 
         var modalHtml = document.getElementById('modalHtml')
         modalHtml.insertAdjacentHTML("afterbegin", getModal)
-     }
+        modalHtml.style.display = "block"
+
+        const modal = document.getElementById("modalHtml")
+        console.log(modal)
+  
+        modal.addEventListener("click", function(evento) {
+          if (evento.target.id == "modal" || evento.target.className == "modalBox__botao") {
+            modal.style.display = "none"
+          }
+        })
+      }
+
+
+
+
 
 
     function btnPesquisar(){
