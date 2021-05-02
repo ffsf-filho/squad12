@@ -22,35 +22,6 @@ body {
   width: 720px;
 }
 
-/* inicio Balão */
-.balao {
-  display: block;
-  position: relative;
-}
-
-.nes-field.is-inline {
-width: 600px;
-position: relative; 
-left: 50%; 
-margin-left: -300px;
-}
-
-.nes-bcrikko {
-  position: relative;
-  display: inline-block; 
-  /* width: 96px; */
-  /* height: 25px; */
-  left: 14px;
-  top: 52px;
-}
-
-.nes-balloon.from-left {
-  position: relative;
-  display: inline-block;
-  bottom: 32px;
-}
-/*fim Balão*/
-
 .container {
   text-align: center;
   margin: 3rem 0 6rem 0;
@@ -123,9 +94,9 @@ margin-left: -300px;
   background-color:white;
   border:1px;
   border-style:double;
-  border-color:red;
+  border-color:#F1605A;
   border-radius:10px;
-  box-shadow:3px 3px 3px 2px #996633;
+  box-shadow: 0.2rem 0.2rem 0 #041420;
 }
 
 .cartao:hover {
