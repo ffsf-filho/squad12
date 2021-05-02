@@ -25,9 +25,7 @@ body {
   width: 70%;
 }
 
-
 .userStatus__img {
-  /*background-image: url("./images/avatar-removebg-preview.png");*/
   background-image: url("../images/avatar-pinguim.png");
   background-repeat: no-repeat;
   background-size: cover;
