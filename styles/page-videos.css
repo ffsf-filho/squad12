@@ -17,14 +17,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
   padding: 2rem;
+  position: relative;
   text-align: center;
   width: 720px;
 }
 
 .container {
   text-align: center;
-  margin: 3rem 0 6rem 0;
+  margin: 3rem 0;
+}
+
+/*Gatinha do github*/
+.github{
+  position: absolute;
+  margin:0 0 0 0;
+  right: 0;
+  top: 0;
 }
 
 .form-wrapper {
@@ -38,8 +48,9 @@ body {
 }
 
 .page-subtitle {
-  color: #fdfdfd;
-  font-size: 1.25rem;
+  color: #FBB248;
+  text-shadow: 2px 2px 0 #F1605A;
+  font-size: 2rem;
   margin: 1rem auto 2rem auto;
   text-align: center;
 }
@@ -49,7 +60,7 @@ body {
   margin: 0;
 }
 
-.addFilme__listaFilmes {
+.listaFilmes {
   margin: 1em;
   display:flex;
   flex-flow:row wrap;

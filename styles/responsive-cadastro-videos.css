@@ -1,0 +1,43 @@
+@media screen and (max-width: 768px) {
+    body {
+        padding: 2rem;
+        width: 410px;
+    }
+
+    .container {
+        max-width: 100%;
+     }
+
+    .page-subtitle {
+        display: block;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        margin: 1rem auto 3rem auto;
+    }
+
+    .form-wrapper input {
+        width: 100%;
+      }
+
+    .form-wrapper select {
+        max-width: 100%;
+    }
+
+    .form-wrapper button {
+        height: 4rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    body {
+        padding: 1rem;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        width: 100vw;
+    }
+   
+}

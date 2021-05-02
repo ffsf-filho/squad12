@@ -16,15 +16,33 @@ body {
   font-family: 'Press Start 2P', monospace;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   justify-content: center;
-  padding: 2rem;
+  padding: 4rem;
+  position: relative;
   text-align: center;
   width: 720px;
 }
 
 .container {
   text-align: center;
-  margin: 3rem 0 6rem 0;
+}
+
+
+/*Gatinha do github*/
+.github{
+  position: absolute;
+  margin:0 0 0 0;
+  right: 0;
+  top: 0;
+}
+
+.page-subtitle {
+  color: #FBB248;
+  text-shadow: 2px 2px 0 #F1605A;
+  font-size: 1.75rem;
+  margin: 1rem auto 5rem auto;
+  text-align: center;
 }
 
 .form-wrapper {
@@ -33,33 +51,24 @@ body {
 
 .form-wrapper input {
   display: block;
-  margin: 1rem auto;
+  margin: 0.5rem 0 2rem 0;
   padding: 10px 15px;
+  width: 100%;
 }
 
-.page-subtitle {
+.form-wrapper select {
+  margin-bottom: 2rem;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.form-wrapper label {
   color: #fdfdfd;
-  font-size: 1.25rem;
-  margin: 1rem auto 2rem auto;
-  text-align: center;
+  display: block;
+  text-align: left;
 }
 
-.pesquisaFilme_label {
-  color: #ffffff;
-  margin: 0;
-}
-
-.addFilme__listaFilmes {
-  margin: 1em;
-  display:flex;
-  flex-flow:row wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin:0 auto;
-}
-
-
-.addFilme__container___button {
+.form-wrapper button {
   display: inline;
   background: #FFAF50;
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
@@ -71,38 +80,18 @@ body {
   min-width: 10rem;
   min-height: 3rem;
   padding: 0.4rem;
-  transition: all 0.3s ease;
 }
+
+#videoError {
+  color: rgb(255 160 160);
+  display: none;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 
 /* inicio estilos no js */
-#btnDeletaVideo{
-  background: #FFAF50;
-  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
-  border: none;
-  box-shadow: inset -10px -10px 0px #F1605A;
-  color: #122432;
-  font-size: 0.9rem;
-  margin: 2rem 0;
-  min-width: 10rem;
-  min-height: 3rem;
-  transition: all 0.3s ease;
-}
-
-.cartao {
-  margin:0.5em;
-  padding:0.5em;
-  background-color:white;
-  border:1px;
-  border-style:double;
-  border-color:#F1605A;
-  border-radius:10px;
-  box-shadow: 0.2rem 0.2rem 0 #041420;
-}
-
-.cartao:hover {
-  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
-}
-
 .modal {
   background-color: rgba(0, 0, 0, .5);
   display: flex;

@@ -170,3 +170,18 @@ body {
   padding: 1rem;
 }
 /* fim dos estilos no js */
+.modalBox {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: none;
+}
+
+/*Gatinha do github*/
+.github{
+  position: absolute;
+  margin:0 0 0 0;
+  right: 0;
+  top: 0;
+}

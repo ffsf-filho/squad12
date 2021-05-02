@@ -78,8 +78,21 @@ function abreModal(filmeId){
   })
 }
 
+//link para página de videos de lazer
+function videoLazer() {
+  location.href="page-videos-lazer.html"
+}
 
+//mensagem de erro no cadastro de videos
+function exibeAlerta() {
+  const exibeAlerta = document.getElementById("videoError")
+  exibeAlerta.style.display = "inline"
+}
 
+//link para página de videos de estudo
+function videoEstudo() {
+  location.href="page-videos-estudo.html"
+}
 
 
 
