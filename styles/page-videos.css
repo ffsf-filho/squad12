@@ -29,7 +29,7 @@ body {
   margin: 3rem 0;
 }
 
-/*dropdown*/
+/*dropdown div*/
 .dropdown {
     position: absolute;
     display: flex;
@@ -42,7 +42,7 @@ body {
     text-shadow: 2px 2px #F1605A;
 }
 
-/*dropdown btn*/
+/*dropdown botão*/
 .btn.btn-secondary.dropdown-toggle {
     font-size: 1.5rem;
     background-color: #404679;
