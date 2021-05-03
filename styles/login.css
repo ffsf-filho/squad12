@@ -16,7 +16,7 @@ main {
     box-shadow: 0.5rem 0.5rem 0 #041420;
     border-left: 0.2rem solid #FBB248;
     border-right: 0.2rem solid #FBB248;
-    height: 100%;
+    height: 100vh;
     padding: 2rem;
     width: 720px;
 }
