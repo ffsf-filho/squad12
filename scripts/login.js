@@ -14,7 +14,7 @@ function login(nomeDoUsuario = "") {
                         break
                     } else {
                         let wrongData = document.getElementById('messageError')
-                        wrongData.style.display = 'inline';
+                        wrongData.style.display = 'none';
                     }
                 } else {
                     if(data[i].Usuario == nomeDoUsuario){
@@ -60,7 +60,7 @@ function loginCadastro(){
                 if(data[i].Usuario == userName.value){
                     ok = false
                     let wrongData = document.getElementById('messageError')
-                    wrongData.style.display = 'inline';                
+                    wrongData.style.display = 'none';                
                     break
                 } 
             }
