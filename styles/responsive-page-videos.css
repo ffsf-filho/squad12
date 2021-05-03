@@ -1,0 +1,67 @@
+@media screen and (max-width: 768px) {
+    body {
+        width: 410px;
+    }
+
+    .container {
+        margin: 0;
+      }
+
+    .listaFilmes {
+        display: block;
+    }
+
+    .cartao {
+        margin: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 596px) {
+    .modalBox {
+        width: 90%;
+      }
+}
+
+@media screen and (max-width: 426px) {
+    body {
+        width: 100vw;
+        padding: 0.5rem
+    }
+
+    #pesquisaFilme {
+        width: 100%;
+    }
+
+    .modalBox__botao {
+        font-size: 0.75rem;
+      }
+      
+    .modalBox__botaoDeleta {
+    font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        width: 100vw;
+        padding: 0;
+    }
+
+    .modalBox__titulo {
+        font-size: 0.5rem;
+    }
+
+    .modalBox__descricao {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .modalBox__botao {
+        font-size: 0.75rem;
+        margin: 0;
+    }
+      
+    .modalBox__botaoDeleta {
+    font-size: 0.75rem;
+    }
+}

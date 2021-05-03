@@ -17,14 +17,28 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
   padding: 2rem;
+  position: relative;
   text-align: center;
   width: 720px;
 }
 
 .container {
   text-align: center;
-  margin: 3rem 0 6rem 0;
+  margin: 3rem 0;
+}
+
+/*Gatinha do github*/
+.github{
+  position: absolute;
+  margin:0 0 0 0;
+  right: 0;
+  top: 0;
+}
+
+.github a {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
 
 .form-wrapper {
@@ -38,8 +52,9 @@ body {
 }
 
 .page-subtitle {
-  color: #fdfdfd;
-  font-size: 1.25rem;
+  color: #FBB248;
+  text-shadow: 2px 2px 0 #F1605A;
+  font-size: 2rem;
   margin: 1rem auto 2rem auto;
   text-align: center;
 }
@@ -49,7 +64,7 @@ body {
   margin: 0;
 }
 
-.addFilme__listaFilmes {
+.listaFilmes {
   margin: 1em;
   display:flex;
   flex-flow:row wrap;
@@ -62,7 +77,6 @@ body {
 .addFilme__container___button {
   display: inline;
   background: #FFAF50;
-  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
   border: none;
   box-shadow: inset -10px -10px 0px #F1605A;
   color: #122432;
@@ -74,10 +88,13 @@ body {
   transition: all 0.3s ease;
 }
 
-/* inicio estilos no js */
-#btnDeletaVideo{
-  background: #FFAF50;
+.addFilme__container___button:hover {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
+}
+
+/* inicio estilos no js */
+#btnDeletaVideo {
+  background: #FFAF50;
   border: none;
   box-shadow: inset -10px -10px 0px #F1605A;
   color: #122432;
@@ -86,6 +103,10 @@ body {
   min-width: 10rem;
   min-height: 3rem;
   transition: all 0.3s ease;
+}
+
+#btnDeletaVideo:hover {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
 
 .cartao {
@@ -99,19 +120,6 @@ body {
   box-shadow: 0.2rem 0.2rem 0 #041420;
 }
 
-.cartao:hover {
-  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
-}
-
-<<<<<<< HEAD
-.nes-bcrikko {
-  position: relative;
-    display: inline-block;
-    width: 96px;
-    height: 25px;
-    margin-left: -360px;
-    margin-top: 52px;
-=======
 .modal {
   background-color: rgba(0, 0, 0, .5);
   display: flex;
@@ -123,7 +131,6 @@ body {
   height: 100vh;
   width: 100vw;
   z-index: 999;
->>>>>>> 9e2007d51673675d7dd2de9980e619fe73abb894
 }
 
 .modalBox {
@@ -171,6 +178,10 @@ body {
   padding: 1rem;
 }
 
+.modalBox__botao:hover {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
+}
+
 .modalBox__botaoDeleta {
   background-color: #FBB248;
   border: 2px solid #F1605A;
@@ -179,19 +190,8 @@ body {
   color: #122432;
   padding: 1rem;
 }
-/* fim dos estilos no js */
-.modalBox {
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  display: none;
-}
 
-/*Gatinha do github*/
-.github{
-  position: absolute;
-  margin:0 0 0 0;
-  right: 0;
-  top: 0;
+.modalBox__botaoDeleta:hover {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
+/* fim dos estilos no js */
