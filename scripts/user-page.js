@@ -1,7 +1,7 @@
 //Inicializa variáveis
 let usuario = ""
 let id
-let avatar = ""
+let personagem = ""
 let imgUrlAvatar ="../images/"
 
 //recupera as informações do localStorage
@@ -16,7 +16,7 @@ if(objCamaraRoll== null){
     for(var i in objCamaraRoll){
         usuario = objCamaraRoll[i].Users
         id = objCamaraRoll[i].Id
-        avatar = objCamaraRoll[i].Avatar
+        personagem = objCamaraRoll[i].personagem
     }
 }
 
@@ -38,9 +38,8 @@ let nickName = document.getElementById("nick")
 nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" >Nick: ${usuario}</p>`
 
 //troca a imagem do avatar
-console.log(avatar)
-if(avatar != ""){
-    imgUrlAvatar += avatar
+if(personagem != ""){
+    imgUrlAvatar += personagem
     let imgDivAvatar = document.getElementById("imgAvatar")
     imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
 }

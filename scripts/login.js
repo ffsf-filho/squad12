@@ -9,7 +9,7 @@ function login(nomeDoUsuario = "") {
             for(var i =0; i < data.length; i++){
                 if(nomeDoUsuario.length == 0){
                     if(data[i].Usuario == userName.value && data[i].Senha == userPassWord.value){
-                        postUsers(data[i].Usuario, data[i].Id, data[i].Avatar)
+                        postUsers(data[i].Usuario, data[i].Id, data[i].personagem)
                         location.href="user-page.html"
                         break
                     } else {
@@ -18,7 +18,7 @@ function login(nomeDoUsuario = "") {
                     }
                 } else {
                     if(data[i].Usuario == nomeDoUsuario){
-                        postUsers(data[i].Usuario, data[i].Id, data[i].Avatar)
+                        postUsers(data[i].Usuario, data[i].Id, data[i].personagem)
                         location.href="user-page.html"
                         break
                     }                    
@@ -35,13 +35,12 @@ function loginCadastro(){
     const userFullName = document.getElementById('userName');
     const userName = document.getElementById('userAdress');
     const userPassWord = document.getElementById('userPass');
-    let avatar = ""
+    let personagem = ""
     const avatarRadio = document.getElementsByName("avatar")
 
     avatarRadio.forEach(function(valor){
         if(valor.checked){
-            avatar = valor.value
-            //console.log("Avatar: " + valor.value)
+            personagem = valor.value
         }
     })
 
@@ -49,7 +48,7 @@ function loginCadastro(){
         "Nome": userFullName.value,
         "Usuario": userName.value,
         "Senha": userPassWord.value,
-        "Avatar": avatar
+        "personagem": personagem
     }
 
     fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_usuarios/usuarios", {method: "GET"})
@@ -83,10 +82,33 @@ function loginCadastro(){
 
 //faz a gravação do usuário no localstorage
 function postUsers(nomeUsuario, idUsuario, nomeAvatar){
+    let personAvatar = ""
+    if(nomeAvatar != null){
+        personAvatar = nomeAvatar
+    }
+
     let camaraRoll = [{
         "Users": nomeUsuario,
         "Id": idUsuario,
-        "Avatar": nomeAvatar
+        "personagem": personAvatar
     }]
     localStorage.setItem("@camaraRoll-Users", JSON.stringify(camaraRoll))
+}
+
+const goToLogin = () => {
+    let login = document.getElementById('login');
+
+    if (login.onclick) {
+        //vai levar para página de login
+        location.href = "login.html"
+    }
+}
+
+const goToRegister = () => {
+    let register = document.getElementById('register');
+
+    if (register.onclick) {
+        //vai levar para página de cadastro de login
+        location.href = "login-cadastro.html"
+    }
 }
