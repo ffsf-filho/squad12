@@ -3,8 +3,8 @@
         width: 410px;
     }
 
-    .content {
-        margin: 2rem;
+    .divAvatar {
+        width: 100%;
     }
 }
 
@@ -13,12 +13,17 @@
         width: 100vw;
     }
 
-    .content {
-        margin: 1rem;
+    h1 {
+        margin: 2rem;
     }
     
-    .login input {
+    .sigin input {
         width: 90vw;
+    }
+
+    .divAvatar {
+        margin: 0.5rem;
+        justify-content: space-evenly;
     }
 }
 
@@ -27,7 +32,7 @@
         width: 100vw;
     }
 
-    .user__login {
+    .user__sigin {
         font-size: 0.9rem;
     }
     

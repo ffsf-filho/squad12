@@ -17,7 +17,7 @@ main {
     border-right: 0.2rem solid #FBB248;
     min-height: 100vh;
     max-height: 100%;
-    padding:2rem 2rem 2rem 2rem;
+    padding:1rem 2rem 2rem 2rem;
     position: relative;
     width: 720px;
 }
@@ -42,7 +42,8 @@ section {
 }
 
 .content {
-    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -54,22 +55,29 @@ h1 {
     text-transform: uppercase;
 }
 
-.form_login {
+.form_sigin {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1rem;
 }
 
-.user__login {
+.user__text {
+    color: #fdfdfd;
+    display: block;
+    margin-top: 2rem;
+}
+
+.user__sigin {
     color: #fdfdfd;
     display: block;
 }
 
-.login {
+.sigin {
     margin: 0.75rem 0;
 }
 
-.login input {
+.sigin input {
     border: none;
     color: #1a1b1bfa;
     font-size: 1rem;
@@ -79,8 +87,34 @@ h1 {
     width: 100%;
 }
 
-.login input::placeholder {
+.sigin input::placeholder {
     color: #1a1b1b86;
+}
+
+/*Avatar*/
+.divAvatar{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem;
+    width: 60%;
+}
+
+.labelAvatar{
+    display:flex;
+    flex-flow:column wrap;
+    align-items: center;
+    margin: 1rem;
+    padding: 5px;
+}
+
+.labelAvatar input{
+    margin-bottom: 5px;
+}
+
+.imgAvatar{
+    height:60px;
+    width:60px;
 }
 
 .btn {
@@ -115,8 +149,6 @@ h1 {
     font-size: 1rem;
     margin: 1rem;
 }
-
-
 
 .joinUS {
     display: flex;
