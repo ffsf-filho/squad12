@@ -29,23 +29,53 @@ body {
   margin: 3rem 0;
 }
 
+/*dropdown*/
+.dropdown {
+    position: absolute;
+    display: flex;
+    text-align: left;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: #FFAF50;
+    text-align: left;
+    text-shadow: 2px 2px #F1605A;
+}
+
+/*dropdown btn*/
+.btn.btn-secondary.dropdown-toggle {
+    font-size: 1.5rem;
+    background-color: #404679;
+    color: #FFAF50;
+    text-align: left;
+    text-shadow: 2px 2px #F1605A;
+}
+
+/*dropdown itens*/
+.dropdown-item {
+    font-size: 1rem;
+    color: #122432;
+    text-align: left;
+    text-shadow: 2px 2px #FFAF50;
+}
+
 /*navbar*/
-.navbar.navbar-light.bg-light {
+/* .navbar.navbar-light.bg-light {
   position: absolute;
   display: flex;
   text-align: left;
   top: 0;
   left: 1rem;
-}
+} */
 
 /*Navbar span*/
-.navbar-brand.mb-0.h1 {
+/* .navbar-brand.mb-0.h1 {
     font-size: 1.5rem;
     color: #FFAF50;
     margin: 1rem 0 1rem 0;
     text-align: left;
     text-shadow: 2px 2px #F1605A;
-}
+} */
 
 /*Gatinha do github*/
 .github{

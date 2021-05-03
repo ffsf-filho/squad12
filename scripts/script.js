@@ -203,5 +203,3 @@ function btnDeletaVideo(id){
   }).then(response => {if (response.ok){console.log(response.status)}
   setTimeout(document.location.reload(true), 1000)})
 };
-
-
