@@ -28,6 +28,9 @@ main {
     height: 10rem;
 }
 
+#text-welcome{
+    margin-top: -5%;
+}
 
 h1 {
     color: #FFAF50;
