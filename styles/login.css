@@ -11,14 +11,28 @@ body {
 }
 
 main {
-    position: relative;
     background-color: #404679;
     box-shadow: 0.5rem 0.5rem 0 #041420;
     border-left: 0.2rem solid #FBB248;
     border-right: 0.2rem solid #FBB248;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 100%;
     padding:1rem 2rem 2rem 2rem;
+    position: relative;
     width: 720px;
+}
+
+/*Gatinha do github*/
+.github{
+    position:absolute;
+    margin:0;
+    right:0;
+    top:0;
+}
+
+.imgLogoCamararoll {
+    width: 12rem;
+    height: 6rem;
 }
 
 h1 {
@@ -26,18 +40,8 @@ h1 {
     margin: 1rem 5rem 2rem 5rem;
     position: relative;
     text-align: center;
-}
-
-
-h1::before {
-    background: #122432;
-    border-radius: 8px;
-    content:'';
-    position: absolute; /*para o before ser absolute, o elemento pai (h1) tem que ser relative*/
-    bottom: 3px;
-    left: 0;
-    height: 4px;
-    width: 100%;
+    text-shadow: 2px 2px 0 #F1605A;
+    text-transform: uppercase;
 }
 
 section {
@@ -45,49 +49,83 @@ section {
     flex-direction: column;
     align-items: center;
 }
-.imgLogoCamararoll {
-    width: 20rem;
-    height: 10rem;
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
 }
 
-.sigin {
-    margin: 1rem;
+.user__text {
+    color: #fdfdfd;
+    display: block;
+    margin-top: 2rem;
 }
 
 .user__sigin {
     color: #fdfdfd;
+    display: block;
 }
 
-.sigin input:first-child {
-    margin-bottom: 0.9rem;
+.sigin {
+    margin: 0.75rem 0;
 }
 
 .sigin input {
     border: none;
     color: #1a1b1bfa;
-    display: flex;
     font-size: 1rem;
     height: 2rem;
     margin: 0.2rem 0;
     padding: 0.5rem;
+    width: 100%;
 }
 
 .sigin input::placeholder {
     color: #1a1b1b86;
 }
 
+/*Avatar*/
+.divAvatar{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem;
+    width: 60%;
+}
+
+.labelAvatar{
+    display:flex;
+    flex-flow:column wrap;
+    align-items: center;
+    margin: 1rem;
+    padding: 5px;
+}
+
+.labelAvatar input{
+    margin-bottom: 5px;
+}
+
+.imgAvatar{
+    height:60px;
+    width:60px;
+}
+
 .btn {
     background: #FFAF50;
     border: none;
-    box-shadow: inset -10px -10px 0px #F1605A;
+    border-radius: 5px;
+    box-shadow: inset -5px -5px 0px #F1605A;
     color: #122432;
     font-size: 0.9rem;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     min-width: 10rem;
     min-height: 3rem;
     padding: 0.4rem;
     transition: all 0.3s ease;
 }
+
 
 .btn:hover, img, #github-icon {
     letter-spacing: 0.5px;
@@ -107,38 +145,9 @@ section {
     margin: 1rem;
 }
 
-/*Gatinha do github*/
-.github{
-    position:absolute;
-    margin:0 0 0 0;
-    right:0;
-    top:0;
-}
 
-/*Avatar*/
-.divAvatar{
-    display:flex;
-    flex-flow:row nowrap;
-    margin-top: 1rem;
-}
 
-.labelAvatar{
-    display:flex;
-    flex-flow:column wrap;
-    align-items: center;
-    padding: 5px;
-}
-
-.labelAvatar input{
-    margin-bottom: 5px;
-}
-
-.imgAvatar{
-    width:50px;
-    height:50px;
-}
-
-div.joinUS {
+.joinUS {
     display: flex;
     flex-direction: column;
     align-items: center;
