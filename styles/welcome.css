@@ -23,6 +23,12 @@ main {
     width: 720px;
 }
 
+.imgLogoCamararoll {
+    width: 20rem;
+    height: 10rem;
+}
+
+
 h1 {
     color: #FFAF50;
     margin: 5rem 0 2rem 0;
