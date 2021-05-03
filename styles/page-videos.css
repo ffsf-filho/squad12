@@ -29,12 +29,21 @@ body {
   margin: 3rem 0;
 }
 
-/*Navbar*/
+/*navbar*/
+.navbar.navbar-light.bg-light {
+  position: absolute;
+  display: flex;
+  text-align: left;
+  top: 0;
+  left: 1rem;
+}
+
+/*Navbar span*/
 .navbar-brand.mb-0.h1 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
     color: #FFAF50;
-    margin: 5rem 0 2rem 0;
-    text-align: center;
+    margin: 1rem 0 1rem 0;
+    text-align: left;
     text-shadow: 2px 2px #F1605A;
 }
 
