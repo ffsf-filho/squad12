@@ -23,6 +23,17 @@ main {
     width: 720px;
 }
 
+.divLogoCamaraRoll{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F1605A;
+}
+
+.logoCamaraRoll{
+    width: 40rem;
+    height: 10rem;
+}
+
 h1 {
     color: #FFAF50;
     margin: 5rem 0 2rem 0;

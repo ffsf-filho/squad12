@@ -23,7 +23,7 @@ main {
 
 h1 {
     color: #FFAF50;
-    margin: 5rem;
+    margin: 5rem 5rem 4rem 5rem;
     position: relative;
     text-align: center;
 }
@@ -47,7 +47,7 @@ section {
 }
 
 .sigin {
-    margin: 2rem;
+    margin: 1.5rem;
 }
 
 .user__sigin {
@@ -100,6 +100,7 @@ section {
     font-family: monospace;
     font-weight: bold;
     font-size: 1rem;
+    margin: 1rem;
 }
 
 /*Gatinha do github*/
@@ -114,6 +115,7 @@ section {
 .divAvatar{
     display:flex;
     flex-flow:row nowrap;
+    margin-top: 1rem;
 }
 
 .labelAvatar{
