@@ -28,6 +28,36 @@ body {
   width: 720px;
 }
 
+/*dropdown div*/
+.dropdown {
+  position: absolute;
+  display: flex;
+  text-align: left;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1rem;
+  color: #FFAF50;
+  text-align: left;
+  text-shadow: 2px 2px #F1605A;
+}
+
+/*dropdown botão*/
+.btn.btn-secondary.dropdown-toggle {
+  font-size: 1.5rem;
+  background-color: #404679;
+  color: #FFAF50;
+  text-align: left;
+  text-shadow: 2px 2px #F1605A;
+}
+
+/*dropdown itens*/
+.dropdown-item {
+  font-size: 1rem;
+  color: #122432;
+  text-align: left;
+  text-shadow: 2px 2px #FFAF50;
+}
+
 .container {
   text-align: center;
 }

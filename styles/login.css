@@ -96,6 +96,10 @@ h1 {
     padding: 0.4rem;
     transition: all 0.3s ease;
 }
+/* .btn#loing {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+} */
 
 
 .btn:hover, img, #github-icon {
