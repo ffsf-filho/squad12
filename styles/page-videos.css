@@ -29,6 +29,15 @@ body {
   margin: 3rem 0;
 }
 
+/*Navbar*/
+.navbar-brand.mb-0.h1 {
+  font-size: 1.5rem;
+    color: #FFAF50;
+    margin: 5rem 0 2rem 0;
+    text-align: center;
+    text-shadow: 2px 2px #F1605A;
+}
+
 /*Gatinha do github*/
 .github{
   position: absolute;
