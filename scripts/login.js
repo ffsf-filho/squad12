@@ -94,3 +94,21 @@ function postUsers(nomeUsuario, idUsuario, nomeAvatar){
     }]
     localStorage.setItem("@camaraRoll-Users", JSON.stringify(camaraRoll))
 }
+
+const goToLogin = () => {
+    let login = document.getElementById('login');
+
+    if (login.onclick) {
+        //vai levar para página de login
+        location.href = "login.html"
+    }
+}
+
+const goToRegister = () => {
+    let register = document.getElementById('register');
+
+    if (register.onclick) {
+        //vai levar para página de cadastro de login
+        location.href = "login-cadastro.html"
+    }
+}
