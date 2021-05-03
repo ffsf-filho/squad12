@@ -47,7 +47,7 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
     filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
   
 var campoDataList = document.querySelector("#historico")
-campoDataList.innerHTML = campoDataList.innerHTML + `<option value="${filmeNome}"></option>`
+campoDataList.innerHTML = campoDataList.innerHTML + `<option value="${filmeNome}" ></option>`
 
     resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
     title='YouTube video player' frameborder='0' 
@@ -119,18 +119,20 @@ function videoEstudo() {
 
           jsonBody.forEach(function(valorAtual, indice) {
             const valorAtualNome = valorAtual.Nome
-            if(removerAcentosEspaco(valorAtualNome.toUpperCase()) == removerAcentosEspaco(filmePesquisado.toUpperCase())){
-          console.log(jsonBody[indice].url)
+            let resultadoPesquisa;
+           
+            if(removerAcentosEspaco(valorAtualNome.toUpperCase()).includes(removerAcentosEspaco(filmePesquisado.toUpperCase()))){
+          
+           console.log(jsonBody[indice].url)
           
           var filme = jsonBody[indice].url
           filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
           filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
               
-          var resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>` 
-          listarFilmesNaTela(resultado);
-
-        } 
-      }
+          resultadoPesquisa = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>` 
+          listarFilmesNaTela(resultadoPesquisa);
+          
+        } }
         )})
 }
 

@@ -33,12 +33,14 @@
         <p class="page-subtitle">Estudos</p>
         <div>
           <label for="pesquisaFilme" class="pesquisaFilme_label">Qual video você está procurando?</label>
-          <input type="text" id="pesquisaFilme" placeholder="Localizar vídeo">
+          <input type="search" id="pesquisaFilme" list='historico' placeholder="Localizar vídeo">
+          <datalist id="historico"></datalist>
         </div>
         <button class="addFilme__container___button" onClick="btnPesquisar()">Localizar</button>
         <button class="addFilme__container___button" onClick="criarVideoEstudo()">Adicionar novo vídeo</button>
       </div>
     </div>
+
 
     <!-- Divs importantes: lista os videos e adiciona o modal -->
     <div id="listaFilmes" class="listaFilmes"></div>
