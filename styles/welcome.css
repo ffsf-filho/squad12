@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-html {
+html, a, img, svg {
     cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;
 }
 
@@ -19,7 +19,7 @@ main {
     border-left: 0.2rem solid #FBB248;
     border-right: 0.2rem solid #FBB248;
     height: 100vh;
-    padding: 2rem;
+    padding: 1.5rem;
     width: 720px;
 }
 
@@ -34,7 +34,7 @@ main {
 
 h1 {
     color: #FFAF50;
-    margin: 5rem 0 2rem 0;
+    margin: 3rem 0 2rem 0;
     text-align: center;
     text-shadow: 2px 2px #F1605A;
 }
@@ -81,7 +81,16 @@ div.joinUS {
     transition: all 0.3s ease;
 }
 
-.btn:hover {
+.btn#register {
+    margin-bottom: 1.5rem;
+}
+
+.btn#login {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.btn:hover, #github-icon {
     cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
     letter-spacing: 0.5px;
 }
@@ -102,4 +111,12 @@ div.joinUS {
     margin:0 0 0 0;
     right: 0;
     top: 0;
+}
+
+.teste{
+    font-size: 12px;
+}
+
+.description {
+    margin-bottom: 1.4rem;
 }

@@ -14,7 +14,7 @@ function login(nomeDoUsuario = "") {
                         break
                     } else {
                         let wrongData = document.getElementById('messageError')
-                        wrongData.style.display = 'inline';
+                        wrongData.style.display = 'none';
                     }
                 } else {
                     if(data[i].Usuario == nomeDoUsuario){
@@ -59,7 +59,7 @@ function loginCadastro(){
                 if(data[i].Usuario == userName.value){
                     ok = false
                     let wrongData = document.getElementById('messageError')
-                    wrongData.style.display = 'inline';                
+                    wrongData.style.display = 'none';                
                     break
                 } 
             }
@@ -93,4 +93,22 @@ function postUsers(nomeUsuario, idUsuario, nomeAvatar){
         "personagem": personAvatar
     }]
     localStorage.setItem("@camaraRoll-Users", JSON.stringify(camaraRoll))
+}
+
+const goToLogin = () => {
+    let login = document.getElementById('login');
+
+    if (login.onclick) {
+        //vai levar para página de login
+        location.href = "login.html"
+    }
+}
+
+const goToRegister = () => {
+    let register = document.getElementById('register');
+
+    if (register.onclick) {
+        //vai levar para página de cadastro de login
+        location.href = "login-cadastro.html"
+    }
 }

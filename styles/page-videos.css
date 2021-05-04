@@ -7,6 +7,10 @@ html {
   justify-content: center;
 }
 
+svg {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;
+}
+
 body {
   align-items: center;
   background-color: #404679;
@@ -29,6 +33,54 @@ body {
   margin: 3rem 0;
 }
 
+/*dropdown div*/
+.dropdown {
+    position: absolute;
+    display: flex;
+    text-align: left;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: #FFAF50;
+    text-align: left;
+    text-shadow: 2px 2px #F1605A;
+}
+
+/*dropdown botão*/
+.btn.btn-secondary.dropdown-toggle {
+    font-size: 1.5rem;
+    background-color: #404679;
+    color: #FFAF50;
+    text-align: left;
+    text-shadow: 2px 2px #F1605A;
+}
+
+/*dropdown itens*/
+.dropdown-item {
+    font-size: 1rem;
+    color: #122432;
+    text-align: left;
+    text-shadow: 2px 2px #FFAF50;
+}
+
+/*navbar*/
+/* .navbar.navbar-light.bg-light {
+  position: absolute;
+  display: flex;
+  text-align: left;
+  top: 0;
+  left: 1rem;
+} */
+
+/*Navbar span*/
+/* .navbar-brand.mb-0.h1 {
+    font-size: 1.5rem;
+    color: #FFAF50;
+    margin: 1rem 0 1rem 0;
+    text-align: left;
+    text-shadow: 2px 2px #F1605A;
+} */
+
 /*Gatinha do github*/
 .github{
   position: absolute;
@@ -37,7 +89,7 @@ body {
   top: 0;
 }
 
-.github a {
+a, #github-icon {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
 

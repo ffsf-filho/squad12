@@ -2,7 +2,7 @@
 let usuario = ""
 let id
 let personagem = ""
-let imgUrlAvatar ="../images/"
+let imgUrlAvatar ="images/"
 
 //recupera as informações do localStorage
 const camaraRoll = localStorage.getItem("@camaraRoll-Users");// Recupera os dados armazenados
