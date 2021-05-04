@@ -128,8 +128,10 @@ function videoEstudo() {
           var filme = jsonBody[indice].url
           filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
           filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+          filmeId = jsonBody[indice].Id
               
-          resultadoPesquisa = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>` 
+          resultadoPesquisa = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+          <div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
           listarFilmesNaTela(resultadoPesquisa);
           
         } }
