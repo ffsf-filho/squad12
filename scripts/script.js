@@ -160,10 +160,12 @@ function adicionarVideoLazer(){
   
   var inputUrlVideoLazer = document.querySelector("#inputUrlVideoLazer")
 
+  console.log(id)
   var dadosVideoLazer = {
     "Nome": inputNomeVideoLazer.value,
     "Categoria": selectCategoriaVideoLazer.value,
-    "url": inputUrlVideoLazer.value
+    "url": inputUrlVideoLazer.value,
+    "IdUsuario": id
     }
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
     method: "POST", 
@@ -186,10 +188,13 @@ function adicionarVideoEstudo(){
   
   var inputUrlVideoEstudo = document.querySelector("#inputUrlVideoEstudo")
 
+  console.log(id)
+
   var dadosVideoEstudo = {
     "Nome": inputNomeVideoEstudo.value,
     "Categoria": selectCategoriaVideoEstudo.value,
-    "url": inputUrlVideoEstudo.value
+    "url": inputUrlVideoEstudo.value,
+    "IdUsuario": id
     }
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
     method: "POST", 
