@@ -3,7 +3,9 @@ html, a, img, svg {
 }
 
 body {
-    background-color: #122432;;
+    background-image: url(../images/sunset-vaporwave.gif);
+    background-size: cover;
+    background-color: #1B1821;
     font-family: 'Press Start 2P', monospace;
     display: flex;
     align-items: center;
@@ -12,25 +14,26 @@ body {
 
 main {
     position: relative;
-    background-color: #404679;
-    box-shadow: 0.5rem 0.5rem 0 #041420;
-    border-left: 0.2rem solid #FBB248;
-    border-right: 0.2rem solid #FBB248;
+    background-color: #1B1821;
+    box-shadow: 0.5rem 0.5rem 0 #1B1821;
+    border-left: 0.2rem solid #6B54BF;
+    border-right: 0.2rem solid #6B54BF;
     height: 100vh;
     padding:1rem 2rem 2rem 2rem;
     width: 720px;
 }
 
 h1 {
-    color: #FFAF50;
+    color: #FFFFFF;
     margin: 1rem 5rem 2rem 5rem;
     position: relative;
     text-align: center;
+    text-shadow: 2px 2px #D941B0;
 }
 
 
 h1::before {
-    background: #122432;
+    background: #D941B0;
     border-radius: 8px;
     content:'';
     position: absolute; /*para o before ser absolute, o elemento pai (h1) tem que ser relative*/
@@ -56,6 +59,7 @@ section {
 
 .user__sigin {
     color: #fdfdfd;
+    text-shadow: 2px 2px #D941B0;
 }
 
 .sigin input:first-child {
@@ -77,10 +81,10 @@ section {
 }
 
 .btn {
-    background: #FFAF50;
+    background: #D941B0;
     border: none;
-    box-shadow: inset -10px -10px 0px #F1605A;
-    color: #122432;
+    box-shadow: inset -10px -10px 0px #6B54BF;
+    color: #FFFFFF;
     font-size: 0.9rem;
     margin-top: 1rem;
     min-width: 10rem;
@@ -146,11 +150,11 @@ div.joinUS {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .joinUS__label {
-    color: #FFAF50;
+    color: #FFFFFF;
     font-family: monospace;
     font-size: 1rem;
 }

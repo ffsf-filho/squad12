@@ -41,10 +41,14 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
     
     let filmeUrl = jsonBody[indice].url
     var filmeId = jsonBody[indice].Id
+    var filmeNome = jsonBody[indice].Nome
     console.log(filmeUrl)
     filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
     filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
   
+var campoDataList = document.querySelector("#historico")
+campoDataList.innerHTML = campoDataList.innerHTML + `<option value="${filmeNome}" ></option>`
+
     resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
     title='YouTube video player' frameborder='0' 
     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
@@ -96,30 +100,42 @@ function videoEstudo() {
 
 
 
-    function btnPesquisar(){
-  var listaFilmes = document.querySelector('#listaFilmes');
-  listaFilmes.innerHTML = ""
+  function btnPesquisar(){
+        var listaFilmes = document.querySelector('#listaFilmes');
+        listaFilmes.innerHTML = ""
 
-  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos").then(
-  response => {
-    return response.json();
-  }).then(jsonBody => {
-    // console.log(jsonBody)
-    const campoPesquisaFilme = document.querySelector("#pesquisaFilme");
-    const filmePesquisado = campoPesquisaFilme.value;
-    jsonBody.forEach(function(valorAtual, indice) {
-      if(valorAtual.Nome == filmePesquisado){
-     console.log(jsonBody[indice].url)
-    
-     var filme = jsonBody[indice].url
-     filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
-     filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
-         
-     var resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>` 
-    listarFilmesNaTela(resultado);
+        fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos").then(
+        response => {
+          return response.json();
+        }).then(jsonBody => {
+          // console.log(jsonBody)
+          const campoPesquisaFilme = document.querySelector("#pesquisaFilme");
+          const filmePesquisado = campoPesquisaFilme.value;
+        
 
-  }}
-  )})
+        function removerAcentosEspaco(str) {
+            return str.normalize("NFD").replace(/[^a-zA-Zs]/g, "");
+        }
+
+          jsonBody.forEach(function(valorAtual, indice) {
+            const valorAtualNome = valorAtual.Nome
+            let resultadoPesquisa;
+           
+            if(removerAcentosEspaco(valorAtualNome.toUpperCase()).includes(removerAcentosEspaco(filmePesquisado.toUpperCase()))){
+          
+           console.log(jsonBody[indice].url)
+          
+          var filme = jsonBody[indice].url
+          filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
+          filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+          filmeId = jsonBody[indice].Id
+              
+          resultadoPesquisa = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+          <div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
+          listarFilmesNaTela(resultadoPesquisa);
+          
+        } }
+        )})
 }
 
 
