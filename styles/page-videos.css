@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 html {
-  background-color: #122432;
+  background-image: url(../images/sunset-vaporwave.gif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-color: #1B1821; /*fallback*/
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;
   display: flex;
   justify-content: center;
@@ -12,20 +17,27 @@ svg {
 }
 
 body {
-  align-items: center;
-  background-color: #404679;
-  border-left: 0.2rem solid #FBB248;
-  border-right: 0.2rem solid #FBB248;
-  box-shadow: 0.5rem 0.5rem 0 #041420;
+  background-color: #1B1821;
+  border-left: 0.2rem solid #6B54BF;
+  border-right: 0.2rem solid #6B54BF;
+  box-shadow: 0.5rem 0.5rem 0 #1B1821;
   font-family: 'Press Start 2P', monospace;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  max-height: 100%;
   padding: 2rem;
   position: relative;
   text-align: center;
   width: 720px;
+}
+
+.btn-group.dropright {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
 }
 
 .container {
@@ -33,53 +45,42 @@ body {
   margin: 3rem 0;
 }
 
-/*dropdown div*/
-.dropdown {
-    position: absolute;
-    display: flex;
-    text-align: left;
-    top: 1rem;
-    left: 1rem;
-    font-size: 1rem;
-    color: #FFAF50;
-    text-align: left;
-    text-shadow: 2px 2px #F1605A;
-}
-
-/*dropdown botão*/
 .btn.btn-secondary.dropdown-toggle {
-    font-size: 1.5rem;
-    background-color: #404679;
-    color: #FFAF50;
-    text-align: left;
-    text-shadow: 2px 2px #F1605A;
+  background-color: #1B1821;
 }
 
-/*dropdown itens*/
-.dropdown-item {
-    font-size: 1rem;
-    color: #122432;
-    text-align: left;
-    text-shadow: 2px 2px #FFAF50;
+.dropdown-menu {
+  padding: 1px;
+  margin-left: 2px;
+  background-color: #FFFFFF;
+  color: #1B1821;
 }
 
-/*navbar*/
-/* .navbar.navbar-light.bg-light {
-  position: absolute;
-  display: flex;
-  text-align: left;
-  top: 0;
-  left: 1rem;
-} */
+.userStatus__text {
+  padding: 2px;
+  color: #1B1821;
+  text-shadow: 1px 1px #d34dafd0;
+}
 
-/*Navbar span*/
-/* .navbar-brand.mb-0.h1 {
-    font-size: 1.5rem;
-    color: #FFAF50;
-    margin: 1rem 0 1rem 0;
-    text-align: left;
-    text-shadow: 2px 2px #F1605A;
-} */
+.userStatus__text___sair {
+  padding: 2px;
+  color: #1B1821;
+  text-shadow: 1px 1px #c468ab;
+}
+
+.links_drop_usuario {
+  padding: 2px;
+  color: #1B1821;
+  text-shadow: 1px 1px #c468ab;
+}
+ 
+  .userStatus__img {
+  background-image: url("../images/avatar-pinguim.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+} 
 
 /*Gatinha do github*/
 .github{
@@ -104,8 +105,8 @@ a, #github-icon {
 }
 
 .page-subtitle {
-  color: #FBB248;
-  text-shadow: 2px 2px 0 #F1605A;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 0 #ff120a;
   font-size: 2rem;
   margin: 1rem auto 2rem auto;
   text-align: center;
@@ -125,18 +126,17 @@ a, #github-icon {
   margin:0 auto;
 }
 
-
 .addFilme__container___button {
   display: inline;
-  background: #FFAF50;
+  background: #e9a6ff;
   border: none;
-  box-shadow: inset -10px -10px 0px #F1605A;
+  box-shadow: inset -6px -6px 0px #ff120a;
   color: #122432;
   font-size: 0.9rem;
   margin: 1rem auto;
   min-width: 10rem;
   min-height: 3rem;
-  padding: 0.4rem;
+  padding: 0.4rem 1rem;
   transition: all 0.3s ease;
 }
 
@@ -146,14 +146,15 @@ a, #github-icon {
 
 /* inicio estilos no js */
 #btnDeletaVideo {
-  background: #FFAF50;
+  background: #e9a6ff;
   border: none;
-  box-shadow: inset -10px -10px 0px #F1605A;
+  box-shadow: inset -6px -6px 0px #ff120a;
   color: #122432;
   font-size: 0.9rem;
   margin: 2rem 0;
   min-width: 10rem;
   min-height: 3rem;
+  padding: 0 1rem;
   transition: all 0.3s ease;
 }
 
@@ -164,12 +165,10 @@ a, #github-icon {
 .cartao {
   margin:0.5em;
   padding:0.5em;
-  background-color:white;
+  background-color:#FFFFFF;
   border:1px;
   border-style:double;
-  border-color:#F1605A;
-  border-radius:10px;
-  box-shadow: 0.2rem 0.2rem 0 #041420;
+  box-shadow: inset -6px - 6px 0 #ff120a;
 }
 
 .modal {
@@ -186,11 +185,11 @@ a, #github-icon {
 }
 
 .modalBox {
-  background-color: #fdfdfd;
-  border-radius: 10px;
-  border: 3px solid #F1605A;
+  background-color: #FFFFFF;
+  border: 3px solid #ff120a;
   box-shadow: 0.5rem 0.5rem 0 #041420;
   padding: 1rem;
+  max-width: 500px;
   width: 60%;
 }
 
@@ -222,9 +221,8 @@ a, #github-icon {
 }
 
 .modalBox__botao {
-  border: 2px solid #F1605A;
-  border-radius: 5px;
-  box-shadow: 2px 2px #041420;
+  border: none;
+  box-shadow: inset -6px -6px 0px #ff120a;
   color: #122432;
   margin-right: 2rem;
   padding: 1rem;
@@ -235,10 +233,9 @@ a, #github-icon {
 }
 
 .modalBox__botaoDeleta {
-  background-color: #FBB248;
-  border: 2px solid #F1605A;
-  border-radius: 5px;
-  box-shadow: 2px 2px #041420;
+  background-color: #e9a6ff;
+  border: none;
+  box-shadow: inset -6px -6px 0px #ff120a;
   color: #122432;
   padding: 1rem;
 }

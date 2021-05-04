@@ -1,5 +1,7 @@
 let usuario = ""
 let id
+let personagem = ""
+let imgUrlAvatar ="images/"
 
 let camaraRoll = localStorage.getItem("@camaraRoll-Users");// Recupera os dados armazenados
 camaraRoll = JSON.parse(camaraRoll); // Converte string para objeto
@@ -12,6 +14,7 @@ if(camaraRoll== null){
     for(var i in camaraRoll){
         usuario = camaraRoll[i].Users
         id = camaraRoll[i].Id
+        personagem = camaraRoll[i].personagem
     }
 }
 
@@ -22,6 +25,17 @@ function sair() {
 
 console.log("Usuario: " + usuario + " | id: " + id);
 
+
+//inclui o Nick do usuário
+let nickName = document.getElementById("nick")
+nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+
+//troca a imagem do avatar
+if(personagem != ""){
+    imgUrlAvatar += personagem
+    let imgDivAvatar = document.getElementById("imgAvatar")
+    imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
+}
 
 
 function listarFilmesNaTela(filme){

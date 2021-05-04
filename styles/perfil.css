@@ -12,17 +12,12 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Press Start 2P', monospace;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
 }
-
-/* .btn-group.dropright {
-  background-color: #D941B0;
-} */
 
 .btn.btn-secondary.dropdown-toggle {
   background-color: #1B1821;
-  /* border: 0.2rem solid #6B54BF; */
-  
 }
 
 .dropdown-menu {
@@ -30,8 +25,6 @@ body {
   margin-left: 2px;
   background-color: #FFFFFF;
   color: #1B1821;
-  /* border: 0.2rem solid #6B54BF; */
-  /* text-shadow: 2px 2px #D941B0; */
 }
 
 .userStatus__text {
@@ -52,44 +45,13 @@ body {
   text-shadow: 1px 1px #c468ab;
 }
 
-
-/* .userStatus {
-  background-color: #D941B0; */
-  /* border: 2px solid #6B54BF; */
-  /* box-shadow: 4px 4px 0 #6B54BF;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  position: relative;
-  width: 70%;
-} */
- 
-  .userStatus__img {
+.userStatus__img {
   background-image: url("../images/avatar-pinguim.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 80px;
   width: 80px;
-  /*transform: translate(0, -5px);*/
 } 
-
-
-/* .userStatus__text {
-  padding-left: 2rem;
-  transform: translate(0, -5px);
-} */
-
-/* .userStatus__text___label {
-  text-indent: 1px;
-  color: #6B54BF;
-} */
-/* 
-a.userStatus__text___sair{
-  color: #6B54BF;
-  margin-top: 50px;
-  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;;
-} */
 
 main {
   position: relative;
@@ -117,14 +79,6 @@ h1 {
   align-items: center;
   justify-content: space-around;
 }
-
-/* .escolhaUsuario:first-child {
-  margin: 2rem 0;
-  background: #5DD5D4;
-  border: none;
-  box-shadow: inset -10px -10px 0px #7052C2;
-  color: #FFFFFF;
-} */
 
 .escolhaUsuario {
   margin: 2rem 0;
