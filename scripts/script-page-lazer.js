@@ -39,13 +39,16 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
   }).then(jsonBody => {
     jsonBody.forEach(function(valorAtual, indice) {
     
+    var filmePagina = jsonBody[indice].Pagina
     let filmeUrl = jsonBody[indice].url
     var filmeId = jsonBody[indice].Id
     var filmeNome = jsonBody[indice].Nome
-    console.log(filmeUrl)
+    var filmeIdUsuario = jsonBody[indice].IdUsuario
+
     filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
     filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
   
+    if(filmeIdUsuario == id && filmePagina == "lazer"){
 var campoDataList = document.querySelector("#historico")
 campoDataList.innerHTML = campoDataList.innerHTML + `<option value="${filmeNome}" ></option>`
 
@@ -54,7 +57,7 @@ campoDataList.innerHTML = campoDataList.innerHTML + `<option value="${filmeNome}
     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
     </iframe><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
 
-    listarFilmesNaTela(resultado)})})
+    listarFilmesNaTela(resultado)}})})
      
      
     
@@ -94,9 +97,10 @@ function exibeAlerta() {
 }
 
 //link para página de videos de estudo
-function videoEstudo() {
-  location.href="page-videos-estudo.html"
-}
+
+// function videoEstudo() {
+//   location.href="page-videos-estudo.html"
+// }
 
 
 
@@ -118,31 +122,34 @@ function videoEstudo() {
         }
 
           jsonBody.forEach(function(valorAtual, indice) {
+
+
             const valorAtualNome = valorAtual.Nome
             let resultadoPesquisa;
            
             if(removerAcentosEspaco(valorAtualNome.toUpperCase()).includes(removerAcentosEspaco(filmePesquisado.toUpperCase()))){
           
-           console.log(jsonBody[indice].url)
-          
+          var filmePagina = jsonBody[indice].Pagina
+          var filmeIdUsuario = jsonBody[indice].IdUsuario                      
           var filme = jsonBody[indice].url
           filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
           filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
           filmeId = jsonBody[indice].Id
-              
+
+          if(filmeIdUsuario == id && filmePagina == "lazer"){
           resultadoPesquisa = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
           <div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
           listarFilmesNaTela(resultadoPesquisa);
           
-        } }
+        } }}
         )})
 }
 
 
 
-function criarVideoEstudo(){
-  location.href="cadastro-video-estudo.html"
-}
+// function criarVideoEstudo(){
+//   location.href="cadastro-video-estudo.html"
+// }
 
 function criarVideoLazer(){
   location.href="cadastro-video-lazer.html"
@@ -160,10 +167,13 @@ function adicionarVideoLazer(){
   
   var inputUrlVideoLazer = document.querySelector("#inputUrlVideoLazer")
 
+  console.log(id)
   var dadosVideoLazer = {
     "Nome": inputNomeVideoLazer.value,
     "Categoria": selectCategoriaVideoLazer.value,
-    "url": inputUrlVideoLazer.value
+    "url": inputUrlVideoLazer.value,
+    "IdUsuario": id,
+    "Pagina": "lazer",
     }
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
     method: "POST", 
@@ -178,29 +188,33 @@ function adicionarVideoLazer(){
 
 
 
-function adicionarVideoEstudo(){
+// function adicionarVideoEstudo(){
 
-  var inputNomeVideoEstudo = document.querySelector("#inputNomeVideoEstudo")
+//   var inputNomeVideoEstudo = document.querySelector("#inputNomeVideoEstudo")
 
-  var selectCategoriaVideoEstudo = document.querySelector("#selectCategoriaVideoEstudo")
+//   var selectCategoriaVideoEstudo = document.querySelector("#selectCategoriaVideoEstudo")
   
-  var inputUrlVideoEstudo = document.querySelector("#inputUrlVideoEstudo")
+//   var inputUrlVideoEstudo = document.querySelector("#inputUrlVideoEstudo")
 
-  var dadosVideoEstudo = {
-    "Nome": inputNomeVideoEstudo.value,
-    "Categoria": selectCategoriaVideoEstudo.value,
-    "url": inputUrlVideoEstudo.value
-    }
-  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
-    method: "POST", 
-    headers:{
-      "Content-type": "application/json"  
-    },
-    body: JSON.stringify(dadosVideoEstudo),
-  }).then(response => {if (response.ok){console.log(response.status)} 
-  console.log(dadosVideoEstudo)
+//   console.log(id)
+
+//   var dadosVideoEstudo = {
+//     "Nome": inputNomeVideoEstudo.value,
+//     "Categoria": selectCategoriaVideoEstudo.value,
+//     "url": inputUrlVideoEstudo.value,
+//     "IdUsuario": id,
+//     "Pagina": "estudo",
+//     }
+//   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
+//     method: "POST", 
+//     headers:{
+//       "Content-type": "application/json"  
+//     },
+//     body: JSON.stringify(dadosVideoEstudo),
+//   }).then(response => {if (response.ok){console.log(response.status)} 
+//   console.log(dadosVideoEstudo)
   
-})};
+// })};
 
 
 
