@@ -28,7 +28,7 @@ body {
   width: 720px;
 }
 
-/*dropdown div*/
+/*Dropdown div*/
 .dropdown {
   position: absolute;
   display: flex;
@@ -41,7 +41,7 @@ body {
   text-shadow: 2px 2px #F1605A;
 }
 
-/*dropdown botão*/
+/*Dropdown botão*/
 .btn.btn-secondary.dropdown-toggle {
   font-size: 1.5rem;
   background-color: #404679;
@@ -50,7 +50,7 @@ body {
   text-shadow: 2px 2px #F1605A;
 }
 
-/*dropdown itens*/
+/*Dropdown itens*/
 .dropdown-item {
   font-size: 1rem;
   color: #122432;
@@ -129,7 +129,7 @@ a, #github-icon {
 }
 
 
-/* inicio estilos no js */
+/* Inicio estilos no js */
 .modal {
   background-color: rgba(0, 0, 0, .5);
   display: flex;
@@ -196,4 +196,4 @@ a, #github-icon {
   color: #122432;
   padding: 1rem;
 }
-/* fim dos estilos no js */
+/* Fim dos estilos no js */

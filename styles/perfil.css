@@ -31,7 +31,6 @@ body {
   background-size: cover;
   height: 80px;
   width: 80px;
-  /*transform: translate(0, -5px);*/
 }
 
 .userStatus__text {

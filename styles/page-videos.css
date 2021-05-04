@@ -33,7 +33,7 @@ body {
   margin: 3rem 0;
 }
 
-/*dropdown div*/
+/*Dropdown div*/
 .dropdown {
     position: absolute;
     display: flex;
@@ -46,7 +46,7 @@ body {
     text-shadow: 2px 2px #F1605A;
 }
 
-/*dropdown botão*/
+/*Dropdown botão*/
 .btn.btn-secondary.dropdown-toggle {
     font-size: 1.5rem;
     background-color: #404679;
@@ -55,31 +55,13 @@ body {
     text-shadow: 2px 2px #F1605A;
 }
 
-/*dropdown itens*/
+/*Dropdown itens*/
 .dropdown-item {
     font-size: 1rem;
     color: #122432;
     text-align: left;
     text-shadow: 2px 2px #FFAF50;
 }
-
-/*navbar*/
-/* .navbar.navbar-light.bg-light {
-  position: absolute;
-  display: flex;
-  text-align: left;
-  top: 0;
-  left: 1rem;
-} */
-
-/*Navbar span*/
-/* .navbar-brand.mb-0.h1 {
-    font-size: 1.5rem;
-    color: #FFAF50;
-    margin: 1rem 0 1rem 0;
-    text-align: left;
-    text-shadow: 2px 2px #F1605A;
-} */
 
 /*Gatinha do github*/
 .github{
@@ -144,7 +126,7 @@ a, #github-icon {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
 
-/* inicio estilos no js */
+/* Inicio estilos no js */
 #btnDeletaVideo {
   background: #FFAF50;
   border: none;
@@ -246,4 +228,4 @@ a, #github-icon {
 .modalBox__botaoDeleta:hover {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
-/* fim dos estilos no js */
+/* Fim dos estilos no js */
