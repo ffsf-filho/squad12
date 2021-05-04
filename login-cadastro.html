@@ -1,88 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="styles/normalize.css"> <!--Normalize e reset para uniformizar o css dos navegadores-->
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/login.css">
-    <link rel="stylesheet" href="styles/responsive-login.css"> <!--arquivo para ficar todos os layouts responsivos-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <main>
-        <div class="github">
-            <a href="https://github.com/ffsf-filho/squad12" title="Repositório no GitHub" target="_blank">
-                <svg width="80" height="80" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <switch>
-                        <g id="github-icon" fill="orange">
-                            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
-                            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" />
-                            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" />
-                        </g>
-<!--                         <foreignObject>
-                            <img alt="GitHub" width="80" height="80" src="https://image.flaticon.com/icons/png/512/2956/2956194.png" />
-                        </foreignObject> -->
-                    </switch>
-                </svg>
-            </a>
-        </div>
-        <section>
-            <a href="index.html" target="_self">
-                <img src="./images/logo-squad12.png" alt="logo do CamaraRoll" class="imgLogoCamararoll">
-            </a>            
-            <h1>CADASTRO</h1>
-            <div class="sigin">
-                <label for="userName" class="user__sigin" >Nome:</label>
-                <input type="text" name="userName" id="userName" aria-required="true" placeholder="Digite seu Nome">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="styles/normalize.css"> <!--Normalize e reset para uniformizar o css dos navegadores-->
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/login.css">
+        <link rel="stylesheet" href="styles/responsive-login.css"> <!--arquivo para ficar todos os layouts responsivos-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap">
+    </head>
+    <body>
+        <main>
+            <div class="github">
+                <a href="https://github.com/ffsf-filho/squad12" title="Repositório no GitHub" target="_blank">
+                    <svg width="80" height="80" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <switch>
+                            <g id="github-icon" fill="orange">
+                                <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
+                                <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" />
+                                <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" />
+                            </g>
+    <!--                         <foreignObject>
+                                <img alt="GitHub" width="80" height="80" src="https://image.flaticon.com/icons/png/512/2956/2956194.png" />
+                            </foreignObject> -->
+                        </switch>
+                    </svg>
+                </a>
             </div>
-            <div class="sigin">
-                <label for="userAdress" class="user__sigin">Usuário:</label>
-                <input type="email" name="userAdress" id="userAdress" aria-required="true" placeholder="Digite seu usuário">
-            </div>
-            <div class="sigin">
-                <label for="userPass" class="user__sigin">Senha:</label>
-                <input type="password" name="userPass" id="userPass" aria-required="true" placeholder="Digite sua senha">
-            </div>
-            <span id="messageError">
-                Usuário já existente, use outra opção de nome.
-            </span>
-            <div class="divAvatar">
-                <label for="avatar-touro" class="labelAvatar">
-                    <input type="radio" name="avatar" id="avatar-touro" value="avatar-touro">
-                    <img src="images/avatar-touro.png" alt="avatar-touro" class="imgAvatar">
-                </label>
-                <label for="avatar-tubarao" class="labelAvatar">
-                    <input type="radio" name="avatar" id="avatar-tubarao" value="avatar-tubarao">
-                    <img src="images/avatar-tubarao.png" alt="avatar-tubarao" class="imgAvatar">
-                </label>
-                <label for="avatar-porco" class="labelAvatar">
-                    <input type="radio" name="avatar" id="avatar-porco" value="avatar-porco">
-                    <img src="images/avatar-porco.png" alt="avatar-porco" class="imgAvatar">
-                </label>
-                <label for="avatar-raposa" class="labelAvatar">
-                    <input type="radio" name="avatar" id="avatar-raposa" value="avatar-raposa">
-                    <img src="images/avatar-raposa.png" alt="avatar-raposa" class="imgAvatar">
-                </label>
-                <label for="avatar-pinguim" class="labelAvatar">
-                    <input type="radio" name="avatar" id="avatar-pinguim" value="avatar-pinguim.png" checked="true" >
-                    <img src="images/avatar-pinguim.png" alt="avatar-pinguim" class="imgAvatar">
-                </label>
-                <label for="avatar-guaxinim" class="labelAvatar">
-                    <input type="radio" name="avatar" id="avatar-guaxinim" value="avatar-guaxinim">
-                    <img src="images/avatar-guaxinim.png" alt="avatar-guaxinim" class="imgAvatar">
-                </label>
-            </div>
-            <button class="btn" onClick="loginCadastro()">ENTRAR</button>
-            <div class="joinUS">
-                <label for="login" class="joinUS__label">Já é usuário?</label>
-                <button class="btn" id="login" onClick="goToLogin()">Login</button>
-            </div>
-        </section>
-    </main>
-</body>
-<script src="scripts/login.js"></script>
+            <section>
+                <a href="index.html" target="_self">
+                    <img src="./images/logo-squad12.png" alt="logo do CamaraRoll" class="imgLogoCamararoll">
+                </a>            
+                <h1>CADASTRO</h1>
+                <div class="sigin">
+                    <label for="userName" class="user__sigin" >Nome:</label>
+                    <input type="text" name="userName" id="userName" aria-required="true" placeholder="Digite seu Nome" autofocus tabindex="1">
+                </div>
+                <div class="sigin">
+                    <label for="userAdress" class="user__sigin">Usuário:</label>
+                    <input type="email" name="userAdress" id="userAdress" aria-required="true" placeholder="Digite seu usuário" tabindex="2">
+                </div>
+                <div class="sigin">
+                    <label for="userPass" class="user__sigin">Senha:</label>
+                    <input type="password" name="userPass" id="userPass" aria-required="true" placeholder="Digite sua senha" tabindex="3">
+                </div>
+                <span id="messageError"></span>
+                <div class="divAvatar">
+                    <label for="avatar-touro" class="labelAvatar">
+                        <input type="radio" name="avatar" id="avatar-touro" value="avatar-touro" tabindex="4">
+                        <img src="images/avatar-touro.png" alt="avatar-touro" class="imgAvatar">
+                    </label>
+                    <label for="avatar-tubarao" class="labelAvatar">
+                        <input type="radio" name="avatar" id="avatar-tubarao" value="avatar-tubarao" tabindex="4">
+                        <img src="images/avatar-tubarao.png" alt="avatar-tubarao" class="imgAvatar">
+                    </label>
+                    <label for="avatar-porco" class="labelAvatar">
+                        <input type="radio" name="avatar" id="avatar-porco" value="avatar-porco" tabindex="4">
+                        <img src="images/avatar-porco.png" alt="avatar-porco" class="imgAvatar">
+                    </label>
+                    <label for="avatar-raposa" class="labelAvatar">
+                        <input type="radio" name="avatar" id="avatar-raposa" value="avatar-raposa" tabindex="4">
+                        <img src="images/avatar-raposa.png" alt="avatar-raposa" class="imgAvatar">
+                    </label>
+                    <label for="avatar-pinguim" class="labelAvatar">
+                        <input type="radio" name="avatar" id="avatar-pinguim" value="avatar-pinguim.png" checked="true" tabindex="4" >
+                        <img src="images/avatar-pinguim.png" alt="avatar-pinguim" class="imgAvatar">
+                    </label>
+                    <label for="avatar-guaxinim" class="labelAvatar">
+                        <input type="radio" name="avatar" id="avatar-guaxinim" value="avatar-guaxinim" tabindex="4">
+                        <img src="images/avatar-guaxinim.png" alt="avatar-guaxinim" class="imgAvatar">
+                    </label>
+                </div>
+                <button class="btn" onClick="loginCadastro()" tabindex="5">ENTRAR</button>
+                <div class="joinUS">
+                    <label for="login" class="joinUS__label">Já é usuário?</label>
+                    <button class="btn" id="login" onClick="goToLogin()" tabindex="6">Login</button>
+                </div>
+            </section>
+        </main>
+        <script src="scripts/login.js"></script>
+    </body>
 </html>

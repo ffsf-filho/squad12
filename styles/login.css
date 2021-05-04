@@ -80,6 +80,10 @@ section {
     color: #1a1b1b86;
 }
 
+.sigin input:focus {
+    background-color: #f19cdb;
+}
+
 .btn {
     background: #D941B0;
     border: none;
