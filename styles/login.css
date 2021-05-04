@@ -5,6 +5,9 @@ html, a, img, svg {
 body {
     background-image: url(../images/sunset-vaporwave.gif);
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    background-size: contain;
     background-color: #1B1821;
     font-family: 'Press Start 2P', monospace;
     display: flex;
