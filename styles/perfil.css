@@ -5,7 +5,9 @@ html {
 }
 
 body {
-  background-color: #122432;
+  background-image: url(../images/sunset-vaporwave.gif);
+  background-size: cover;
+  background-color: #1B1821;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,9 +16,9 @@ body {
 }
 
 .userStatus {
-  background-color: #FBB248;
-  border: 2px solid #F1605A;
-  box-shadow: 4px 4px 0 #122432;
+  background-color: #D941B0;
+  border: 2px solid #6B54BF;
+  box-shadow: 4px 4px 0 #6B54BF;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -40,33 +42,33 @@ body {
 }
 
 .userStatus__text___label {
-  color: #122432;
+  color: #FFFFFF;
 }
 
 a.userStatus__text___sair{
-  color: #122432;
+  color: #FFFFFF;
   margin-top: 50px;
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;;
 }
 
 main {
   position: relative;
-  background-color: #404679;
-  box-shadow: 0.5rem 0.5rem 0 #041420;
-  border-left: 0.2rem solid #FBB248;
-  border-right: 0.2rem solid #FBB248;
+  background-color: #1B1821;
+  box-shadow: 0.5rem 0.5rem 0 #1B1821;
+  border-left: 0.2rem solid #6B54BF;
+  border-right: 0.2rem solid #6B54BF;
   height: 100vh;
   padding: 2rem;
   width: 720px;
 }
 
 h1 {
-  color: #FFAF50;
+  color: #FFFFFF;
   line-height: 3rem;
   margin: 5rem;
   position: relative;
   text-align: center;
-  text-shadow: 2px 2px #F1605A;
+  text-shadow: 2px 2px #D941B0;
 }
 
 .botoes {
@@ -76,12 +78,20 @@ h1 {
   justify-content: space-around;
 }
 
+/* .escolhaUsuario:first-child {
+  margin: 2rem 0;
+  background: #5DD5D4;
+  border: none;
+  box-shadow: inset -10px -10px 0px #7052C2;
+  color: #FFFFFF;
+} */
+
 .escolhaUsuario {
   margin: 2rem 0;
-  background: #FFAF50;
+  background: #D941B0;
   border: none;
-  box-shadow: inset -10px -10px 0px #F1605A;
-  color: #122432;
+  box-shadow: inset -10px -10px 0px #6B54BF;
+  color: #FFFFFF;
   font-size: 0.9rem;
   margin-top: 2rem;
   min-width: 10rem;
