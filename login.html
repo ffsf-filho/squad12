@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/responsive-login.css"> <!--arquivo para ficar todos os layouts responsivos-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap">
 </head>
 <body>
     <main>
@@ -37,21 +37,17 @@
             <h1>LOGIN</h1>
             <div class="sigin">
                 <label for="userAdress" class="user__sigin">Usuário:</label>
-                <!-- <input type="text" name="userAdress" id="userAdress" onblur="validaCampo(this.value, 'texto certo')" placeholder="Digite sua senha"> -->
-                <input type="text" name="userAdress" id="userAdress" placeholder="Digite sua senha">
+                <input type="text" name="userAdress" id="userAdress" placeholder="Digite sua senha" autofocus tabindex="1">
             </div>
             <div class="sigin">
                 <label for="userPass" class="user__sigin">Senha:</label>
-                <input type="password" name="userPass" id="userPass" placeholder="Digite sua senha">
+                <input type="password" name="userPass" id="userPass" placeholder="Digite sua senha" tabindex="2">
             </div>
-            <span id="messageError">
-                Verifique se há erros com o nome de usuário ou senha
-            </span>
-            <button class="btn" id="login" onclick="login()">ENTRAR</button>
+            <span id="messageError"></span>
+            <button class="btn" id="login" onclick="login()" tabindex="3">ENTRAR</button>
             <div class="joinUS">
                 <label for="register" class="joinUS__label">Criar conta</label>
-                <!-- <button class="btn" id="register" onClick="goToRegister()">Cadastrar</button> -->
-                <input type="button" class="btn" id="register" onClick="goToRegister()" value="Cadastrar">
+                <input type="button" class="btn" id="register" onClick="goToRegister()" value="Cadastrar" tabindex="4">
             </div>
         </section>
     </main>
