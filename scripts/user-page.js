@@ -20,6 +20,33 @@ if(objCamaraRoll== null){
     }
 }
 
+/*modal e sair*/
+function abreModal(){
+    //cria o modal
+    const getModal = 
+    `<div class="modal" id="modal">
+      <div class="modalBox" id="modalBoxId">
+        <h5 class="modalBox__titulo">Saindo...</h5>
+        <p class="modalBox__descricao">Tem certeza que deseja ir embora?</p>
+        <button type="button" class="modalBox__botao">Não</button>
+        <button type="button" class="modalBox__botaoSair" onClick="sair()">Sair</button>
+      </div>
+    </div>`
+    
+    //pega a div modal no html
+    const modalHtml = document.getElementById("modalHtml")
+    
+    //insere e tira do html
+    modalHtml.innerHTML = modalHtml.innerHTML + getModal
+    modalHtml.addEventListener("click", function(evento) {
+      if (evento.target.id == "modal" || evento.target.className == "modalBox__botao") {
+        modalHtml.innerHTML = ""
+      }
+    })
+  }
+
+
+
 function sair() { 
     localStorage.removeItem("@camaraRoll-Users");// Remove o item
     location.href="index.html"
