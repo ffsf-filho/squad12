@@ -16,15 +16,20 @@
     <div class="container">
       
       <!-- Dropdown bootstrap com as opçoes de ir para página principal ou deslogar -->
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        camaraRoll
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="user-page.html">Home</a>
-        <a class="dropdown-item" onClick='sair()'>Sair</a>
+      <div class="btn-group dropright">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div id="imgAvatar" class="userStatus__img"></div>
+        </button>
+        <div class="dropdown-menu">
+          <!-- Dropdown menu links -->
+          <div id="nick" class="userStatus__text"></div>
+          <a class="links_drop_usuario" href="page-videos-estudo.html">Estudos</a>
+          <a class="links_drop_usuario" href="page-videos-lazer.html">Lazer</a>
+          <a class="userStatus__text___sair" id="sair" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <u>Sair</u>
+          </a>
+        </div>
       </div>
-    </div>
 
       <!-- gatinha do github -->
       <div class="github">

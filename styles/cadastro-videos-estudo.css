@@ -35,38 +35,47 @@ body {
 }
 
 /*dropdown div*/
-.dropdown {
-  position: absolute;
-  display: flex;
-  text-align: left;
-  top: 1rem;
-  left: 1rem;
-  font-size: 1rem;
-  color: #ffffff;
-  text-align: left;
-  text-shadow: 2px 2px #00a6ff;
-}
-
-/*dropdown botão*/
 .btn.btn-secondary.dropdown-toggle {
-  font-size: 1.5rem;
-  background-color: transparent;
-  color: #FFFFFF;
-  text-align: left;
-  text-shadow: 2px 2px #00a6ff;
+  background-color: #1B1821;
+  /* border: 0.2rem solid #6B54BF; */
+  
 }
 
-/*dropdown itens*/
-.dropdown-item {
-  font-size: 1rem;
-  color: #122432;
-  text-align: left;
-  text-shadow: 1px 1px #00a6ff;
+.dropdown-menu {
+  padding: 1px;
+  margin-left: 2px;
+  background-color: #FFFFFF;
+  color: #1B1821;
+  /* border: 0.2rem solid #6B54BF; */
+  /* text-shadow: 2px 2px #D941B0; */
 }
 
-.dropdown-item:hover {
-  background-color: #bae7ff;
+.userStatus__text {
+  padding: 2px;
+  color: #1B1821;
+  text-shadow: 1px 1px #d34dafd0;
 }
+
+.userStatus__text___sair {
+  padding: 2px;
+  color: #1B1821;
+  text-shadow: 1px 1px #c468ab;
+}
+
+.links_drop_usuario {
+  padding: 2px;
+  color: #1B1821;
+  text-shadow: 1px 1px #c468ab;
+}
+
+.userStatus__img {
+  background-image: url("../images/avatar-pinguim.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  /*transform: translate(0, -5px);*/
+} 
 
 .container {
   text-align: center;
