@@ -48,7 +48,7 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
     filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
     filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
   
-    if(filmeIdUsuario == id & filmePagina == "lazer"){
+    if(filmeIdUsuario == id && filmePagina == "lazer"){
 var campoDataList = document.querySelector("#historico")
 campoDataList.innerHTML = campoDataList.innerHTML + `<option value="${filmeNome}" ></option>`
 
@@ -136,7 +136,7 @@ function exibeAlerta() {
           filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
           filmeId = jsonBody[indice].Id
 
-          if(filmeIdUsuario == id & filmePagina == "lazer"){
+          if(filmeIdUsuario == id && filmePagina == "lazer"){
           resultadoPesquisa = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
           <div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
           listarFilmesNaTela(resultadoPesquisa);
