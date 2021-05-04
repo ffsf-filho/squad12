@@ -5,7 +5,9 @@ html, a, img, svg {
 }
 
 body {
-    background-color: #122432;;
+    background-image: url(../images/sunset-vaporwave.gif);
+    background-size: cover;
+    background-color: #1B1821;
     font-family: 'Press Start 2P', monospace;
     display: flex;
     align-items: center;
@@ -14,10 +16,10 @@ body {
 
 main {
     position: relative;
-    background-color: #404679;
+    background-color: #1B1821;
     box-shadow: 0.5rem 0.5rem 0 #041420;
-    border-left: 0.2rem solid #FBB248;
-    border-right: 0.2rem solid #FBB248;
+    border-left: 0.2rem solid #6B54BF;
+    border-right: 0.2rem solid #6B54BF;
     height: 100vh;
     padding: 1.5rem;
     width: 720px;
@@ -33,22 +35,22 @@ main {
 }
 
 h1 {
-    color: #FFAF50;
+    color: #FFFFFF;
     margin: 3rem 0 2rem 0;
     text-align: center;
-    text-shadow: 2px 2px #F1605A;
+    text-shadow: 2px 2px #D941B0;
 }
 
 .subtitle {
-    color: #FFAF50;
+    color: #FFFFFF;
     font-size: 1rem;
     margin-bottom: 2rem;
     text-align: center;
-    text-shadow: 2px 2px #F1605A;
+    text-shadow: 2px 2px #D941B0;
 }
 
 .description {
-    color: #FFAF50;
+    color: #FFFFFF;
     font-family: monospace;
     font-size: 1.15rem;
     margin-bottom: 3rem;
@@ -68,10 +70,10 @@ div.joinUS {
 }
 
 .btn {
-    background: #FFAF50;
+    background: #D941B0;
     border: none;
-    box-shadow: inset -10px -10px 0px #F1605A;
-    color: #122432;
+    box-shadow: inset -10px -10px 0px #6B54BF;
+    color: #FFFFFF;
     font-size: 0.9rem;
     margin-top: 0.5rem;
     margin-bottom: 3rem;
@@ -100,7 +102,7 @@ div.joinUS {
 }
 
 .joinUS__label {
-    color: #FFAF50;
+    color: #FFFFFF;
     font-family: monospace;
     font-size: 1rem;
 }
