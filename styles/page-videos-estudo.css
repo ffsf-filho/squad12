@@ -49,7 +49,7 @@ body {
   font-size: 1rem;
   color: #FFFFFF;
   text-align: left;
-  text-shadow: 2px 2px #ff120a;
+  text-shadow: 2px 2px #00a6ff;
 }
 
 
@@ -59,7 +59,7 @@ body {
   background-color:transparent;
   color: #FFFFFF;
   text-align: left;
-  text-shadow: 2px 2px #ff120a;
+  text-shadow: 2px 2px #00a6ff;
 }
 
 /*dropdown itens*/
@@ -67,7 +67,7 @@ body {
   font-size: 1rem;
   color: #122432;
   text-align: left;
-  text-shadow: 1px 1px #ff120a;
+  text-shadow: 1px 1px #00a6ff;
 }
 
 /*Gatinha do github*/
@@ -94,7 +94,7 @@ a, #github-icon {
 
 .page-subtitle {
   color: #FFFFFF;
-  text-shadow: 2px 2px 0 #ff120a;
+  text-shadow: 2px 2px 0 #00a6ff;
   font-size: 2rem;
   margin: 1rem auto 2rem auto;
   text-align: center;
@@ -116,9 +116,9 @@ a, #github-icon {
 
 .addFilme__container___button {
   display: inline;
-  background: #e9a6ff;
+  background: #bae7ff;
   border: none;
-  box-shadow: inset -6px -6px 0px #ff120a;
+  box-shadow: inset -6px -6px 0px #00a6ff;
   color: #122432;
   font-size: 0.9rem;
   margin: 1rem auto;
@@ -134,9 +134,9 @@ a, #github-icon {
 
 /* inicio estilos no js */
 #btnDeletaVideo {
-  background: #e9a6ff;
+  background: #bae7ff;
   border: none;
-  box-shadow: inset -6px -6px 0px #ff120a;
+  box-shadow: inset -6px -6px 0px #00a6ff;
   color: #122432;
   font-size: 0.9rem;
   margin: 2rem 0;
@@ -156,7 +156,7 @@ a, #github-icon {
   background-color:#FFFFFF;
   border:1px;
   border-style:double;
-  box-shadow: inset -6px - 6px 0 #ff120a;
+  box-shadow: inset -6px - 6px 0 #00a6ff;
 }
 
 .modal {
@@ -174,7 +174,7 @@ a, #github-icon {
 
 .modalBox {
   background-color: #FFFFFF;
-  border: 3px solid #ff120a;
+  border: 3px solid #00a6ff;
   box-shadow: 0.5rem 0.5rem 0 #041420;
   padding: 1rem;
   max-width: 500px;
@@ -210,7 +210,7 @@ a, #github-icon {
 
 .modalBox__botao {
   border: none;
-  box-shadow: inset -6px -6px 0px #ff120a;
+  box-shadow: inset -6px -6px 0px #00a6ff;
   color: #122432;
   margin-right: 2rem;
   padding: 1rem;
@@ -221,9 +221,9 @@ a, #github-icon {
 }
 
 .modalBox__botaoDeleta {
-  background-color: #e9a6ff;
+  background-color: #bae7ff;
   border: none;
-  box-shadow: inset -6px -6px 0px #ff120a;
+  box-shadow: inset -6px -6px 0px #00a6ff;
   color: #122432;
   padding: 1rem;
 }
