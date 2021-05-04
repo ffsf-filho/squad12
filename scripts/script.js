@@ -42,10 +42,12 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
     let filmeUrl = jsonBody[indice].url
     var filmeId = jsonBody[indice].Id
     var filmeNome = jsonBody[indice].Nome
-    console.log(filmeUrl)
+    var filmeIdUsuario = jsonBody[indice].IdUsuario
+
     filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
     filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
   
+    if(filmeIdUsuario == id){
 var campoDataList = document.querySelector("#historico")
 campoDataList.innerHTML = campoDataList.innerHTML + `<option value="${filmeNome}" ></option>`
 
@@ -54,7 +56,7 @@ campoDataList.innerHTML = campoDataList.innerHTML + `<option value="${filmeNome}
     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
     </iframe><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
 
-    listarFilmesNaTela(resultado)})})
+    listarFilmesNaTela(resultado)}})})
      
      
     
