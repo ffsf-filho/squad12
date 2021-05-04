@@ -34,19 +34,19 @@ body {
   width: 720px;
 }
 
+.btn-group.dropright {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
 .container {
   text-align: center;
   margin: 3rem 0;
 }
 
-/* .btn-group.dropright {
-  background-color: #D941B0;
-} */
-
 .btn.btn-secondary.dropdown-toggle {
   background-color: #1B1821;
-  /* border: 0.2rem solid #6B54BF; */
-  
 }
 
 .dropdown-menu {
@@ -54,8 +54,6 @@ body {
   margin-left: 2px;
   background-color: #FFFFFF;
   color: #1B1821;
-  /* border: 0.2rem solid #6B54BF; */
-  /* text-shadow: 2px 2px #D941B0; */
 }
 
 .userStatus__text {
@@ -82,7 +80,6 @@ body {
   background-size: cover;
   height: 80px;
   width: 80px;
-  /*transform: translate(0, -5px);*/
 } 
 
 /*Gatinha do github*/

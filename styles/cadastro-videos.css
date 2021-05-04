@@ -7,7 +7,7 @@ html {
   background-repeat: repeat-x;
   background-size: contain;
   background-color: #1B1821; /*fallback*/
-   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;
   display: flex;
   justify-content: center;
 }
@@ -34,14 +34,15 @@ body {
   width: 720px;
 }
 
-/* .btn-group.dropright {
-  background-color: #D941B0;
-} */
+/*dropdown div*/
+.btn-group.dropright {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
 
 .btn.btn-secondary.dropdown-toggle {
   background-color: #1B1821;
-  /* border: 0.2rem solid #6B54BF; */
-  
 }
 
 .dropdown-menu {
@@ -49,8 +50,6 @@ body {
   margin-left: 2px;
   background-color: #FFFFFF;
   color: #1B1821;
-  /* border: 0.2rem solid #6B54BF; */
-  /* text-shadow: 2px 2px #D941B0; */
 }
 
 .userStatus__text {
@@ -78,7 +77,6 @@ body {
   background-size: cover;
   height: 80px;
   width: 80px;
-  /*transform: translate(0, -5px);*/
 } 
 
 .container {
@@ -89,7 +87,7 @@ body {
 /*Gatinha do github*/
 .github{
   position: absolute;
-  margin:0 0 0 0;
+  margin: 0;
   right: 0;
   top: 0;
 }
@@ -115,7 +113,7 @@ h1 {
 }
 
 .form-wrapper {
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .form-wrapper input {
@@ -136,14 +134,6 @@ h1 {
   display: block;
   text-align: left;
   text-shadow: 1px 1px 0 #ff120a;
-}
-
-option {
-  padding: 0.5rem !important;
-}
-
-option:hover {
-  background-color: #e9a6ff !important;
 }
 
 .form-wrapper button {
