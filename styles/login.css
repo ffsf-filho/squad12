@@ -35,12 +35,12 @@ h1 {
     text-shadow: 2px 2px #D941B0;
 }
 
-
+/*Para o before ser absolute, o elemento pai (h1) tem que ser relative*/
 h1::before {
     background: #D941B0;
     border-radius: 8px;
     content:'';
-    position: absolute; /*para o before ser absolute, o elemento pai (h1) tem que ser relative*/
+    position: absolute; 
     bottom: 3px;
     left: 0;
     height: 4px;
@@ -85,6 +85,10 @@ section {
     color: #1a1b1b86;
 }
 
+.sigin input:focus {
+    background-color: #f19cdb;
+}
+
 .avatar_text {
     margin: 1rem;
 }
@@ -101,10 +105,6 @@ section {
     padding: 0.4rem;
     transition: all 0.3s ease;
 }
-/* .btn#loing {
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
-} */
 
 .btn:hover, img, #github-icon {
     letter-spacing: 0.5px;
@@ -115,7 +115,8 @@ section {
     transform: translate(10px, 10px);
 }
 
-#messageError { /*mensagem de senha ou usuário incorreta*/
+/*Mensagem de senha ou usuário incorreta*/
+#messageError { 
     color: rgb(255 160 160);
     display: none;
     font-family: monospace;
