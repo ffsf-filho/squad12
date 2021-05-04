@@ -44,7 +44,7 @@ body {
   font-size: 1rem;
   color: #ffffff;
   text-align: left;
-  text-shadow: 2px 2px #ff120a;
+  text-shadow: 2px 2px #00a6ff;
 }
 
 /*dropdown botão*/
@@ -53,7 +53,7 @@ body {
   background-color: transparent;
   color: #FFFFFF;
   text-align: left;
-  text-shadow: 2px 2px #ff120a;
+  text-shadow: 2px 2px #00a6ff;
 }
 
 /*dropdown itens*/
@@ -61,11 +61,11 @@ body {
   font-size: 1rem;
   color: #122432;
   text-align: left;
-  text-shadow: 1px 1px #ff120a;
+  text-shadow: 1px 1px #00a6ff;
 }
 
 .dropdown-item:hover {
-  background-color: #e9a6ff;
+  background-color: #bae7ff;
 }
 
 .container {
@@ -87,7 +87,7 @@ a, #github-icon {
 
 h1 {
   color: #FFFFFF;
-  text-shadow: 2px 2px 0 #ff120a;
+  text-shadow: 2px 2px 0 #00a6ff;
   font-size: 2rem;
   margin: 1rem auto 2rem auto;
   text-align: center;
@@ -95,7 +95,7 @@ h1 {
 
 .page-subtitle {
   color: #ffffff;
-  text-shadow: 2px 2px 0 #ff120a;
+  text-shadow: 2px 2px 0 #00a6ff;
   font-size: 1.25rem;
   margin: 3rem auto 3rem auto;
   text-align: center;
@@ -122,7 +122,7 @@ h1 {
   color: #ffffff;
   display: block;
   text-align: left;
-  text-shadow: 1px 1px 0 #ff120a;
+  text-shadow: 1px 1px 0 #00a6ff;
 }
 
 option {
@@ -130,15 +130,15 @@ option {
 }
 
 option:hover {
-  background-color: #e9a6ff !important;
+  background-color: #bae7ff !important;
 }
 
 .form-wrapper button {
   display: inline;
-  background: #e9a6ff;
+  background: #bae7ff;
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
   border: none;
-  box-shadow: inset -6px -6px 0px #ff120a;
+  box-shadow: inset -6px -6px 0px #00a6ff;
   color: #122432;
   font-size: 0.9rem;
   margin: 1rem auto;
@@ -173,7 +173,7 @@ option:hover {
 .modalBox {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 3px solid #ff120a;
+  border: 3px solid #00a6ff;
   box-shadow: 0.5rem 0.5rem 0 #041420;
   padding: 1rem;
   width: 60%;
@@ -208,7 +208,7 @@ option:hover {
 
 .modalBox__botao {
   border: none;
-  box-shadow: inset -6px -6px 0px #ff120a;
+  box-shadow: inset -6px -6px 0px #00a6ff;
   box-shadow: 2px 2px #041420;
   color: #122432;
   margin-right: 2rem;
@@ -216,9 +216,9 @@ option:hover {
 }
 
 .modalBox__botaoDeleta {
-  background-color: #e9a6ff;
+  background-color: #bae7ff;
   border: none;
-  box-shadow: inset -6px -6px 0px #ff120a;
+  box-shadow: inset -6px -6px 0px #00a6ff;
   box-shadow: 2px 2px #041420;
   color: #122432;
   padding: 1rem;
