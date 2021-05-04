@@ -37,7 +37,8 @@
             <h1>LOGIN</h1>
             <div class="sigin">
                 <label for="userAdress" class="user__sigin">Usuário:</label>
-                <input type="email" name="userAdress" id="userAdress" placeholder="Digite seu usuário">
+                <!-- <input type="text" name="userAdress" id="userAdress" onblur="validaCampo(this.value, 'texto certo')" placeholder="Digite sua senha"> -->
+                <input type="text" name="userAdress" id="userAdress" placeholder="Digite sua senha">
             </div>
             <div class="sigin">
                 <label for="userPass" class="user__sigin">Senha:</label>
@@ -46,10 +47,11 @@
             <span id="messageError">
                 Verifique se há erros com o nome de usuário ou senha
             </span>
-            <button class="btn" id="login" onClick="login()">ENTRAR</button>
+            <button class="btn" id="login" onclick="login()">ENTRAR</button>
             <div class="joinUS">
                 <label for="register" class="joinUS__label">Criar conta</label>
-                <button class="btn" id="register" onClick="goToRegister()">Cadastrar</button>
+                <!-- <button class="btn" id="register" onClick="goToRegister()">Cadastrar</button> -->
+                <input type="button" class="btn" id="register" onClick="goToRegister()" value="Cadastrar">
             </div>
         </section>
     </main>
