@@ -120,23 +120,24 @@ function videoEstudo() {
         }
 
           jsonBody.forEach(function(valorAtual, indice) {
+
+
             const valorAtualNome = valorAtual.Nome
             let resultadoPesquisa;
            
             if(removerAcentosEspaco(valorAtualNome.toUpperCase()).includes(removerAcentosEspaco(filmePesquisado.toUpperCase()))){
           
-           console.log(jsonBody[indice].url)
-          
+          var filmeIdUsuario = jsonBody[indice].IdUsuario                      
           var filme = jsonBody[indice].url
           filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
           filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
           filmeId = jsonBody[indice].Id
-              
+          if(filmeIdUsuario == id){
           resultadoPesquisa = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
           <div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
           listarFilmesNaTela(resultadoPesquisa);
           
-        } }
+        } }}
         )})
 }
 
