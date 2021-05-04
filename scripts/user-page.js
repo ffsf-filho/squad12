@@ -35,7 +35,7 @@ function timeToPlay () {
 
 //inclui o Nick do usuário
 let nickName = document.getElementById("nick")
-nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" >Nick: ${usuario}</p>`
+nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
 
 //troca a imagem do avatar
 if(personagem != ""){
