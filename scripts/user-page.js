@@ -19,7 +19,7 @@ else {
     }
 }
 
-// Remove o item do localstorage quando o usuário faz log-out
+// Remove o item do localstorage quando o usuário faz log-out e volta para página inicial
 function sair() { 
     localStorage.removeItem("@camaraRoll-Users");
     location.href="index.html"

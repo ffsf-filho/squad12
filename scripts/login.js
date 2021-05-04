@@ -52,7 +52,6 @@ function loginCadastro(){
     let personagem = ""
     let wrongData = document.getElementById('messageError')
     
-
     if(userFullName.value != "" && userName.value != "" && userPassWord.value != ""){
         avatarRadio.forEach(function(valor){
             if(valor.checked){
@@ -108,6 +107,7 @@ function loginCadastro(){
 //Faz a gravação do usuário no localstorage
 function postUsers(nomeUsuario, idUsuario, nomeAvatar){
     let personAvatar = ""
+    
     if(nomeAvatar != null){
         personAvatar = nomeAvatar
     }
