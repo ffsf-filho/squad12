@@ -15,34 +15,41 @@ body {
   height: 100vh;
 }
 
-.btn-group.dropright {
+/* .btn-group.dropright {
   background-color: #D941B0;
-}
+} */
 
 .btn.btn-secondary.dropdown-toggle {
-  background-color: #D941B0;
-  border: 0.2rem solid #6B54BF;
+  background-color: #1B1821;
+  /* border: 0.2rem solid #6B54BF; */
+  
 }
 
 .dropdown-menu {
   padding: 1px;
   margin-left: 2px;
-  background-color: #D941B0;
-  color: #FFFFFF;
-  border: 0.2rem solid #6B54BF;
+  background-color: #FFFFFF;
+  color: #1B1821;
+  /* border: 0.2rem solid #6B54BF; */
   /* text-shadow: 2px 2px #D941B0; */
+}
+
+.userStatus__text {
+  padding: 2px;
+  color: #1B1821;
+  text-shadow: 1px 1px #d34dafd0;
 }
 
 .userStatus__text___sair {
   padding: 2px;
-  color: #FFFFFF;
-  text-shadow: 2px 2px #D941B0;
+  color: #1B1821;
+  text-shadow: 1px 1px #c468ab;
 }
 
 .links_drop_usuario {
   padding: 2px;
-  color: #FFFFFF;
-  text-shadow: 2px 2px #D941B0;
+  color: #1B1821;
+  text-shadow: 1px 1px #c468ab;
 }
 
 
@@ -91,14 +98,14 @@ main {
   border-left: 0.2rem solid #6B54BF;
   border-right: 0.2rem solid #6B54BF;
   height: 100vh;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 720px;
 }
 
 h1 {
   color: #FFFFFF;
   line-height: 3rem;
-  margin: 5rem;
+  margin: 4rem;
   position: relative;
   text-align: center;
   text-shadow: 2px 2px #D941B0;
