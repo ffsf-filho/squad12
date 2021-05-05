@@ -5,6 +5,9 @@ html, a, img, svg {
 body {
     background-image: url(../images/sunset-vaporwave.gif);
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    background-size: contain;
     background-color: #1B1821;
     font-family: 'Press Start 2P', monospace;
     display: flex;
@@ -18,7 +21,8 @@ main {
     box-shadow: 0.5rem 0.5rem 0 #1B1821;
     border-left: 0.2rem solid #6B54BF;
     border-right: 0.2rem solid #6B54BF;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 100%;
     padding:1rem 2rem 2rem 2rem;
     width: 720px;
 }
@@ -49,8 +53,9 @@ section {
     align-items: center;
 }
 .imgLogoCamararoll {
-    width: 20rem;
-    height: 10rem;
+    margin-bottom: 1.5rem;
+    height: 6rem;
+    width: 12rem;
 }
 
 .sigin {
@@ -82,6 +87,10 @@ section {
 
 .sigin input:focus {
     background-color: #f19cdb;
+}
+
+.avatar_text {
+    margin: 1rem;
 }
 
 .btn {
@@ -158,4 +167,5 @@ div.joinUS {
     color: #FFFFFF;
     font-family: monospace;
     font-size: 1rem;
+    margin-top: 2rem;
 }
