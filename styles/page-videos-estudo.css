@@ -40,11 +40,11 @@ body {
   left: 1.5rem;
 }
 
-.container {
+/* .container {
   text-align: center;
   margin: 3rem 0;
 }
-
+ */
 .btn.btn-secondary.dropdown-toggle {
   background-color: #1B1821;
 }
@@ -115,13 +115,18 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   color: #FFFFFF;
   text-shadow: 2px 2px 0 #00a6ff;
   font-size: 2rem;
-  margin: 1rem auto 2rem auto;
+  margin-top: 80px;
+ /*  margin: 1rem auto 2rem auto; */
   text-align: center;
 }
 
 .pesquisaFilme_label {
   color: #ffffff;
-  margin: 0;
+  text-shadow: 2px 2px 0 #00a6ff;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: 3rem auto 3rem auto;
+  text-align: center;
 }
 
 .listaFilmes {

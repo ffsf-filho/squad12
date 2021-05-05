@@ -96,18 +96,19 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
 
-h1 {
+.page-subtitle {
   color: #FFFFFF;
   text-shadow: 2px 2px 0 #00a6ff;
   font-size: 2rem;
-  margin-top: 150px;
+  margin-top: 80px;
   text-align: center;
 }
 
-.page-subtitle {
+.addFilme_label {
   color: #ffffff;
   text-shadow: 2px 2px 0 #00a6ff;
   font-size: 1.25rem;
+  line-height: 2rem;
   margin: 3rem auto 3rem auto;
   text-align: center;
 }
@@ -150,13 +151,13 @@ h1 {
   padding: 0.4rem 1rem;
 }
 
-#videoError {
+/* #videoError {
   color: rgb(255 160 160);
   display: none;
   font-family: monospace;
   font-weight: bold;
   font-size: 1rem;
-}
+} */
 
 
 /* inicio estilos no js */
