@@ -131,8 +131,8 @@ function adicionarVideoEstudo(){
     "IdUsuario": id,
     "Pagina": "estudo",
   }
-
-  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
+  if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
+    fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
     method: "POST", 
     headers:{
       "Content-type": "application/json"  
@@ -140,9 +140,12 @@ function adicionarVideoEstudo(){
     body: JSON.stringify(dadosVideoEstudo),
   })
   .then(response => {if (response.ok) abreModalInserirNovo()})
+  }
+  else {abreModalFalha()
+  }
 };
 
-/*Modal de inserção vídeos*/
+/*Modal de inserção vídeos bem sucedida*/
 function abreModalInserirNovo(){
   //cria o modal
   const getModal = 
@@ -162,6 +165,31 @@ function abreModalInserirNovo(){
   modalHtml.innerHTML = modalHtml.innerHTML + getModal
   modalHtml.addEventListener("click", function(evento) {
     if (evento.target.id == "modalInserirNovo" || evento.target.className == "modalBox__botao") {
+      modalHtml.innerHTML = ""
+    }
+  })
+}
+
+/*Modal de falha na inserção de vídeos*/
+function abreModalFalha(){
+  //cria o modal
+  const getModal = 
+  `<div class="modal" id="modalFalha">
+    <div class="modalBox failure" id="modalBoxIdFalha">
+      <h5 class="modalBox__titulo">Algo deu errado ... </h5>
+      <p class="modalBox__descricao">Deseja tentar novamente?</p>
+      <button type="button" class="modalBox__botao failure" onClick="videoEstudo()">Não</button>
+      <button type="button" class="modalBox__botaoDeleta failure" onClick="criarVideoEstudo()">Sim</button>
+    </div>
+  </div>`
+  
+  //pega a div do modalInserir no html
+  const modalHtml = document.getElementById("modalHtml")
+  
+  //insere e tira do html
+  modalHtml.innerHTML = modalHtml.innerHTML + getModal
+  modalHtml.addEventListener("click", function(evento) {
+    if (evento.target.id == "modalFalha" || evento.target.className == "modalBox__botao") {
       modalHtml.innerHTML = ""
     }
   })
