@@ -19,37 +19,32 @@ else {
     }
 }
 
-<<<<<<< HEAD
-// Remove o item do localstorage quando o usuário faz log-out e volta para página inicial
-=======
 /*modal para sair/deslogar */
 function abreModalSair(){
-    //cria o modal
-    const getModal = 
-    `<div class="modal" id="modalSair">
-      <div class="modalBox" id="modalBoxIdSair">
-        <h5 class="modalBox__titulo">Saindo...</h5>
-        <p class="modalBox__descricao">Tem certeza que deseja ir embora?</p>
-        <button type="button" class="modalBox__botao">Não</button>
-        <button type="button" class="modalBox__botaoSair" onClick="sair()">Sair</button>
-      </div>
-    </div>`
+  //cria o modal
+  const getModal = 
+  `<div class="modal" id="modalSair">
+    <div class="modalBox" id="modalBoxIdSair">
+      <h5 class="modalBox__titulo">Saindo...</h5>
+      <p class="modalBox__descricao">Tem certeza que deseja ir embora?</p>
+      <button type="button" class="modalBox__botao">Não</button>
+      <button type="button" class="modalBox__botaoSair" onClick="sair()">Sair</button>
+    </div>
+  </div>`
     
-    //pega a div do modalSair no html
-    const modalHtml = document.getElementById("modalHtml")
+  //pega a div do modalSair no html
+  const modalHtml = document.getElementById("modalHtml")
     
-    //insere e tira do html
-    modalHtml.innerHTML = modalHtml.innerHTML + getModal
-    modalHtml.addEventListener("click", function(evento) {
-      if (evento.target.id == "modalSair" || evento.target.className == "modalBox__botao") {
-        modalHtml.innerHTML = ""
-      }
-    })
-  }
+  //insere e tira do html
+  modalHtml.innerHTML = modalHtml.innerHTML + getModal
+  modalHtml.addEventListener("click", function(evento) {
+    if (evento.target.id == "modalSair" || evento.target.className == "modalBox__botao") {
+      modalHtml.innerHTML = ""
+    }
+  })
+}
 
-
-
->>>>>>> b5ffa0f7d259b851ed10228179244a7dee5b7597
+// Remove o item do localstorage quando o usuário faz log-out e volta para página inicial
 function sair() { 
     localStorage.removeItem("@camaraRoll-Users");
     location.href="index.html"
