@@ -165,6 +165,7 @@ h1 {
 
 .modalBox__descricao {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .modalBox__descricao::after {
