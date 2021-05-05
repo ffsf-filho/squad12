@@ -149,6 +149,7 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   min-width: 10rem;
   min-height: 3rem;
   padding: 0.4rem 1rem;
+  transition: all 0.3s ease;
 }
 
 /* #videoError {
@@ -215,6 +216,7 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   color: #122432;
   margin-right: 2rem;
   padding: 1rem;
+  transition: all 0.3s ease;
 }
 
 .modalBox__botao:hover {
@@ -227,6 +229,7 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   box-shadow: inset -6px -6px 0px #ff120a;
   color: #122432;
   padding: 1rem;
+  transition: all 0.3s ease;
 }
 
 .modalBox__botaoDeleta:hover {

@@ -3,10 +3,10 @@
         width: 410px;
     }
 
-    h1 {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        margin: 3rem 0;
+    .page-subtitle {
+        font-size: 1.25rem;
+        line-height: 2rem;
+        margin-top: 150px;
     }
 }
 

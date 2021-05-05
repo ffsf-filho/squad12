@@ -83,10 +83,12 @@ body {
   width: 80px;
 } 
 
-h1 {
+.page-subtitle {
   color: #FFFFFF;
+  font-size: 2rem;
+  margin-top: 80px;
   line-height: 3rem;
-  margin: 4rem;
+  margin-bottom: 4rem;
   position: relative;
   text-align: center;
   text-shadow: 2px 2px #D941B0;
@@ -103,7 +105,7 @@ h1 {
   margin: 2rem 0;
   background: #D941B0;
   border: none;
-  box-shadow: inset -10px -10px 0px #6B54BF;
+  box-shadow: inset -6px -6px 0px #6B54BF;
   color: #FFFFFF;
   font-size: 0.9rem;
   margin-top: 2rem;
