@@ -92,8 +92,7 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
     })
   }
 )
-     
-         
+
 function abreModal(filmeId){
   //Cria o modal
   const getModal = 

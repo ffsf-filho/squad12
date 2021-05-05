@@ -48,6 +48,9 @@ git clone  https://github.com/ffsf-filho/squad12
     <img height="50" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="JavaScript">
   </code>
   <code>
+    <img height="50" src="https://icon-library.com/images/jquery-icon-png/jquery-icon-png-18.jpg" alt="JQuery">
+  </code>
+  <code>
     <img height="50" src="https://img.pngio.com/filebootstrap-logosvg-wikimedia-commons-bootstrap-png-480_480.png" alt="Bootstrap">
     <imge>
   </code>
@@ -69,10 +72,12 @@ OR
 
 - [x] Homepage
 - [x] Login
-- [x] Cadastro Login
+- [x] Cadastro login
 - [x] Endpoint of outsystem Rest API
-- [x] Tela de Features de Estudo
-- [x] Tela de Features de Lazer  
+- [x] Tela de vídeo para estudo
+- [x] Tela de cadastro de vídeos para estudo, por catégoria
+- [x] Tela de vídeo para lazer
+- [x] Tela de cadastro de vídeos para laser, por catégoria
 
 ### Autores
 ---
