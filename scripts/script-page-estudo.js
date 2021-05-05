@@ -133,13 +133,13 @@ function adicionarVideoEstudo(){
   }
   if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
     fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
-    method: "POST", 
-    headers:{
-      "Content-type": "application/json"  
-    },
-    body: JSON.stringify(dadosVideoEstudo),
-  })
-  .then(response => {if (response.ok) abreModalInserirNovo()})
+      method: "POST", 
+      headers:{
+        "Content-type": "application/json"  
+      },
+      body: JSON.stringify(dadosVideoEstudo),
+    })
+    .then(response => {if (response.ok) abreModalInserirNovo()})
   }
   else {abreModalFalha()
   }
