@@ -20,7 +20,6 @@
 @media screen and (max-width: 768px) {
     main {
         width: 410px;
-        overflow: hidden;
     }
 
     h1 {
