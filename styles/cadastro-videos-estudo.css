@@ -46,6 +46,10 @@ body {
   background-color: #1B1821;
 }
 
+.btn:active {
+  transform: translate(10px, 10px);
+}
+
 .dropdown-menu {
   padding: 1px;
   margin-left: 2px;
@@ -78,11 +82,6 @@ body {
   height: 80px;
   width: 80px;
 } 
-
-/* .container {
-  text-align: center;
-} */
-
 
 /*Gatinha do github*/
 .github{
@@ -149,6 +148,11 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   min-width: 10rem;
   min-height: 3rem;
   padding: 0.4rem 1rem;
+  transition: all 0.3s ease;
+}
+
+button:active {
+  transform: translate(10px, 10px);
 }
 
 /* inicio estilos no js */
@@ -163,6 +167,10 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   min-height: 3rem;
   padding: 0 1rem;
   transition: all 0.3s ease;
+}
+
+#btnDeletaVideo:active {
+  transform: translate(10px, 10px);
 }
 
 #btnDeletaVideo:hover {
@@ -241,6 +249,7 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   color: #122432;
   margin-right: 2rem;
   padding: 1rem;
+  transition: all 0.3s ease;
 }
 
 .modalBox__botao.sucess {
@@ -249,6 +258,10 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
 
 .modalBox__botao.failure {
   box-shadow: inset -6px -6px 0px rgb(253, 2, 2);
+}
+
+.modalBox__botao:active {
+  transform: translate(10px, 10px);
 }
 
 .modalBox__botao:hover {
@@ -261,6 +274,7 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   box-shadow: inset -6px -6px 0px #00a6ff;
   color: #122432;
   padding: 1rem;
+  transition: all 0.3s ease;
 }
 
 .modalBox__botaoDeleta.sucess {
@@ -271,6 +285,10 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
 .modalBox__botaoDeleta.failure {
   background-color: rgb(253, 189, 189);
   box-shadow: inset -6px -6px 0px rgb(253, 2, 2);
+}
+
+.modalBox__botaoDeleta:active {
+  transform: translate(10px, 10px);
 }
 
 .modalBox__botaoDeleta:hover {
