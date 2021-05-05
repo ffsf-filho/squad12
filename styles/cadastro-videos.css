@@ -34,34 +34,18 @@ body {
   width: 720px;
 }
 
-<<<<<<< HEAD
-/*Dropdown div*/
-.dropdown {
-=======
 /*dropdown div*/
 .btn-group.dropright {
->>>>>>> b5ffa0f7d259b851ed10228179244a7dee5b7597
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
 }
 
-<<<<<<< HEAD
 /*Dropdown botão*/
-=======
->>>>>>> b5ffa0f7d259b851ed10228179244a7dee5b7597
 .btn.btn-secondary.dropdown-toggle {
   background-color: #1B1821;
 }
 
-<<<<<<< HEAD
-/*Dropdown itens*/
-.dropdown-item {
-  font-size: 1rem;
-  color: #122432;
-  text-align: left;
-  text-shadow: 2px 2px #FFAF50;
-=======
 .dropdown-menu {
   padding: 1px;
   margin-left: 2px;
@@ -85,7 +69,6 @@ body {
   padding: 2px;
   color: #1B1821;
   text-shadow: 1px 1px #c468ab;
->>>>>>> b5ffa0f7d259b851ed10228179244a7dee5b7597
 }
 
 
@@ -246,12 +229,8 @@ h1 {
   color: #122432;
   padding: 1rem;
 }
-<<<<<<< HEAD
-/* Fim dos estilos no js */
-=======
 
 .modalBox__botaoDeleta:hover {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
-/* fim dos estilos no js */
->>>>>>> b5ffa0f7d259b851ed10228179244a7dee5b7597
+/* Fim dos estilos no js */
