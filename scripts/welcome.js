@@ -1,25 +1,25 @@
-const camaraRoll = localStorage.getItem("@camaraRoll-Users");// Recupera os dados armazenados
+const camaraRoll = localStorage.getItem("@camaraRoll-Users");// Recupera os dados armazenados no localstorage
 let objCamaraRoll = JSON.parse(camaraRoll); // Converte string para objeto
 
+//Se existir o objeto e ele não estiver vazio, redirecionamos para a página de usuário 
 if(objCamaraRoll!= null){
-    //Se existir o objeto e ele não estiver vazio redirecionamos para a página de usuário 
     location.href="user-page.html" 
 }
 
+//Redireciona para a página de cadastro
 const goToRegister = () => {
     let register = document.getElementById('register');
 
     if (register.onclick) {
-        //vai levar para página de cadastro de login
         location.href = "login-cadastro.html"
     }
 }
 
+//Redireciona para a página de login
 const goToLogin = () => {
     let login = document.getElementById('login');
 
     if (login.onclick) {
-        //vai levar para página de login
         location.href = "login.html"
     }
 }
