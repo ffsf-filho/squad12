@@ -19,10 +19,16 @@
 
     .form-wrapper input {
         width: 100%;
+        margin-bottom: 0;
+    }
+    .localizar-flex{
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
     }
 
     .form-wrapper select {
-        max-width: 100%;
+        width: 100%;
     }
 
     .cartao {

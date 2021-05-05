@@ -48,25 +48,25 @@
       <!-- Localizar/cadastrar videos -->
       <div class="form-wrapper">
         <h1 class="page-subtitle">Estudos</h1>
-        <div>
-          <h2 class="pesquisaFilme_label">Qual video você está procurando?</h2>
+        <h2 class="pesquisaFilme_label">Qual video você está procurando?</h2>
+        <div class="localizar-flex">
           <input type="search" id="pesquisaFilme" list='historico' placeholder="Localizar vídeo">
           <datalist id="historico"></datalist>
+          <button class="addFilme__container___button" onClick="btnPesquisar()">Localizar</button>
         </div>
 
-        <div>
+        <div class="localizar-flex">
           <select required id="filtroCategoriaEstudo">
             <option value="Sem filtro">Sem filtro</option>
             <option value="Programação">Programação</option>
             <option value="Inglês">Inglês</option>
             <option value="Diversos">diversos</option>
           </select>
-          <div id="FiltrarCategoria">
-            <button id="btnFiltrarCategoria" class="addFilme__container___button" onclick="filtrarCategoria()">Aplicar filtro</button>
-          </div>
+          <button id="btnFiltrarCategoria" class="addFilme__container___button" onclick="filtrarCategoria()">Aplicar</button>
+<!--           <div id="FiltrarCategoria">
+          </div> -->
         </div>
 
-        <button class="addFilme__container___button" onClick="btnPesquisar()">Localizar</button>
         <button class="addFilme__container___button" onClick="criarVideoEstudo()">Adicionar vídeo</button>
       </div>
     <!-- </div> -->
