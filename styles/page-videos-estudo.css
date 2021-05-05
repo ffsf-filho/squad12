@@ -40,11 +40,6 @@ body {
   left: 1.5rem;
 }
 
-/* .container {
-  text-align: center;
-  margin: 3rem 0;
-}
- */
 .btn.btn-secondary.dropdown-toggle {
   background-color: #1B1821;
 }
@@ -153,7 +148,6 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   color: #122432;
   font-size: 0.9rem;
   margin: 1rem auto;
-  /* min-width: 59%; */
   min-width: 30%;
   min-height: 3rem;
   padding: 0.4rem 1rem;

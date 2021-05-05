@@ -152,15 +152,6 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   transition: all 0.3s ease;
 }
 
-/* #videoError {
-  color: rgb(255 160 160);
-  display: none;
-  font-family: monospace;
-  font-weight: bold;
-  font-size: 1rem;
-} */
-
-
 /* inicio estilos no js */
 #btnDeletaVideo {
   background: #bae7ff;

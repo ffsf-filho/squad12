@@ -130,20 +130,68 @@ function adicionarVideoLazer(){
     "IdUsuario": id,
     "Pagina": "lazer",
   }
-    
-  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
-    method: "POST", 
-    headers:{
-      "Content-type": "application/json"
-    },
-    body: JSON.stringify(dadosVideoLazer),
-  })
+  if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){
+    fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
+      method: "POST", 
+      headers:{
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(dadosVideoLazer),
+    })
+    .then(response => {if (response.ok) abreModalInserirNovo()})
+  }  
+  else {abreModalFalha()
+  }
 };
 
-//Mensagem de erro no cadastro de videos
-function exibeAlerta() {
-  const exibeAlerta = document.getElementById("videoError")
-  exibeAlerta.style.display = "inline"
+/*Modal de inserção vídeos bem sucedida*/
+function abreModalInserirNovo(){
+  //cria o modal
+  const getModal = 
+  `<div class="modal" id="modalInserirNovo">
+    <div class="modalBox sucess" id="modalBoxIdInserirNovo">
+      <h5 class="modalBox__titulo">Vídeo Inserido</h5>
+      <p class="modalBox__descricao">Deseja inserir outro vídeo?</p>
+      <button type="button" class="modalBox__botao sucess" onClick="videoLazer()">Não</button>
+      <button type="button" class="modalBox__botaoDeleta sucess" onClick="criarVideoLazer()">Sim</button>
+    </div>
+  </div>`
+  
+  //pega a div do modalInserir no html
+  const modalHtml = document.getElementById("modalHtml")
+  
+  //insere e tira do html
+  modalHtml.innerHTML = modalHtml.innerHTML + getModal
+  modalHtml.addEventListener("click", function(evento) {
+    if (evento.target.id == "modalInserirNovo" || evento.target.className == "modalBox__botao") {
+      modalHtml.innerHTML = ""
+    }
+  })
+}
+
+/*Modal de falha na inserção de vídeos*/
+function abreModalFalha(){
+  //cria o modal
+  const getModal = 
+  `<div class="modal" id="modalFalha">
+    <div class="modalBox failure" id="modalBoxIdFalha">
+      <h5 class="modalBox__titulo">Algo deu errado ... </h5>
+      <p class="modalBox__descricao">Deseja tentar novamente?</p>
+      <button type="button" class="modalBox__botao failure" onClick="videoLazer()">Não</button>
+      <button type="button" class="modalBox__botaoDeleta failure" onClick="criarVideoLazer()">Sim</button>
+    </div>
+  </div>`
+  
+  //pega a div do modalInserir no html
+  const modalHtml = document.getElementById("modalHtml")
+  
+  //insere e tira do html
+  modalHtml.innerHTML = modalHtml.innerHTML + getModal
+  modalHtml.addEventListener("click", function(evento) {
+    if (evento.target.id == "modalFalha" || evento.target.className == "modalBox__botao") {
+      modalHtml.innerHTML = ""
+    }
+  })
 }
 
 //Pesquisar filmes já cadastrados
