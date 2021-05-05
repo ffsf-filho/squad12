@@ -28,6 +28,12 @@
     }
 }
 
+@media screen and (max-width: 596px) {
+    .modalBox {
+        width: 90%;
+    }
+}
+
 @media screen and (max-width: 426px) {
     body {
         padding: 1rem;
