@@ -45,38 +45,6 @@ body {
   margin: 3rem 0;
 }
 
-<<<<<<< HEAD
-/*Dropdown div*/
-.dropdown {
-    position: absolute;
-    display: flex;
-    text-align: left;
-    top: 1rem;
-    left: 1rem;
-    font-size: 1rem;
-    color: #FFAF50;
-    text-align: left;
-    text-shadow: 2px 2px #F1605A;
-}
-
-/*Dropdown botão*/
-.btn.btn-secondary.dropdown-toggle {
-    font-size: 1.5rem;
-    background-color: #404679;
-    color: #FFAF50;
-    text-align: left;
-    text-shadow: 2px 2px #F1605A;
-}
-
-/*Dropdown itens*/
-.dropdown-item {
-    font-size: 1rem;
-    color: #122432;
-    text-align: left;
-    text-shadow: 2px 2px #FFAF50;
-}
-
-=======
 .btn.btn-secondary.dropdown-toggle {
   background-color: #1B1821;
 }
@@ -114,7 +82,6 @@ body {
   width: 80px;
 } 
 
->>>>>>> b5ffa0f7d259b851ed10228179244a7dee5b7597
 /*Gatinha do github*/
 .github{
   position: absolute;
@@ -276,13 +243,4 @@ a, #github-icon {
 .modalBox__botaoDeleta:hover {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
-<<<<<<< HEAD
 /* Fim dos estilos no js */
-=======
-/* fim dos estilos no js */
-
-
-/*estilos do modal para sair*/
-
-
->>>>>>> b5ffa0f7d259b851ed10228179244a7dee5b7597
