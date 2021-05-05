@@ -65,6 +65,19 @@
           <input type="search" id="pesquisaFilme" list='historico' placeholder="Localizar vídeo">
           <datalist id="historico"></datalist>
         </div>
+
+        <div>
+          <select required id="filtroCategoriaEstudo">
+            <option value="Sem filtro">Sem filtro</option>
+            <option value="Programação">Programação</option>
+            <option value="Inglês">Inglês</option>
+            <option value="Diversos">diversos</option>
+          </select>
+          <div id="FiltrarCategoria">
+            <button id="btnFiltrarCategoria" onclick="filtrarCategoria()">Aplicar filtro</button>
+          </div>
+        </div>
+
         <button class="addFilme__container___button" onClick="btnPesquisar()">Localizar</button>
         <button class="addFilme__container___button" onClick="criarVideoEstudo()">Adicionar novo vídeo</button>
       </div>

@@ -99,11 +99,8 @@ function abreModal(filmeId){
   })
 }
 
-//link para página de videos de lazer
 
-// function videoLazer() {
-//   location.href="page-videos-lazer.html"
-// }
+
 
 //mensagem de erro no cadastro de videos
 function exibeAlerta() {
@@ -160,46 +157,11 @@ function videoEstudo() {
 }
 
 
+//link para página de videos de estudo
 
 function criarVideoEstudo(){
   location.href="cadastro-video-estudo.html"
 }
-
-// function criarVideoLazer(){
-//   location.href="cadastro-video-lazer.html"
-// }
-
-
-
-
-
-// function adicionarVideoLazer(){
-
-//   var inputNomeVideoLazer = document.querySelector("#inputNomeVideoLazer")
-
-//   var selectCategoriaVideoLazer = document.querySelector("#selectCategoriaVideoLazer")
-  
-//   var inputUrlVideoLazer = document.querySelector("#inputUrlVideoLazer")
-
-//   console.log(id)
-//   var dadosVideoLazer = {
-//     "Nome": inputNomeVideoLazer.value,
-//     "Categoria": selectCategoriaVideoLazer.value,
-//     "url": inputUrlVideoLazer.value,
-//     "IdUsuario": id,
-//     "Pagina": "lazer",
-//     }
-//   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
-//     method: "POST", 
-//     headers:{
-//       "Content-type": "application/json"
-//     },
-//     body: JSON.stringify(dadosVideoLazer),
-//   }).then(response => {if (response.ok){console.log(response.status)} 
-//   console.log(dadosVideoLazer)
-  
-// })};
-
 
 
 function adicionarVideoEstudo(){
@@ -247,3 +209,68 @@ function btnDeletaVideo(id){
   }).then(response => {if (response.ok){console.log(response.status)}
   setTimeout(document.location.reload(true), 1000)})
 };
+
+
+
+
+function filtrarCategoria(){
+    
+  var resultado;
+  var listaFilmes = document.querySelector('#listaFilmes');
+  listaFilmes.innerHTML = ""
+
+  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos").then(
+  response => {
+    return response.json();
+  }).then(jsonBody => {
+
+    var campoFiltrarCategoria = document.querySelector('#filtroCategoriaEstudo');
+    var filtroAplicado = campoFiltrarCategoria.value;
+
+    if(filtroAplicado == "Sem filtro"){     
+
+          jsonBody.forEach(function(valorAtual, indice) {
+          
+          var filmePagina = jsonBody[indice].Pagina
+          let filmeUrl = jsonBody[indice].url
+          var filmeId = jsonBody[indice].Id
+          var filmeNome = jsonBody[indice].Nome
+          var filmeIdUsuario = jsonBody[indice].IdUsuario
+      
+          filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
+          filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+        
+          if(filmeIdUsuario == id && filmePagina == "estudo"){
+      
+          resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
+          title='YouTube video player' frameborder='0' 
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
+          </iframe><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
+      
+          listarFilmesNaTela(resultado)}})}
+
+    else {
+  
+          jsonBody.forEach(function(valorAtual, indice) {
+
+            const valorAtualCategoria = valorAtual.Categoria
+            let resultadoFiltro;
+          
+            if(valorAtualCategoria.includes(filtroAplicado)){
+          
+              var filmePagina = jsonBody[indice].Pagina
+              var filmeIdUsuario = jsonBody[indice].IdUsuario                      
+              var filme = jsonBody[indice].url
+              filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
+              filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+              filmeId = jsonBody[indice].Id
+              filmeCategoria = jsonBody[indice].Categoria
+
+              if(filmeIdUsuario == id && filmePagina == "estudo"){
+              resultadoFiltro = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+              <div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
+              listarFilmesNaTela(resultadoFiltro);
+          
+            }}}
+        )}})
+ }
