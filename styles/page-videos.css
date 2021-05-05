@@ -44,6 +44,10 @@ body {
   background-color: #1B1821;
 }
 
+.btn:active {
+  transform: translate(10px, 10px);
+}
+
 .dropdown-menu {
   padding: 1px;
   margin-left: 2px;
@@ -69,7 +73,7 @@ body {
   text-shadow: 1px 1px #c468ab;
 }
 
-  .userStatus__img {
+.userStatus__img {
   background-image: url("../images/avatar-pinguim.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -118,7 +122,6 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover{
   text-shadow: 2px 2px 0 #ff120a;
   font-size: 2rem;
   margin-top: 80px;
-  /* margin: 1rem auto 2rem auto; */
   text-align: center;
 }
 
@@ -154,6 +157,10 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover{
   transition: all 0.3s ease;
 }
 
+.addFilme__container___button:active {
+  transform: translate(10px, 10px);
+}
+
 .addFilme__container___button:hover {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
@@ -170,6 +177,10 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover{
   min-height: 3rem;
   padding: 0 1rem;
   transition: all 0.3s ease;
+}
+
+#btnDeletaVideo:active {
+  transform: translate(10px, 10px);
 }
 
 #btnDeletaVideo:hover {
@@ -243,6 +254,10 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover{
   transition: all 0.3s ease;
 }
 
+.modalBox__botao:active {
+  transform: translate(10px, 10px);
+}
+
 .modalBox__botao:hover {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
@@ -254,6 +269,10 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover{
   color: #122432;
   padding: 1rem;
   transition: all 0.3s ease;
+}
+
+.modalBox__botaoDeleta:active {
+  transform: translate(10px, 10px);
 }
 
 .modalBox__botaoDeleta:hover {
