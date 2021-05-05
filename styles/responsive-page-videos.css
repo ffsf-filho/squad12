@@ -11,8 +11,20 @@
         display: block;
     }
 
+    .form-wrapper input {
+        width: 100%;
+    }
+
+    .form-wrapper select {
+        max-width: 100%;
+    }
+
     .cartao {
         margin: 2rem 0;
+    }
+    
+    .form-wrapper button {
+        width: 100%;
     }
 }
 
