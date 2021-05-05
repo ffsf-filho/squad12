@@ -4,10 +4,6 @@ var resultado;
 let personagem = ""
 let imgUrlAvatar ="images/"
 
-//inclui o Nick do usuário
-let nickName = document.getElementById("nick")
-nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
-
 let camaraRoll = localStorage.getItem("@camaraRoll-Users");// Recupera os dados armazenados no localstorage
 camaraRoll = JSON.parse(camaraRoll); // Converte string para objeto
 
@@ -22,6 +18,10 @@ else {
     personagem = camaraRoll[i].personagem
   }
 }
+
+//inclui o Nick do usuário
+let nickName = document.getElementById("nick")
+nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
 
 // Remove o item do localstorage quando o usuário faz log-out e volta para página inicial
 function sair() { 

@@ -37,8 +37,16 @@
     }
 
     .modalBox__botaoDeleta {
-    font-size: 0.75rem;
+        font-size: 0.75rem;
     }
+
+    .form-wrapper input {
+        width: 100%;
+    }
+
+    .form-wrapper select {
+        max-width: 100%;
+    }    
 }
 
 @media screen and (max-width: 320px) {
