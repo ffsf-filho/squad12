@@ -164,7 +164,7 @@ function btnPesquisar(){
       jsonBody.forEach(function(valorAtual, indice) {
         const valorAtualNome = valorAtual.Nome
         let resultadoPesquisa;
-
+           
         if(removerAcentosEspaco(valorAtualNome.toUpperCase()).includes(removerAcentosEspaco(filmePesquisado.toUpperCase()))){
           
           var filmePagina = jsonBody[indice].Pagina

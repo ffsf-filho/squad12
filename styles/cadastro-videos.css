@@ -41,6 +41,7 @@ body {
   left: 1.5rem;
 }
 
+/*Dropdown botão*/
 .btn.btn-secondary.dropdown-toggle {
   background-color: #1B1821;
 }
@@ -159,7 +160,7 @@ h1 {
 }
 
 
-/* inicio estilos no js */
+/* Inicio estilos no js */
 .modal {
   background-color: rgba(0, 0, 0, .5);
   display: flex;
@@ -174,11 +175,11 @@ h1 {
 }
 
 .modalBox {
-  background-color: #ffffff;
-  border-radius: 10px;
+  background-color: #FFFFFF;
   border: 3px solid #ff120a;
   box-shadow: 0.5rem 0.5rem 0 #041420;
   padding: 1rem;
+  max-width: 500px;
   width: 60%;
 }
 
@@ -212,18 +213,24 @@ h1 {
 .modalBox__botao {
   border: none;
   box-shadow: inset -6px -6px 0px #ff120a;
-  box-shadow: 2px 2px #041420;
   color: #122432;
   margin-right: 2rem;
   padding: 1rem;
+}
+
+.modalBox__botao:hover {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
 
 .modalBox__botaoDeleta {
   background-color: #e9a6ff;
   border: none;
   box-shadow: inset -6px -6px 0px #ff120a;
-  box-shadow: 2px 2px #041420;
   color: #122432;
   padding: 1rem;
 }
-/* fim dos estilos no js */
+
+.modalBox__botaoDeleta:hover {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
+}
+/* Fim dos estilos no js */

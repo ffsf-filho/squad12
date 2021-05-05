@@ -13,12 +13,6 @@
   </head>
   
   <body>
-    <!-- Just an image, usando o logo da aplicação -->
-  <!-- <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="images/camararoll-logo.png" width="150" height="150" alt="">
-    </a>
-  </nav> -->
   
     <!-- Default dropright button -->
     <div class="btn-group dropright">
@@ -30,19 +24,14 @@
         <div id="nick" class="userStatus__text"></div>
         <a class="links_drop_usuario" href="page-videos-estudo.html">Estudos</a>
         <a class="links_drop_usuario" href="page-videos-lazer.html">Lazer</a>
-        <a class="userStatus__text___sair" id="sair" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <a class="userStatus__text___sair" id="sair" onclick="abreModalSair()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           <u>Sair</u>
         </a>
       </div>
     </div>
 
-  <!-- <nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1">camaraRoll</span>
-  </nav> -->
-
     <div class="container">
-
-      <!-- gatinha do github -->
+      <!-- Gatinha do github -->
       <div class="github">
         <a href="https://github.com/ffsf-filho/squad12" title="Repositório no GitHub" target="_blank">
           <svg width="80" height="80" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +46,7 @@
         </a>
       </div>
       
-      <!-- localizar/cadastrar videos -->
+      <!-- Localizar/cadastrar videos -->
       <div class="form-wrapper">
         <p class="page-subtitle">Estudos</p>
         <div>
@@ -65,17 +54,30 @@
           <input type="search" id="pesquisaFilme" list='historico' placeholder="Localizar vídeo">
           <datalist id="historico"></datalist>
         </div>
+
+        <div>
+          <select required id="filtroCategoriaEstudo">
+            <option value="Sem filtro">Sem filtro</option>
+            <option value="Programação">Programação</option>
+            <option value="Inglês">Inglês</option>
+            <option value="Diversos">diversos</option>
+          </select>
+          <div id="FiltrarCategoria">
+            <button id="btnFiltrarCategoria" onclick="filtrarCategoria()">Aplicar filtro</button>
+          </div>
+        </div>
+
         <button class="addFilme__container___button" onClick="btnPesquisar()">Localizar</button>
         <button class="addFilme__container___button" onClick="criarVideoEstudo()">Adicionar novo vídeo</button>
       </div>
     </div>
 
 
-    <!-- Divs importantes: lista os videos e adiciona o modal -->
+    <!-- Lista os videos e adiciona o modal -->
     <div id="listaFilmes" class="listaFilmes"></div>
     <div class="modalHtml" id="modalHtml"></div>
 
-    <!-- adiconei os links necessários para o dropdown bootstrap funcionar -->
+    <!-- Links necessários para o dropdown bootstrap funcionar -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
