@@ -139,12 +139,32 @@ function adicionarVideoEstudo(){
     },
     body: JSON.stringify(dadosVideoEstudo),
   })
+  .then(response => {if (response.ok) abreModalInserirNovo()})
 };
 
-//Mensagem de erro no cadastro de videos
-function exibeAlerta() {
-  const exibeAlerta = document.getElementById("videoError")
-  exibeAlerta.style.display = "inline"
+/*Modal de inserção vídeos*/
+function abreModalInserirNovo(){
+  //cria o modal
+  const getModal = 
+  `<div class="modal" id="modalInserirNovo">
+    <div class="modalBox sucess" id="modalBoxIdInserirNovo">
+      <h5 class="modalBox__titulo">Vídeo Inserido</h5>
+      <p class="modalBox__descricao">Deseja inserir outro vídeo?</p>
+      <button type="button" class="modalBox__botao sucess" onClick="videoEstudo()">Não</button>
+      <button type="button" class="modalBox__botaoDeleta sucess" onClick="criarVideoEstudo()">Sim</button>
+    </div>
+  </div>`
+  
+  //pega a div do modalInserir no html
+  const modalHtml = document.getElementById("modalHtml")
+  
+  //insere e tira do html
+  modalHtml.innerHTML = modalHtml.innerHTML + getModal
+  modalHtml.addEventListener("click", function(evento) {
+    if (evento.target.id == "modalInserirNovo" || evento.target.className == "modalBox__botao") {
+      modalHtml.innerHTML = ""
+    }
+  })
 }
 
 //Pesquisar filmes já cadastrados
