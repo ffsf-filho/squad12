@@ -40,11 +40,6 @@ body {
   left: 1.5rem;
 }
 
-/* .container {
-  text-align: center;
-  margin: 3rem 0;
-} */
-
 .btn.btn-secondary.dropdown-toggle {
   background-color: #1B1821;
 }
@@ -102,13 +97,20 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover{
   display: block;
   margin: 1rem auto;
   padding: 10px 15px;
+  width: 70%;
+}
+
+.localizar-flex{
+  display: flex;
+  flex-flow: row nowrap;
   width: 100%;
 }
 
 .form-wrapper select {
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   padding: 10px 15px;
-  width: 100%;
+  width: 70%;
+  height: 3rem;
 }
 
 .page-subtitle {
@@ -146,7 +148,7 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover{
   color: #122432;
   font-size: 0.9rem;
   margin: 1rem auto;
-  min-width: 59%;
+  min-width: 30%;
   min-height: 3rem;
   padding: 0.4rem 1rem;
   transition: all 0.3s ease;
