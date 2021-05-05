@@ -20,20 +20,11 @@ body {
   background-color: #1B1821;
 }
 
-<<<<<<< HEAD
-.userStatus__img {
-  background-image: url("../images/avatar-pinguim.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 80px;
-  width: 80px;
-=======
 .dropdown-menu {
   padding: 1px;
   margin-left: 2px;
   background-color: #FFFFFF;
   color: #1B1821;
->>>>>>> b5ffa0f7d259b851ed10228179244a7dee5b7597
 }
 
 .userStatus__text {
@@ -134,7 +125,7 @@ h1 {
   top: 0;
 }
 
-/* estilo modal */
+/* Estilo modal */
 
 .modal {
   background-color: rgba(0, 0, 0, .5);
@@ -208,4 +199,4 @@ h1 {
 .modalBox__botaoSair:hover {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
-/* fim dos estilos no js */
+/* Fim dos estilos no js */
