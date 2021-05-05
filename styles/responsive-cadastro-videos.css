@@ -6,7 +6,7 @@
 
     .container {
         max-width: 100%;
-     }
+    }
 
     .page-subtitle {
         display: block;
@@ -17,7 +17,7 @@
 
     .form-wrapper input {
         width: 100%;
-      }
+    }
 
     .form-wrapper select {
         max-width: 100%;
@@ -39,5 +39,4 @@
     body {
         width: 100vw;
     }
-   
 }

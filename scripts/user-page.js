@@ -31,7 +31,7 @@ function abreModalSair(){
       <button type="button" class="modalBox__botaoSair" onClick="sair()">Sair</button>
     </div>
   </div>`
-    
+  
   //pega a div do modalSair no html
   const modalHtml = document.getElementById("modalHtml")
     
