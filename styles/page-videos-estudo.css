@@ -146,7 +146,7 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   color: #122432;
   font-size: 0.9rem;
   margin: 1rem auto;
-  min-width: 10rem;
+  min-width: 59%;
   min-height: 3rem;
   padding: 0.4rem 1rem;
   transition: all 0.3s ease;
