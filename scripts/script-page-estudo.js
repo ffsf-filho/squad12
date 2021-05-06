@@ -124,14 +124,27 @@ function adicionarVideoEstudo(){
   var selectCategoriaVideoEstudo = document.querySelector("#selectCategoriaVideoEstudo")
   var inputUrlVideoEstudo = document.querySelector("#inputUrlVideoEstudo")
 
-  var dadosVideoEstudo = {
-    "Nome": inputNomeVideoEstudo.value,
-    "Categoria": selectCategoriaVideoEstudo.value,
-    "url": inputUrlVideoEstudo.value,
-    "IdUsuario": id,
-    "Pagina": "estudo",
-  }
+
+  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+  .then(response => { return response.json()})
+  .then(jsonBody => { 
+
+    jsonBody.forEach(function(valorAtual, indice) {
+      var videoCategoria = jsonBody[indice].Categoria
+      var videoIdUsuario = jsonBody[indice].IdUsuario
+      var categoriaId = jsonBody[indice].Id
+      
+      var dadosVideoEstudo = {
+        "Nome": inputNomeVideoEstudo.value,
+        "url": inputUrlVideoEstudo.value,
+        "IdUsuario": id,
+        "IdCategoria": categoriaId,
+        "Pagina": "estudo",
+      }
+    
   if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
+   if(selectCategoriaVideoEstudo.value == videoCategoria && videoIdUsuario == id){
+   
     fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
       method: "POST", 
       headers:{
@@ -140,10 +153,11 @@ function adicionarVideoEstudo(){
       body: JSON.stringify(dadosVideoEstudo),
     })
     .then(response => {if (response.ok) abreModalInserirNovo()})
+  }}
+  else {
+    abreModalFalha()
   }
-  else {abreModalFalha()
-  }
-};
+})})};
 
 /*Modal de inserção vídeos bem sucedida*/
 function abreModalInserirNovo(){
@@ -266,7 +280,8 @@ function filtrarCategoria(){
           let filmeUrl = jsonBody[indice].url
           var filmeId = jsonBody[indice].Id
           var filmeNome = jsonBody[indice].Nome
-          var filmeIdUsuario = jsonBody[indice].IdUsuario    
+          var filmeIdUsuario = jsonBody[indice].IdUsuario
+          var filmeIdCategoria = jsonBody[indice].IdCategoria
           filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
           filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
         
@@ -280,32 +295,46 @@ function filtrarCategoria(){
         })
       }
       else {
-        jsonBody.forEach(function(valorAtual, indice) {
-          const valorAtualCategoria = valorAtual.Categoria
-          let resultadoFiltro;
-          
-          if(valorAtualCategoria.includes(filtroAplicado)){
-            var filmePagina = jsonBody[indice].Pagina
-            var filmeIdUsuario = jsonBody[indice].IdUsuario
-            var filmeNome = jsonBody[indice].Nome                      
-            var filme = jsonBody[indice].url
-            filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
-            filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
-            filmeId = jsonBody[indice].Id
-            filmeCategoria = jsonBody[indice].Categoria
+    
+        fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+        .then(response => { return response.json()})
+        .then(jsonBodyCategoria => { 
+          jsonBodyCategoria.forEach(function(valorAtual, indice) {
+            var videoCategoria = jsonBodyCategoria[indice].Categoria
+            var videoIdUsuario = jsonBodyCategoria[indice].IdUsuario
+            var categoriaId = jsonBodyCategoria[indice].Id   
 
-            if(filmeIdUsuario == id && filmePagina == "estudo"){
-              resultadoFiltro = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-              <p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
-              listarFilmesNaTela(resultadoFiltro);
-          
-            }
-          }
+
+        if(filtroAplicado == videoCategoria && videoIdUsuario == id){
+
+          jsonBody.forEach(function(valorAtual, indice) {
+            const valorAtualCategoria = valorAtual.IdCategoria
+            let resultadoFiltro;
+            
+            if(valorAtualCategoria == categoriaId){
+              var filmePagina = jsonBody[indice].Pagina
+              var filmeIdUsuario = jsonBody[indice].IdUsuario
+              var filmeNome = jsonBody[indice].Nome                      
+              var filme = jsonBody[indice].url
+              filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
+              filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+              filmeId = jsonBody[indice].Id
+              filmeCategoria = jsonBody[indice].Categoria
+  
+              if(filmeIdUsuario == id && filmePagina == "estudo"){
+                resultadoFiltro = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                <p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
+                listarFilmesNaTela(resultadoFiltro);
+            
+            }       
+            
+          }})
+        }
+               
         })
-      }
-    }
-  )
-}
+      })
+}})}
+
 
 //Redireciona para página de vídeos de estudo
 function videoEstudo() {
@@ -332,3 +361,59 @@ document.addEventListener("keypress", function (event) {
     btn.click()
   }
 })
+
+      
+
+//Adicionar nova categoria na pagina de cadastro
+function adicionarCategoria() {
+  let input = document.getElementById("addOption")
+  let select = document.getElementById("selectCategoriaVideoEstudo")
+
+  let newOption = document.createElement("option")
+  newOption.value = input.value
+  newOption.text = input.value
+
+  select.add(newOption)
+  input.value = ""
+
+  var cadastraCategoria = {
+    "IdUsuario": id,
+    "Categoria": newOption.value,
+  }
+
+  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
+  method: "POST", 
+  headers:{
+    "Content-type": "application/json"  
+  },
+  body: JSON.stringify(cadastraCategoria),
+})}
+    
+
+//Lista a categoria na pagina de cadastro
+fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+.then(response => { return response.json()})
+.then(jsonBody => { 
+  jsonBody.forEach(function(valorAtual, indice) {
+    var videoCategoria = jsonBody[indice].Categoria
+    var videoIdUsuario = jsonBody[indice].IdUsuario
+
+    if(videoIdUsuario == id) {
+      var novaCategoria = document.querySelector("#selectCategoriaVideoEstudo")
+      novaCategoria.innerHTML = novaCategoria.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
+      }
+  })})
+
+//Lista a categoria na pagina de videos
+fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+  .then(response => { return response.json()})
+  .then(jsonBody => { 
+    jsonBody.forEach(function(valorAtual, indice) {
+      var videoCategoria = jsonBody[indice].Categoria
+      var videoIdUsuario = jsonBody[indice].IdUsuario
+
+      if(videoIdUsuario == id) {
+        var categoriaPageVideos = document.querySelector("#filtroCategoriaEstudo")
+        categoriaPageVideos.innerHTML = categoriaPageVideos.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
+      }
+  })})
