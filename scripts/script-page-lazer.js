@@ -123,26 +123,41 @@ function adicionarVideoLazer(){
   var selectCategoriaVideoLazer = document.querySelector("#selectCategoriaVideoLazer")
   var inputUrlVideoLazer = document.querySelector("#inputUrlVideoLazer")
 
-  var dadosVideoLazer = {
-    "Nome": inputNomeVideoLazer.value,
-    "Categoria": selectCategoriaVideoLazer.value,
-    "url": inputUrlVideoLazer.value,
-    "IdUsuario": id,
-    "Pagina": "lazer",
-  }
-  if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){
+
+  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+  .then(response => { return response.json()})
+  .then(jsonBody => { 
+
+    jsonBody.forEach(function(valorAtual, indice) {
+      var videoCategoria = jsonBody[indice].Categoria
+      var videoIdUsuario = jsonBody[indice].IdUsuario
+      var categoriaId = jsonBody[indice].Id
+      
+      var dadosVideoLazer = {
+        "Nome": inputNomeVideoLazer.value,
+        "url": inputUrlVideoLazer.value,
+        "IdUsuario": id,
+        "IdCategoria": categoriaId,
+        "Pagina": "estudo",
+      }
+    
+  if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
+   if(selectCategoriaVideoLazer.value == videoCategoria && videoIdUsuario == id){
+   
     fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
       method: "POST", 
       headers:{
-        "Content-type": "application/json"
+        "Content-type": "application/json"  
       },
       body: JSON.stringify(dadosVideoLazer),
     })
     .then(response => {if (response.ok) abreModalInserirNovo()})
-  }  
-  else {abreModalFalha()
+  }}
+  else {
+    abreModalFalha()
   }
-};
+})})};
+
 
 /*Modal de inserção vídeos bem sucedida*/
 function abreModalInserirNovo(){
