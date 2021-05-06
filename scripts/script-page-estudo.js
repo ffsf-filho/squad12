@@ -324,3 +324,13 @@ document.addEventListener("keypress", function (event) {
       btn.click()
     }
 })
+
+//Adiciona na página de cadastrar vídeos a funcionalidade de quando apertar a tecla "Enter" no teclado aciona o botão adicionar
+document.addEventListener("keypress", function (event) {
+  if (event.key == "Enter"){
+    
+    const btn = document.querySelector("#btnAdicionarVideoEstudo")
+
+    btn.click()
+  }
+})
