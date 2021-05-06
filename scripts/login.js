@@ -137,3 +137,14 @@ const goToRegister = () => {
         location.href = "login-cadastro.html"
     }
 }
+
+
+//Adiciona na página de login a funcionalidade de quando apertar a tecla "Enter" no teclado aciona o botão entrar
+document.addEventListener("keypress", function (event) {
+    if (event.key == "Enter"){
+      
+      const btn = document.querySelector("#login")
+  
+      btn.click()
+    }
+  })
