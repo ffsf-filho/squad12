@@ -279,7 +279,8 @@ function filtrarCategoria(){
           let filmeUrl = jsonBody[indice].url
           var filmeId = jsonBody[indice].Id
           var filmeNome = jsonBody[indice].Nome
-          var filmeIdUsuario = jsonBody[indice].IdUsuario    
+          var filmeIdUsuario = jsonBody[indice].IdUsuario
+          var filmeIdCategoria = jsonBody[indice].IdCategoria
           filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
           filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
         
@@ -293,31 +294,47 @@ function filtrarCategoria(){
         })
       }
       else {
-        jsonBody.forEach(function(valorAtual, indice) {
-          const valorAtualCategoria = valorAtual.Categoria
-          let resultadoFiltro;
-          
-          if(valorAtualCategoria.includes(filtroAplicado)){
-            var filmePagina = jsonBody[indice].Pagina
-            var filmeIdUsuario = jsonBody[indice].IdUsuario                      
-            var filme = jsonBody[indice].url
-            filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
-            filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
-            filmeId = jsonBody[indice].Id
-            filmeCategoria = jsonBody[indice].Categoria
+    
+        fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+        .then(response => { return response.json()})
+        .then(jsonBodyCategoria => { 
+          jsonBodyCategoria.forEach(function(valorAtual, indice) {
+            var videoCategoria = jsonBodyCategoria[indice].Categoria
+            var videoIdUsuario = jsonBodyCategoria[indice].IdUsuario
+            var categoriaId = jsonBodyCategoria[indice].Id   
 
-            if(filmeIdUsuario == id && filmePagina == "estudo"){
-              resultadoFiltro = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-              <div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
-              listarFilmesNaTela(resultadoFiltro);
-          
-            }
-          }
+
+        if(filtroAplicado == videoCategoria && videoIdUsuario == id){
+
+        // if (&& categoriaId == filmeIdCategoria && filmeIdUsuario == videoIdUsuario){
+          jsonBody.forEach(function(valorAtual, indice) {
+            const valorAtualCategoria = valorAtual.IdCategoria
+            let resultadoFiltro;
+            
+            if(valorAtualCategoria == categoriaId){
+              var filmePagina = jsonBody[indice].Pagina
+              var filmeIdUsuario = jsonBody[indice].IdUsuario
+              var filmeNome = jsonBody[indice].Nome                      
+              var filme = jsonBody[indice].url
+              filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
+              filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+              filmeId = jsonBody[indice].Id
+              filmeCategoria = jsonBody[indice].Categoria
+  
+              if(filmeIdUsuario == id && filmePagina == "estudo"){
+                resultadoFiltro = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                <p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
+                listarFilmesNaTela(resultadoFiltro);
+            
+            }       
+            
+          }})
+        }
+               
         })
-      }
-    }
-  )
-}
+      })
+}})}
+
 
 //Redireciona para página de vídeos de estudo
 function videoEstudo() {
