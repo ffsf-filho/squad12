@@ -129,6 +129,16 @@ const goToLogin = () => {
     }
 }
 
+
+//Redireciona da página de cadastro para a página de login
+const goToLoginCadastro = () => {
+    let login = document.getElementById('loginCadastro');
+
+    if (login.onclick) {
+        location.href = "login.html"
+    }
+}
+
 //Redireciona para a página de cadastro
 const goToRegister = () => {
     let register = document.getElementById('register');
