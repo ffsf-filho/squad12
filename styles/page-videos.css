@@ -167,6 +167,7 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover{
 
 .title{
   margin-bottom: 0px;
+  max-width: 280px;
 }
 
 /* Inicio estilos no js */
