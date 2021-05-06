@@ -1,11 +1,10 @@
 @media screen and (max-width: 768px) {
     main {
-        width: 410px;
-        overflow: hidden;
+        width: 520px;
     }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 520px) {
     main {
         width: 100vw;
     }
