@@ -362,3 +362,59 @@ document.addEventListener("keypress", function (event) {
     btn.click()
   }
 })
+
+
+
+//Adicionar nova categoria na pagina de cadastro
+function adicionarCategoria() {
+  let input = document.getElementById("addOption")
+  let select = document.getElementById("selectCategoriaVideoLazer")
+
+  let newOption = document.createElement("option")
+  newOption.value = input.value
+  newOption.text = input.value
+
+  select.add(newOption)
+  input.value = ""
+
+  var cadastraCategoria = {
+    "IdUsuario": id,
+    "Categoria": newOption.value,
+  }
+
+  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
+  method: "POST", 
+  headers:{
+    "Content-type": "application/json"  
+  },
+  body: JSON.stringify(cadastraCategoria),
+})}
+    
+
+//Lista a categoria na pagina de cadastro
+fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+.then(response => { return response.json()})
+.then(jsonBody => { 
+  jsonBody.forEach(function(valorAtual, indice) {
+    var videoCategoria = jsonBody[indice].Categoria
+    var videoIdUsuario = jsonBody[indice].IdUsuario
+
+    if(videoIdUsuario == id) {
+      var novaCategoria = document.querySelector("#selectCategoriaVideoLazer")
+      novaCategoria.innerHTML = novaCategoria.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
+      }
+  })})
+
+//Lista a categoria na pagina de videos
+fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+  .then(response => { return response.json()})
+  .then(jsonBody => { 
+    jsonBody.forEach(function(valorAtual, indice) {
+      var videoCategoria = jsonBody[indice].Categoria
+      var videoIdUsuario = jsonBody[indice].IdUsuario
+
+      if(videoIdUsuario == id) {
+        var categoriaPageVideos = document.querySelector("#filtroCategoriaLazer")
+        categoriaPageVideos.innerHTML = categoriaPageVideos.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
+      }
+  })})
