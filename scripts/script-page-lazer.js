@@ -313,3 +313,13 @@ function videoLazer() {
 function criarVideoLazer(){
   location.href="cadastro-video-lazer.html"
 }
+
+//Adiciona na página de vídeos a funcionalidade de quando apertar a tecla "Enter" no teclado aciona o botão localizar
+document.addEventListener("keypress", function (event) {
+  if (event.key == "Enter"){
+    
+    const btn = document.querySelector("#btnPesquisar")
+
+    btn.click()
+  }
+})
