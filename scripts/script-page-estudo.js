@@ -317,20 +317,16 @@ function criarVideoEstudo(){
 
 //Adiciona na página de vídeos a funcionalidade de quando apertar a tecla "Enter" no teclado aciona o botão localizar
 document.addEventListener("keypress", function (event) {
-    if (event.key == "Enter"){
-      
-      const btn = document.querySelector("#btnPesquisar")
-
-      btn.click()
-    }
+  if (event.key == "Enter"){
+    const btn = document.querySelector("#btnPesquisar")
+    btn.click()
+  }
 })
 
 //Adiciona na página de cadastrar vídeos a funcionalidade de quando apertar a tecla "Enter" no teclado aciona o botão adicionar
 document.addEventListener("keypress", function (event) {
   if (event.key == "Enter"){
-    
     const btn = document.querySelector("#btnAdicionarVideoEstudo")
-
     btn.click()
   }
 })
