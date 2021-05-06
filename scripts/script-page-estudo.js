@@ -306,7 +306,6 @@ function filtrarCategoria(){
 
         if(filtroAplicado == videoCategoria && videoIdUsuario == id){
 
-        // if (&& categoriaId == filmeIdCategoria && filmeIdUsuario == videoIdUsuario){
           jsonBody.forEach(function(valorAtual, indice) {
             const valorAtualCategoria = valorAtual.IdCategoria
             let resultadoFiltro;

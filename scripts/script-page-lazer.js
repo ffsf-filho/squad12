@@ -249,7 +249,7 @@ function btnDeletaVideo(id){
 };
 
 //Filtra os vídeos da página pelas subcategorias
-function filtrarCategoria(){
+function filtrarCategoria(){  
   var resultado;
   var listaFilmes = document.querySelector('#listaFilmes');
   listaFilmes.innerHTML = ""
@@ -257,16 +257,17 @@ function filtrarCategoria(){
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos")
     .then(response => {return response.json()})
     .then(jsonBody => {
-      var campoFiltrarCategoria = document.querySelector('#filtroCategoriaLazer');
+      var campoFiltrarCategoria = document.querySelector('#filtroCategoriaEstudo');
       var filtroAplicado = campoFiltrarCategoria.value;
 
       if(filtroAplicado == "Sem filtro"){     
-        jsonBody.forEach(function(valorAtual, indice) {  
+        jsonBody.forEach(function(valorAtual, indice) {
           var filmePagina = jsonBody[indice].Pagina
           let filmeUrl = jsonBody[indice].url
           var filmeId = jsonBody[indice].Id
           var filmeNome = jsonBody[indice].Nome
           var filmeIdUsuario = jsonBody[indice].IdUsuario
+          var filmeIdCategoria = jsonBody[indice].IdCategoria
           filmeUrl = filmeUrl.replace("youtu.be/", "www.youtube.com/embed/");
           filmeUrl = filmeUrl.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
         
@@ -274,37 +275,52 @@ function filtrarCategoria(){
             resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
             title='YouTube video player' frameborder='0' 
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
-            </iframe><p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>`
+            </iframe><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
             listarFilmesNaTela(resultado)
           }
         })
       }
       else {
-        jsonBody.forEach(function(valorAtual, indice) {
-          const valorAtualCategoria = valorAtual.Categoria
-          let resultadoFiltro;
-          
-          if(valorAtualCategoria.includes(filtroAplicado)){          
-            var filmePagina = jsonBody[indice].Pagina
-            var filmeIdUsuario = jsonBody[indice].IdUsuario
-            var filmeNome = jsonBody[indice].Nome                      
-            var filme = jsonBody[indice].url
-            filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
-            filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
-            filmeId = jsonBody[indice].Id
-            filmeCategoria = jsonBody[indice].Categoria
+    
+        fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+        .then(response => { return response.json()})
+        .then(jsonBodyCategoria => { 
+          jsonBodyCategoria.forEach(function(valorAtual, indice) {
+            var videoCategoria = jsonBodyCategoria[indice].Categoria
+            var videoIdUsuario = jsonBodyCategoria[indice].IdUsuario
+            var categoriaId = jsonBodyCategoria[indice].Id   
 
-            if(filmeIdUsuario == id && filmePagina == "lazer"){
-              resultadoFiltro = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-              <p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
-              listarFilmesNaTela(resultadoFiltro);
-            }
-          }
+
+        if(filtroAplicado == videoCategoria && videoIdUsuario == id){
+
+           jsonBody.forEach(function(valorAtual, indice) {
+            const valorAtualCategoria = valorAtual.IdCategoria
+            let resultadoFiltro;
+            
+            if(valorAtualCategoria == categoriaId){
+              var filmePagina = jsonBody[indice].Pagina
+              var filmeIdUsuario = jsonBody[indice].IdUsuario
+              var filmeNome = jsonBody[indice].Nome                      
+              var filme = jsonBody[indice].url
+              filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
+              filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+              filmeId = jsonBody[indice].Id
+              filmeCategoria = jsonBody[indice].Categoria
+  
+              if(filmeIdUsuario == id && filmePagina == "lazer"){
+                resultadoFiltro = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                <p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
+                listarFilmesNaTela(resultadoFiltro);
+            
+            }       
+            
+          }})
+        }
+               
         })
-      }
-    }
-  )
-}
+      })
+}})}
+
 
 //Redireciona para página de vídeos de lazer
 function videoLazer() {
