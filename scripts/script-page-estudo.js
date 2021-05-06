@@ -86,7 +86,7 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
         resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
         title='YouTube video player' frameborder='0' 
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
-        </iframe><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
+        </iframe><p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
         listarFilmesNaTela(resultado)
       }
     })
@@ -230,7 +230,8 @@ function btnPesquisar(){
 
         if(removerAcentosEspaco(valorAtualNome.toUpperCase()).includes(removerAcentosEspaco(filmePesquisado.toUpperCase()))){ 
           var filmePagina = jsonBody[indice].Pagina
-          var filmeIdUsuario = jsonBody[indice].IdUsuario                      
+          var filmeIdUsuario = jsonBody[indice].IdUsuario
+          var filmeNome = jsonBody[indice].Nome                      
           var filme = jsonBody[indice].url
           filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
           filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
@@ -238,7 +239,7 @@ function btnPesquisar(){
 
           if(filmeIdUsuario == id && filmePagina == "estudo"){
             resultadoPesquisa = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-            <div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
+            <p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
             listarFilmesNaTela(resultadoPesquisa);  
           }
         }
@@ -288,7 +289,7 @@ function filtrarCategoria(){
             resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
             title='YouTube video player' frameborder='0' 
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
-            </iframe><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
+            </iframe><p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
             listarFilmesNaTela(resultado)
           }
         })
