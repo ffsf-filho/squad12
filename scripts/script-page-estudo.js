@@ -124,14 +124,27 @@ function adicionarVideoEstudo(){
   var selectCategoriaVideoEstudo = document.querySelector("#selectCategoriaVideoEstudo")
   var inputUrlVideoEstudo = document.querySelector("#inputUrlVideoEstudo")
 
-  var dadosVideoEstudo = {
-    "Nome": inputNomeVideoEstudo.value,
-    "Categoria": selectCategoriaVideoEstudo.value,
-    "url": inputUrlVideoEstudo.value,
-    "IdUsuario": id,
-    "Pagina": "estudo",
-  }
+
+  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+  .then(response => { return response.json()})
+  .then(jsonBody => { 
+
+    jsonBody.forEach(function(valorAtual, indice) {
+      var videoCategoria = jsonBody[indice].Categoria
+      var videoIdUsuario = jsonBody[indice].IdUsuario
+      var categoriaId = jsonBody[indice].Id
+      
+      var dadosVideoEstudo = {
+        "Nome": inputNomeVideoEstudo.value,
+        "url": inputUrlVideoEstudo.value,
+        "IdUsuario": id,
+        "IdCategoria": categoriaId,
+        "Pagina": "estudo",
+      }
+    
   if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
+   if(selectCategoriaVideoEstudo.value == videoCategoria && videoIdUsuario == id){
+   
     fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
       method: "POST", 
       headers:{
@@ -140,10 +153,11 @@ function adicionarVideoEstudo(){
       body: JSON.stringify(dadosVideoEstudo),
     })
     .then(response => {if (response.ok) abreModalInserirNovo()})
+  }}
+  else {
+    abreModalFalha()
   }
-  else {abreModalFalha()
-  }
-};
+})})};
 
 /*Modal de inserção vídeos bem sucedida*/
 function abreModalInserirNovo(){
