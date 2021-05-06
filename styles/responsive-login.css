@@ -3,6 +3,10 @@
         width: 410px;
         overflow: hidden;
     }
+
+    .labelAvatar:nth-child(3n) {
+        break-after: always; /* New syntax, works only in Firefox */
+      }
 }
 
 @media screen and (max-width: 426px) {
