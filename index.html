@@ -4,14 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CamaraRoll</title>
-        <link rel="stylesheet" href="styles/normalize.css">
+        <title>Camara-Roll</title>
+        <link rel="stylesheet" href="styles/normalize.css"> <!--Normalize e reset para uniformizar o css dos navegadores-->
         <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/welcome.css">
-        <link rel="stylesheet" href="styles/responsive-welcome.css">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/responsive-index.css"> <!--Arquivo para ficar todos os layouts responsivos-->
     </head>
     <body>
-        
         <main class="welcome">
             <div class="github">
                 <a href="https://github.com/ffsf-filho/squad12" title="Repositório no GitHub" target="_blank">
@@ -27,25 +26,28 @@
                 </a>
             </div>
             <section class="welcomeMessage">
-                
-                <img src="./styles/images/logo-squad12-2.gif" alt="" class="imgLogoCamararoll">
+                <img src="images/logo-squad12.gif" alt="" class="imgLogoCamararoll">
                 <div id="text-welcome">
-                <h1>Seja Bem-vindo(a)</h1>
-                <h2 class="subtitle">à sua plataforma de estudos e lazer</h2>
-                <h3 class="description">Viu um vídeo super legal, mas não pode assistir agora?<br>Nós salvamos para você assistir quando e onde quiser!</h3>
-                <div class="joinUS">
-                    <div class="joinUS__cadastro">
-                        <label for="register" class="joinUS__label">Criar conta</label>
-                        <button class="btn" id="register" onClick="goToRegister()">Cadastrar</button>
-                    </div>
-                    <div class="joinUS__login">
-                        <label for="login" class="joinUS__label">Já é usuário?</label>
-                        <button class="btn" id="login" onClick="goToLogin()">Login</button>
-                    </div>
+                    <h1 class="WelcomeH1">Seja Bem-vindo(a)</h1>
+                    <h2 class="subtitle">à sua plataforma de estudos e lazer</h2>
+                    <h3 class="description">Viu um vídeo super legal, mas não pode assistir agora?<br>Nós salvamos para você assistir quando e onde quiser!</h3>
                 </div>
-            </div>
+                <div class="sigin">
+                    <label for="userAdress" class="user__sigin">Usuário:</label>
+                    <input type="text" name="userAdress" id="userAdress" placeholder="Digite seu usuário" autofocus tabindex="1">
+                </div>
+                <div class="sigin">
+                    <label for="userPass" class="user__sigin">Senha:</label>
+                    <input type="password" name="userPass" id="userPass" placeholder="Digite sua senha" tabindex="2">
+                </div>
+                <span id="messageError"></span>
+                <button class="btn" id="login" onclick="login()" tabindex="3">ENTRAR</button>
+                <div class="joinUS">
+                    <label for="register" class="joinUS__label">Criar conta</label>
+                    <input type="button" class="btn" id="register" onClick="goToRegister()" value="Cadastrar" tabindex="4">
+                </div>
             </section>
         </main>
+        <script src="scripts/index.js"></script>
     </body>
-    <script src="scripts/welcome.js"></script>
 </html>
