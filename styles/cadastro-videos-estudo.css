@@ -34,6 +34,9 @@ body {
   width: 720px;
 }
 
+.menuMobile_box {
+  display: none;
+}
 
 /*dropdown div*/
 .btn-group.dropright {

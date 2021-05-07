@@ -35,6 +35,10 @@ body {
   width: 720px;
 }
 
+.menuMobile_box {
+  display: none;
+}
+
 .btn-group.dropright {
   position: absolute;
   top: 1.5rem;
@@ -89,7 +93,6 @@ body {
   margin-top: 80px;
   line-height: 3rem;
   margin-bottom: 4rem;
-  position: relative;
   text-align: center;
   text-shadow: 2px 2px #D941B0;
 }
