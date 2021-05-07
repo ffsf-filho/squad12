@@ -142,7 +142,7 @@ function adicionarVideoLazer(){
                 "url": inputUrlVideoLazer.value,
                 "IdUsuario": id,
                 "IdCategoria": categoriaId,
-                "Pagina": "estudo",
+                "Pagina": "lazer",
               }
               if(selectCategoriaVideoLazer.value == videoCategoria && videoIdUsuario == id){
                 fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
