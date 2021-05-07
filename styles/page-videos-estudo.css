@@ -110,6 +110,11 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   width: 100%;
 }
 
+.localizar-flex input::placeholder {
+  color: #1a1b1b86;
+  font-size: 14px;
+}
+
 .form-wrapper select {
   margin-top: 1rem;
   padding: 10px 15px;

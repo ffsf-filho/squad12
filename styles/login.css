@@ -84,6 +84,7 @@ section {
 
 .sigin input::placeholder {
     color: #1a1b1b86;
+    font-size: 14px;
 }
 
 .sigin input:focus {
