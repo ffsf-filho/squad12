@@ -70,20 +70,23 @@
       <input type="text" id="inputNomeVideoEstudo" placeholder="Escolha um nome para o vídeo">
       
       <span id="messageErrorCategoria"></span>
+      <div></div>
       <select required id="selectCategoriaVideoEstudo">
-        <option value="" disabled selected hidden>Selecione a categoria do vídeo</option>
+          <option value="" disabled selected hidden>Selecione a categoria do vídeo</option>
       </select>
       
       
       <label for="selectCategoriaVideoEstudo">Nova categoria:</label>
       <input type="text" id="addOption" placeholder="Crie uma nova categoria">
       <button onClick="adicionarCategoria()" id="addCategoria">Criar nova categoria</button>
-      
+      <div></div>
       <span id="messageErrorUrl"></span>
+      <div></div>
       <label for="inputUrlVideoEstudo">Link:</label>
       <input type="url" id="inputUrlVideoEstudo" aria-required="true" placeholder="Insira a url do vídeo">
       
       <span id="messageError"></span>
+      <div></div>
       <button onClick="videoEstudo()">Voltar</button>
       <button onclick="adicionarVideoEstudo()" id="btnAdicionarVideoEstudo">Adicionar</button>
     </div>
