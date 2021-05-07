@@ -46,6 +46,13 @@
     }
 }
 
+@media screen and (max-width: 416px) {
+    .labelAvatar {
+        width: 33.33%;
+    }
+}
+   
+
 @media screen and (max-width: 320px) {
     main {
         width: 100vw;
