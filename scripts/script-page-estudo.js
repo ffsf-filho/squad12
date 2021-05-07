@@ -454,11 +454,7 @@ function adicionarCategoria() {
   let select = document.getElementById("selectCategoriaVideoEstudo")
   let newOption = document.createElement("option")   
   
-  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
-          .then(response => { return response.json()})
-          .then(jsonBodyCategoria => { 
-
-                     
+                      
             if(input.value != "") {
 
             newOption.value = input.value
@@ -480,7 +476,7 @@ function adicionarCategoria() {
             },
             body: JSON.stringify(cadastraCategoria),
             })}
-})}
+}
 
     
 //Lista a categoria na pagina de cadastro
@@ -507,8 +503,9 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
     jsonBody.forEach(function(valorAtual, indice) {
       var videoCategoria = jsonBody[indice].Categoria
       var videoIdUsuario = jsonBody[indice].IdUsuario
+      var categoriaPagina = jsonBody[indice].Pagina
 
-      if(videoIdUsuario == id) {
+      if(videoIdUsuario == id && categoriaPagina == "estudo") {
         var categoriaPageVideos = document.querySelector("#filtroCategoriaEstudo")
         categoriaPageVideos.innerHTML = categoriaPageVideos.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
       }
