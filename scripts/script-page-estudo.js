@@ -449,6 +449,7 @@ document.addEventListener("keypress", function (event) {
 
 //Adicionar nova categoria na pagina de cadastro
 function adicionarCategoria() {
+  
   let input = document.getElementById("addOption")
   let select = document.getElementById("selectCategoriaVideoEstudo")
 
@@ -462,6 +463,7 @@ function adicionarCategoria() {
   var cadastraCategoria = {
     "IdUsuario": id,
     "Categoria": newOption.value,
+    "Pagina": "estudo"
   }
 
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
@@ -480,8 +482,9 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
     jsonBody.forEach(function(valorAtual, indice) {
       var videoCategoria = jsonBody[indice].Categoria
       var videoIdUsuario = jsonBody[indice].IdUsuario
+      var categoriaPagina = jsonBody[indice].Pagina
 
-      if(videoIdUsuario == id) {
+      if(videoIdUsuario == id && categoriaPagina == "estudo") {
         var novaCategoria = document.querySelector("#selectCategoriaVideoEstudo")
         novaCategoria.innerHTML = novaCategoria.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
       }

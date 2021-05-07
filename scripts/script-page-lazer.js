@@ -463,6 +463,7 @@ function adicionarCategoria() {
   var cadastraCategoria = {
     "IdUsuario": id,
     "Categoria": newOption.value,
+    "Pagina": "lazer"
   }
 
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
@@ -481,8 +482,9 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
     jsonBody.forEach(function(valorAtual, indice) {
       var videoCategoria = jsonBody[indice].Categoria
       var videoIdUsuario = jsonBody[indice].IdUsuario
+      var categoriaPagina = jsonBody[indice].Pagina
 
-      if(videoIdUsuario == id) {
+      if(videoIdUsuario == id && categoriaPagina == "lazer") {
         var novaCategoria = document.querySelector("#selectCategoriaVideoLazer")
         novaCategoria.innerHTML = novaCategoria.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
       }
