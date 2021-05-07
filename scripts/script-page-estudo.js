@@ -528,11 +528,13 @@ const menuDropD = document.querySelector(".dropdown-menu")
 const menuFechar = document.querySelector(".menuMobile_fechar")
 
 btnMenu.addEventListener("click", function() {
-  menuSlide.classList.add("menuMobile_open")
-
+  
   if( $(window).width() < 768){
-    menuDropD.style.display = "none"
-}   
+    menuSlide.classList.add("menuMobile_open")
+    menuDropD.style.visibility = "hidden"
+  } else {
+    menuDropD.style.visibility = "visible"
+  }  
 })
 
 //Fecha menu slide

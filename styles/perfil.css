@@ -55,6 +55,7 @@ body {
 }
 
 .dropdown-menu {
+  /* display: none; */
   padding: 1px;
   margin-left: 2px;
   background-color: #FFFFFF;
