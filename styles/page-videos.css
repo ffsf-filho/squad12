@@ -177,9 +177,9 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover{
 
 /* Inicio estilos no js */
 #btnDeletaVideo {
-  background: #e9a6ff;
+  background: #d7d4d8;
   border: none;
-  box-shadow: inset -6px -6px 0px #ff120a;
+  box-shadow: inset -6px -6px 0px #dad6d5;
   color: #122432;
   font-size: 0.9rem;
   margin: 2rem 0;
