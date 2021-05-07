@@ -13,10 +13,22 @@
   </head>
 
   <body>
+      <!-- Mobile menu slide-->
+      <div class="menuMobile_box">
+        <div id="imgAvatarMobile" class="userStatus__img mobile"></div>
+        <div id="nickMobile" class="userStatus__text mobile"></div>
+        <a class="menuMobile_item" href="user-page.html">Home</a>
+        <a class="menuMobile_item" href="page-videos-estudo.html">Estudos</a>
+        <a class="menuMobile_item" href="page-videos-lazer.html">Lazer</a>
+        <a class="menuMobile_item" href="#" href="#" id="sair" onClick="abreModalSair()">
+          <u>Sair</u>
+        </a>
+        <div class="menuMobile_fechar"></div>
+      </div>
 
       <!-- Dropdown bootstrap com as opçoes de ir para página principal ou deslogar -->
       <div class="btn-group dropright">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btnMenu">
           <div id="imgAvatar" class="userStatus__img"></div>
         </button>
         <div class="dropdown-menu">
@@ -54,23 +66,34 @@
       <div class="form-wrapper">
         <h1 class="page-subtitle">Lazer</h1>
         <h2 class="addFilme_label">Qual video você gostaria de inserir?</h2>
+        <span id="messageErrorNome"></span>
         <label for="inputNomeVideoLazer">Nome:</label>
-        <input type="text" id="inputNomeVideoLazer" placeholder="Escolha um nome para o vídeo...">
+        <input type="text" id="inputNomeVideoLazer" placeholder="Escolha um nome para o vídeo">
+        
 
-        <label for="selectCategoriaVideoLazer">Categoria:</label>
-        <input type="text" id="addOption" placeholder="Nova categoria">
-        <button onClick="adicionarCategoria()" id="addCategoria">Criar</button>
+        <span id="messageErrorCategoria"></span>
+        <div></div>
         <select required id="selectCategoriaVideoLazer">
-          <option value="" disabled selected hidden>Selecione a categoria do vídeo...</option>
+          <option value="" disabled selected hidden>Selecione a categoria do vídeo</option>
         </select>
-          
+        
+
+        <label for="selectCategoriaVideoLazer">Nova categoria:</label>
+        <input type="text" id="addOption" placeholder="Crie uma nova categoria">
+        <button onClick="adicionarCategoria()" id="addCategoria">Criar nova categoria</button>
+        <div></div>
+        <span id="messageErrorUrl"></span>
+        <div></div>
         <label for="inputUrlVideoLazer">Link:</label>
-        <input type="url" id="inputUrlVideoLazer" aria-required="true" placeholder="Insira a url do vídeo...">
+        <input type="url" id="inputUrlVideoLazer" aria-required="true" placeholder="Insira a url do vídeo">
+        
+        <span id="messageError"></span>
+        <div></div>
         <button onClick="videoLazer()">Voltar</button>
         <button onclick="adicionarVideoLazer()" id="btnAdicionarVideoLazer">Adicionar</button>
       </div>
-    
 
+      
       <!-- Links necessários para o dropdown bootstrap funcionar -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

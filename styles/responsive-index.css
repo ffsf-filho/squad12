@@ -6,6 +6,11 @@
     h1 {
         font-size: 1.5rem;
     }
+
+    .labelAvatar:nth-child(3n) {
+        page-break-after: always; /* CSS 2.1 syntax */
+        break-after: always; /* New syntax */
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -35,10 +40,19 @@
     div.joinUS {
         margin-top: 3rem;
     }
+
+    .sigin input {
+        width: 90vw;
+    }
 }
 
 @media screen and (max-width: 320px) {
     main {
         width: 100vw;
     }
+
+    .user__sigin {
+        font-size: 0.9rem;
+    }
+    
 }

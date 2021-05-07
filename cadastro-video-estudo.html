@@ -13,10 +13,22 @@
   </head>
 
   <body>
-
+    <!-- Mobile menu slide-->
+    <div class="menuMobile_box">
+      <div id="imgAvatarMobile" class="userStatus__img mobile"></div>
+      <div id="nickMobile" class="userStatus__text mobile"></div>
+      <a class="menuMobile_item" href="user-page.html">Home</a>
+      <a class="menuMobile_item" href="page-videos-estudo.html">Estudos</a>
+      <a class="menuMobile_item" href="page-videos-lazer.html">Lazer</a>
+      <a class="menuMobile_item" href="#" href="#" id="sair" onClick="abreModalSair()">
+        <u>Sair</u>
+      </a>
+      <div class="menuMobile_fechar"></div>
+    </div>
+    
     <!-- Dropdown bootstrap com as opçoes de ir para página principal ou deslogar -->
     <div class="btn-group dropright">
-      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btnMenu">
         <div id="imgAvatar" class="userStatus__img"></div>
       </button>
       <div class="dropdown-menu">
@@ -53,18 +65,28 @@
     <div class="form-wrapper">
       <h1 class="page-subtitle">Estudos</h1>
       <h2 class="addFilme_label">Qual video você gostaria de inserir?</h2>
+      <span id="messageErrorNome"></span>
       <label for="inputNomeVideoEstudo">Nome:</label>
-      <input type="text" id="inputNomeVideoEstudo" placeholder="Escolha um nome para o vídeo...">
-
-      <label for="selectCategoriaVideoEstudo">Categoria:</label>
-      <input type="text" id="addOption" placeholder="Nova categoria">
-      <button onClick="adicionarCategoria()" id="addCategoria">Criar</button>
+      <input type="text" id="inputNomeVideoEstudo" placeholder="Escolha um nome para o vídeo">
+      
+      <span id="messageErrorCategoria"></span>
+      <div></div>
       <select required id="selectCategoriaVideoEstudo">
-        <option value="" disabled selected hidden>Selecione a categoria do vídeo...</option>
+          <option value="" disabled selected hidden>Selecione a categoria do vídeo</option>
       </select>
-    
-      <label for="inputUrlVideoEstudo">link:</label>
-      <input type="url" id="inputUrlVideoEstudo" aria-required="true" placeholder="Insira a url do vídeo...">
+      
+      
+      <label for="selectCategoriaVideoEstudo">Nova categoria:</label>
+      <input type="text" id="addOption" placeholder="Crie uma nova categoria">
+      <button onClick="adicionarCategoria()" id="addCategoria">Criar nova categoria</button>
+      <div></div>
+      <span id="messageErrorUrl"></span>
+      <div></div>
+      <label for="inputUrlVideoEstudo">Link:</label>
+      <input type="url" id="inputUrlVideoEstudo" aria-required="true" placeholder="Insira a url do vídeo">
+      
+      <span id="messageError"></span>
+      <div></div>
       <button onClick="videoEstudo()">Voltar</button>
       <button onclick="adicionarVideoEstudo()" id="btnAdicionarVideoEstudo">Adicionar</button>
     </div>
