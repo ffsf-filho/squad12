@@ -1,8 +1,17 @@
+const camaraRoll = localStorage.getItem("@camaraRoll-Users");// Recupera os dados armazenados no localstorage
+let objCamaraRoll = JSON.parse(camaraRoll); // Converte string para objeto
+
+//Se existir o objeto e ele não estiver vazio, redirecionamos para a página de usuário 
+if(objCamaraRoll!= null){
+    location.href="user-page.html" 
+}
+
 //Faz a validação do usuário e redireciona para página princial, caso não seja validado irá mostrar uma mensagem de erro
 function login(nomeDoUsuario = "") {
     const userName = document.getElementById('userAdress');
     const userPassWord = document.getElementById('userPass');
     let wrongData = document.getElementById('messageError')
+    wrongData.innerText = "Usuário ou senha inválidos."
 
     if(userName.value != "" && userPassWord.value != ""){
         fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_usuarios/usuarios", {method: "GET"})
@@ -18,7 +27,6 @@ function login(nomeDoUsuario = "") {
                             break
                         } 
                         else {
-                            wrongData.innerText = "Verifique se há erros com o nome de usuário ou senha."
                             wrongData.style.display = 'block';
                             userName.focus()
                         }
@@ -37,7 +45,6 @@ function login(nomeDoUsuario = "") {
         )    
     } 
     else {
-        wrongData.innerText = "Todos os campos são obrigatórios, Verifique se há erros."
         wrongData.style.display = "block"
         userName.focus()        
     }
@@ -125,7 +132,7 @@ const goToLogin = () => {
     let login = document.getElementById('login');
 
     if (login.onclick) {
-        location.href = "login.html"
+        location.href = "index.html"
     }
 }
 
@@ -135,7 +142,7 @@ const goToLoginCadastro = () => {
     let login = document.getElementById('loginCadastro');
 
     if (login.onclick) {
-        location.href = "login.html"
+        location.href = "index.html"
     }
 }
 

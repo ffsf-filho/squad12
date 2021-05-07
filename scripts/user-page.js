@@ -12,11 +12,11 @@ if(objCamaraRoll== null){
     location.href="index.html" 
 } 
 else {
-    for(var i in objCamaraRoll){
-        usuario = objCamaraRoll[i].Users
-        id = objCamaraRoll[i].Id
-        personagem = objCamaraRoll[i].personagem
-    }
+  for(var i in objCamaraRoll){
+    usuario = objCamaraRoll[i].Users
+    id = objCamaraRoll[i].Id
+    personagem = objCamaraRoll[i].personagem
+  }
 }
 
 /*modal para sair/deslogar */
@@ -46,27 +46,63 @@ function abreModalSair(){
 
 // Remove o item do localstorage quando o usuário faz log-out e volta para página inicial
 function sair() { 
-    localStorage.removeItem("@camaraRoll-Users");
-    location.href="index.html"
+  localStorage.removeItem("@camaraRoll-Users");
+  location.href="index.html"
 }
 
 //Redireciona para página de vídeos de estudo
 function timeToStudy() {
-    location.href="page-videos-estudo.html"
+  location.href="page-videos-estudo.html"
 }
 
 //Redireciona para página de vídeos de lazer
 function timeToPlay () {
-    location.href="page-videos-lazer.html"
+  location.href="page-videos-lazer.html"
 }
 
-//Inclui o Nick do usuário
+
+
+//Inclui o Nick do usuário no desktop
 let nickName = document.getElementById("nick")
 nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
 
-//Troca a imagem do avatar
+//Troca a imagem do avatar no desktop
 if(personagem != ""){
     imgUrlAvatar += personagem
     let imgDivAvatar = document.getElementById("imgAvatar")
     imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
 }
+
+
+let imgUrlAvatarMobile ="images/"
+//Inclui o Nick do usuário no mobile
+let nickNameMobile = document.getElementById("nickMobile")
+nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+
+//Troca a imagem do avatar no mobile
+if(personagem != ""){
+    imgUrlAvatarMobile += personagem
+    let imgDivAvatarMobile = document.getElementById("imgAvatarMobile")
+    imgDivAvatarMobile.style.backgroundImage = `url(${imgUrlAvatar})`
+}
+
+
+
+//Abre menu slide
+const menuSlide = document.querySelector(".menuMobile_box")
+const btnMenu = document.querySelector("#btnMenu")
+const menuDropD = document.querySelector(".dropdown-menu")
+const menuFechar = document.querySelector(".menuMobile_fechar")
+
+btnMenu.addEventListener("click", function() {
+  menuSlide.classList.add("menuMobile_open")
+
+  if( $(window).width() < 768){
+    menuDropD.style.display = "none"
+}   
+})
+
+//Fecha menu slide
+menuFechar.addEventListener("click", function() {
+  menuSlide.classList.remove("menuMobile_open")
+})
