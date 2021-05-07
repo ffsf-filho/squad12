@@ -224,6 +224,11 @@ function videoEstudo() {
   location.href="page-videos-estudo.html"
 }
 
+//Redireciona para página de cadastro vídeos de estudo
+function criarVideoEstudo() {
+  location.href="cadastro-video-estudo.html"
+}
+
 
 //Adiciona na página de cadastrar vídeos a funcionalidade de quando apertar a tecla "Enter" no teclado aciona o botão adicionar
 document.addEventListener("keypress", function (event) {
