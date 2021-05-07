@@ -1,15 +1,15 @@
 @media screen and (max-width: 768px) {
     main {
-        width: 410px;
-        overflow: hidden;
+        width: 520px;
     }
 
     .labelAvatar:nth-child(3n) {
-        break-after: always; /* New syntax, works only in Firefox */
+        page-break-after: always; /* CSS 2.1 syntax */
+        break-after: always; /* New syntax */
       }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 520px) {
     main {
         width: 100vw;
     }

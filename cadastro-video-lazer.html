@@ -25,7 +25,7 @@
           <a class="links_drop_usuario" href="user-page.html">Home</a>
           <a class="links_drop_usuario" href="page-videos-estudo.html">Estudos</a>
           <a class="links_drop_usuario" href="page-videos-lazer.html">Lazer</a>
-          <a class="userStatus__text___sair" id="sair" onclick="abreModalSair()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <a class="links_drop_usuario" href="#" id="sair" onclick="abreModalSair()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             <u>Sair</u>
           </a>
         </div>
@@ -58,16 +58,10 @@
         <input type="text" id="inputNomeVideoLazer" placeholder="Escolha um nome para o vídeo...">
 
         <label for="selectCategoriaVideoLazer">Categoria:</label>
+        <input type="text" id="addOption" placeholder="Nova categoria">
+        <button onClick="adicionarCategoria()" id="addCategoria">Criar</button>
         <select required id="selectCategoriaVideoLazer">
           <option value="" disabled selected hidden>Selecione a categoria do vídeo...</option>
-          <option value="Comedia">Comédia</option>
-          <option value="Curiosidades">Games</option>
-          <option value="Diversos">diversos</option>
-          <option value="Filmes">Filmes</option>
-          <option value="Games">Games</option>
-          <option value="Musica">Música</option>
-          <option value="Podcasts">Podcasts</option>
-          <option value="Vlogs">Vlogs</option>
         </select>
           
         <label for="inputUrlVideoLazer">Link:</label>

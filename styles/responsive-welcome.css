@@ -1,39 +1,39 @@
-/* @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-    html {
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        width: 100vh;
-        position: absolute;
-        top: 100%;
-        left: 0;
-    }
-
-    main {
-        min-height: 720px;
-        max-height: 867px;
-        min-width: 320px;
-        max-width: 540px;
-    }
-} */
-
 @media screen and (max-width: 768px) {
     main {
-        width: 410px;
+        width: 520px;
     }
 
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    main {
+        width: 100vw;
+    }
+
+    .imgLogoCamararoll {
+        width: 15rem;
+        height: 8rem;
+    }
+
+    h1 {
+        font-size: 0.9rem;
         margin-top: 3rem;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
     }
 
     .description {
         font-size: 0.9rem;
     }
-}
 
-@media screen and (max-width: 426px) {
-    main {
-        width: 100vw;
+    div.joinUS {
+        margin-top: 3rem;
     }
 }
 
