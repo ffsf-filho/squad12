@@ -9,13 +9,8 @@
         margin-top: 150px;
     }
 
-/*     .menuMobile_bg {
-        min-height: 100vh;
-        max-height: 100%;
-        min-width: 100vw;
-    } */
-
     .menuMobile_box {
+        display: block;
         background-color: #ffffff;
         min-height: 100vh;
         max-height: 100%;
@@ -90,6 +85,11 @@
 
     .menuMobile_open {
         transform: translateX(-15%);
+    }
+
+    .userStatus__img.mobile, .userStatus__img {
+        height: 60px;
+        width: 60px;
     }
 }
 
