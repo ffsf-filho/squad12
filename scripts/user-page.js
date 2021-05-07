@@ -68,9 +68,9 @@ nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${u
 
 //Troca a imagem do avatar no desktop
 if(personagem != ""){
-    imgUrlAvatar += personagem
-    let imgDivAvatar = document.getElementById("imgAvatar")
-    imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
+  imgUrlAvatar += personagem
+  let imgDivAvatar = document.getElementById("imgAvatar")
+  imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
 }
 
 
@@ -81,9 +81,9 @@ nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nic
 
 //Troca a imagem do avatar no mobile
 if(personagem != ""){
-    imgUrlAvatarMobile += personagem
-    let imgDivAvatarMobile = document.getElementById("imgAvatarMobile")
-    imgDivAvatarMobile.style.backgroundImage = `url(${imgUrlAvatar})`
+  imgUrlAvatarMobile += personagem
+  let imgDivAvatarMobile = document.getElementById("imgAvatarMobile")
+  imgDivAvatarMobile.style.backgroundImage = `url(${imgUrlAvatar})`
 }
 
 
