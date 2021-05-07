@@ -67,10 +67,12 @@
       <h2 class="addFilme_label">Qual video você gostaria de inserir?</h2>
       <label for="inputNomeVideoEstudo">Nome:</label>
       <input type="text" id="inputNomeVideoEstudo" placeholder="Escolha um nome para o vídeo">
+      <span id="messageErrorNome"></span>
       
       <select required id="selectCategoriaVideoEstudo">
         <option value="" disabled selected hidden>Selecione a categoria do vídeo</option>
       </select>
+      <span id="messageErrorCategoria"></span>
       
       <label for="selectCategoriaVideoEstudo">Nova categoria:</label>
       <input type="text" id="addOption" placeholder="Crie uma nova categoria">
@@ -79,6 +81,7 @@
     
       <label for="inputUrlVideoEstudo">Link:</label>
       <input type="url" id="inputUrlVideoEstudo" aria-required="true" placeholder="Insira a url do vídeo">
+      <span id="messageErrorUrl"></span><span id="messageError"></span>
       <button onClick="videoEstudo()">Voltar</button>
       <button onclick="adicionarVideoEstudo()" id="btnAdicionarVideoEstudo">Adicionar</button>
     </div>
