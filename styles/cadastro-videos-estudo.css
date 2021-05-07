@@ -123,6 +123,11 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   width: 100%;
 }
 
+.form-wrapper input::placeholder {
+  color: #1a1b1b86;
+  font-size: 14px;
+}
+
 .form-wrapper select {
   margin-bottom: 2rem;
   padding: 10px 15px;

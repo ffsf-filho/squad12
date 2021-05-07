@@ -12,11 +12,11 @@ if(objCamaraRoll== null){
     location.href="index.html" 
 } 
 else {
-    for(var i in objCamaraRoll){
-        usuario = objCamaraRoll[i].Users
-        id = objCamaraRoll[i].Id
-        personagem = objCamaraRoll[i].personagem
-    }
+  for(var i in objCamaraRoll){
+    usuario = objCamaraRoll[i].Users
+    id = objCamaraRoll[i].Id
+    personagem = objCamaraRoll[i].personagem
+  }
 }
 
 /*modal para sair/deslogar */
@@ -46,18 +46,18 @@ function abreModalSair(){
 
 // Remove o item do localstorage quando o usuário faz log-out e volta para página inicial
 function sair() { 
-    localStorage.removeItem("@camaraRoll-Users");
-    location.href="index.html"
+  localStorage.removeItem("@camaraRoll-Users");
+  location.href="index.html"
 }
 
 //Redireciona para página de vídeos de estudo
 function timeToStudy() {
-    location.href="page-videos-estudo.html"
+  location.href="page-videos-estudo.html"
 }
 
 //Redireciona para página de vídeos de lazer
 function timeToPlay () {
-    location.href="page-videos-lazer.html"
+  location.href="page-videos-lazer.html"
 }
 
 //Inclui o Nick do usuário
@@ -66,7 +66,7 @@ nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${u
 
 //Troca a imagem do avatar
 if(personagem != ""){
-    imgUrlAvatar += personagem
-    let imgDivAvatar = document.getElementById("imgAvatar")
-    imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
+  imgUrlAvatar += personagem
+  let imgDivAvatar = document.getElementById("imgAvatar")
+  imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
 }
