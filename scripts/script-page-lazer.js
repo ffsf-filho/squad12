@@ -56,9 +56,9 @@ function sair() {
 
 //troca a imagem do avatar
 if(personagem != ""){
-    imgUrlAvatar += personagem
-    let imgDivAvatar = document.getElementById("imgAvatar")
-    imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
+  imgUrlAvatar += personagem
+  let imgDivAvatar = document.getElementById("imgAvatar")
+  imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
 }
 
 //Adiciona o vídeo na tela
@@ -125,38 +125,40 @@ function adicionarVideoLazer(){
 
 
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
-  .then(response => { return response.json()})
-  .then(jsonBody => { 
-
-    jsonBody.forEach(function(valorAtual, indice) {
-      var videoCategoria = jsonBody[indice].Categoria
-      var videoIdUsuario = jsonBody[indice].IdUsuario
-      var categoriaId = jsonBody[indice].Id
+    .then(response => { return response.json()})
+    .then(jsonBody => { 
+      jsonBody.forEach(function(valorAtual, indice) {
+        var videoCategoria = jsonBody[indice].Categoria
+        var videoIdUsuario = jsonBody[indice].IdUsuario
+        var categoriaId = jsonBody[indice].Id
       
-      var dadosVideoLazer = {
-        "Nome": inputNomeVideoLazer.value,
-        "url": inputUrlVideoLazer.value,
-        "IdUsuario": id,
-        "IdCategoria": categoriaId,
-        "Pagina": "estudo",
-      }
+        var dadosVideoLazer = {
+          "Nome": inputNomeVideoLazer.value,
+          "url": inputUrlVideoLazer.value,
+          "IdUsuario": id,
+          "IdCategoria": categoriaId,
+          "Pagina": "estudo",
+        }
     
-  if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
-   if(selectCategoriaVideoLazer.value == videoCategoria && videoIdUsuario == id){
-   
-    fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
-      method: "POST", 
-      headers:{
-        "Content-type": "application/json"  
-      },
-      body: JSON.stringify(dadosVideoLazer),
-    })
-    .then(response => {if (response.ok) abreModalInserirNovo()})
-  }}
-  else {
-    abreModalFalha()
-  }
-})})};
+        if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
+          if(selectCategoriaVideoLazer.value == videoCategoria && videoIdUsuario == id){
+            fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
+              method: "POST", 
+              headers:{
+                "Content-type": "application/json"  
+              },
+              body: JSON.stringify(dadosVideoLazer),
+            })
+            .then(response => {if (response.ok) abreModalInserirNovo()})
+          }
+        }
+        else {
+          abreModalFalha()
+        }
+      })
+    }
+  )
+};
 
 
 /*Modal de inserção vídeos bem sucedida*/
@@ -296,46 +298,44 @@ function filtrarCategoria(){
         })
       }
       else {
-    
         fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
-        .then(response => { return response.json()})
-        .then(jsonBodyCategoria => { 
-          jsonBodyCategoria.forEach(function(valorAtual, indice) {
-            var videoCategoria = jsonBodyCategoria[indice].Categoria
-            var videoIdUsuario = jsonBodyCategoria[indice].IdUsuario
-            var categoriaId = jsonBodyCategoria[indice].Id   
+          .then(response => { return response.json()})
+          .then(jsonBodyCategoria => { 
+            jsonBodyCategoria.forEach(function(valorAtual, indice) {
+              var videoCategoria = jsonBodyCategoria[indice].Categoria
+              var videoIdUsuario = jsonBodyCategoria[indice].IdUsuario
+              var categoriaId = jsonBodyCategoria[indice].Id   
 
-
-        if(filtroAplicado == videoCategoria && videoIdUsuario == id){
-
-           jsonBody.forEach(function(valorAtual, indice) {
-            const valorAtualCategoria = valorAtual.IdCategoria
-            let resultadoFiltro;
+              if(filtroAplicado == videoCategoria && videoIdUsuario == id){
+                jsonBody.forEach(function(valorAtual, indice) {
+                  const valorAtualCategoria = valorAtual.IdCategoria
+                  let resultadoFiltro;
             
-            if(valorAtualCategoria == categoriaId){
-              var filmePagina = jsonBody[indice].Pagina
-              var filmeIdUsuario = jsonBody[indice].IdUsuario
-              var filmeNome = jsonBody[indice].Nome                      
-              var filme = jsonBody[indice].url
-              filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
-              filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
-              filmeId = jsonBody[indice].Id
-              filmeCategoria = jsonBody[indice].Categoria
+                  if(valorAtualCategoria == categoriaId){
+                    var filmePagina = jsonBody[indice].Pagina
+                    var filmeIdUsuario = jsonBody[indice].IdUsuario
+                    var filmeNome = jsonBody[indice].Nome                      
+                    var filme = jsonBody[indice].url
+                    filme = filme.replace("youtu.be/", "www.youtube.com/embed/");
+                    filme = filme.replace("www.youtube.com/watch?v=", "www.youtube.com/embed/");
+                    filmeId = jsonBody[indice].Id
+                    filmeCategoria = jsonBody[indice].Categoria
   
-              if(filmeIdUsuario == id && filmePagina == "lazer"){
-                resultadoFiltro = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-                <p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
-                listarFilmesNaTela(resultadoFiltro);
-            
-            }       
-            
-          }})
-        }
-               
-        })
-      })
-}})}
-
+                    if(filmeIdUsuario == id && filmePagina == "lazer"){
+                      resultadoFiltro = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filme} title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                      <p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button></div>` 
+                      listarFilmesNaTela(resultadoFiltro); 
+                    }         
+                  }
+                })
+              }  
+            })
+          }
+        )
+      }
+    }
+  )
+}
 
 //Redireciona para página de vídeos de lazer
 function videoLazer() {
@@ -383,27 +383,29 @@ function adicionarCategoria() {
   }
 
   fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
-  method: "POST", 
-  headers:{
-    "Content-type": "application/json"  
-  },
-  body: JSON.stringify(cadastraCategoria),
-})}
+    method: "POST", 
+    headers:{
+      "Content-type": "application/json"  
+    },
+    body: JSON.stringify(cadastraCategoria),
+  })
+}
     
-
 //Lista a categoria na pagina de cadastro
 fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
-.then(response => { return response.json()})
-.then(jsonBody => { 
-  jsonBody.forEach(function(valorAtual, indice) {
-    var videoCategoria = jsonBody[indice].Categoria
-    var videoIdUsuario = jsonBody[indice].IdUsuario
+  .then(response => { return response.json()})
+  .then(jsonBody => { 
+    jsonBody.forEach(function(valorAtual, indice) {
+      var videoCategoria = jsonBody[indice].Categoria
+      var videoIdUsuario = jsonBody[indice].IdUsuario
 
-    if(videoIdUsuario == id) {
-      var novaCategoria = document.querySelector("#selectCategoriaVideoLazer")
-      novaCategoria.innerHTML = novaCategoria.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
+      if(videoIdUsuario == id) {
+        var novaCategoria = document.querySelector("#selectCategoriaVideoLazer")
+        novaCategoria.innerHTML = novaCategoria.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
       }
-  })})
+    })
+  }
+)
 
 //Lista a categoria na pagina de videos
 fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
@@ -417,4 +419,6 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
         var categoriaPageVideos = document.querySelector("#filtroCategoriaLazer")
         categoriaPageVideos.innerHTML = categoriaPageVideos.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
       }
-  })})
+    })
+  }
+)
