@@ -122,43 +122,126 @@ function adicionarVideoLazer(){
   var inputNomeVideoLazer = document.querySelector("#inputNomeVideoLazer")
   var selectCategoriaVideoLazer = document.querySelector("#selectCategoriaVideoLazer")
   var inputUrlVideoLazer = document.querySelector("#inputUrlVideoLazer")
-
-
-  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
-    .then(response => { return response.json()})
-    .then(jsonBody => { 
-      jsonBody.forEach(function(valorAtual, indice) {
-        var videoCategoria = jsonBody[indice].Categoria
-        var videoIdUsuario = jsonBody[indice].IdUsuario
-        var categoriaId = jsonBody[indice].Id
-      
-        var dadosVideoLazer = {
-          "Nome": inputNomeVideoLazer.value,
-          "url": inputUrlVideoLazer.value,
-          "IdUsuario": id,
-          "IdCategoria": categoriaId,
-          "Pagina": "estudo",
-        }
+  var wrongData = document.querySelector("#messageError")
+  var wrongDataNome = document.querySelector("#messageErrorNome")
+  var wrongDataCategoria = document.querySelector("#messageErrorCategoria")
+  var wrongDataUrl = document.querySelector("#messageErrorUrl")
     
-        if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
-          if(selectCategoriaVideoLazer.value == videoCategoria && videoIdUsuario == id){
-            fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
-              method: "POST", 
-              headers:{
-                "Content-type": "application/json"  
-              },
-              body: JSON.stringify(dadosVideoLazer),
-            })
-            .then(response => {if (response.ok) abreModalInserirNovo()})
+        if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){
+         
+          fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+          .then(response => { return response.json()})
+          .then(jsonBody => { 
+            jsonBody.forEach(function(valorAtual, indice) {
+              var videoCategoria = jsonBody[indice].Categoria
+              var videoIdUsuario = jsonBody[indice].IdUsuario
+              var categoriaId = jsonBody[indice].Id
+            
+              var dadosVideoLazer = {
+                "Nome": inputNomeVideoLazer.value,
+                "url": inputUrlVideoLazer.value,
+                "IdUsuario": id,
+                "IdCategoria": categoriaId,
+                "Pagina": "estudo",
+              }
+              if(selectCategoriaVideoLazer.value == videoCategoria && videoIdUsuario == id){
+                fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
+                  method: "POST", 
+                  headers:{
+                    "Content-type": "application/json"  
+                  },
+                  body: JSON.stringify(dadosVideoLazer),
+                })
+                .then(response => {if (response.ok) abreModalInserirNovo()})
+              } 
+            }
+            )
           }
+          )
         }
-        else {
-          abreModalFalha()
-        }
-      })
-    }
-  )
-};
+       
+        else if (inputNomeVideoLazer.value == "" && selectCategoriaVideoLazer.value == 0 && (inputUrlVideoLazer.value.includes("youtu.be/") == false && inputUrlVideoLazer.value.includes("youtube.com/") == false)){
+          wrongData.innerText = "";
+          wrongDataNome.innerText = "";
+          wrongDataCategoria.innerText = "";
+          wrongDataUrl.innerText = "";
+
+          wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+          wrongData.style.display = "block"
+          inputNomeVideoLazer.focus() 
+        } 
+        else if (inputNomeVideoLazer.value == "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){
+          console.log("erro")
+          
+          wrongData.innerText = "";
+          wrongDataNome.innerText = "";
+          wrongDataCategoria.innerText = "";
+          wrongDataUrl.innerText = "";
+  
+          wrongDataNome.innerText = "Preencha com um nome válido"
+          wrongData.style.display = "block"
+          inputNomeVideoLazer.focus()   
+
+        } 
+        else if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value == 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){
+          
+          wrongData.innerText = "";
+          wrongDataNome.innerText = "";
+          wrongDataCategoria.innerText = "";
+          wrongDataUrl.innerText = "";
+    
+          wrongDataCategoria.innerText = "Selecione uma categoria"
+          wrongData.style.display = "block"
+          selectCategoriaVideoLazer.focus()   
+        } 
+        else if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") == false && inputUrlVideoLazer.value.includes("youtube.com/") == false)){
+
+          wrongData.innerText = "";
+          wrongDataNome.innerText = "";
+          wrongDataCategoria.innerText = "";
+          wrongDataUrl.innerText = "";
+
+          wrongDataUrl.innerText = "Insira uma URL válida"
+          wrongData.style.display = "block"
+          inputUrlVideoLazer.focus()   
+          }
+        else if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value == 0 && (inputUrlVideoLazer.value.includes("youtu.be/") == false && inputUrlVideoLazer.value.includes("youtube.com/") == false)){
+
+          wrongData.innerText = "";
+          wrongDataNome.innerText = "";
+          wrongDataCategoria.innerText = "";
+          wrongDataUrl.innerText = "";
+  
+          wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+          wrongData.style.display = "block"
+          inputNomeVideoLazer.focus()  
+          }
+
+          
+        else if (inputNomeVideoLazer.value == "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") == false && inputUrlVideoLazer.value.includes("youtube.com/") == false)){
+
+          wrongData.innerText = "";
+          wrongDataNome.innerText = "";
+          wrongDataCategoria.innerText = "";
+          wrongDataUrl.innerText = "";
+  
+          wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+          wrongData.style.display = "block"
+          inputNomeVideoLazer.focus()  
+          }
+        else if (inputNomeVideoLazer.value == "" && selectCategoriaVideoLazer.value == 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){
+        
+          wrongData.innerText = "";
+          wrongDataNome.innerText = "";
+          wrongDataCategoria.innerText = "";
+          wrongDataUrl.innerText = "";
+  
+          wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+          wrongData.style.display = "block"
+          inputNomeVideoLazer.focus()   
+        } 
+}  
+
 
 
 /*Modal de inserção vídeos bem sucedida*/
