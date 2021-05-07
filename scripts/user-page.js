@@ -70,3 +70,19 @@ if(personagem != ""){
     let imgDivAvatar = document.getElementById("imgAvatar")
     imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
 }
+
+//Abre menu slide
+const menuSlide = document.querySelector(".menuMobile_box")
+const btnMenu = document.querySelector("#btnMenu")
+const menuDropD = document.querySelector(".dropdown-menu")
+const menuFechar = document.querySelector(".menuMobile_fechar")
+
+btnMenu.addEventListener("click", function() {
+  menuSlide.classList.add("menuMobile_open")
+  menuDropD.style.display = "none"
+})
+
+//Fecha menu slide
+menuFechar.addEventListener("click", function() {
+  menuSlide.classList.remove("menuMobile_open")
+})

@@ -11,10 +11,25 @@
     <link rel="stylesheet" href="styles/perfil.css">
     <link rel="stylesheet" href="styles/responsive-categorias.css">
   </head>
+
   <body>
+    <!-- Mobile menu slide-->
+<!--     <div class="menuMobile_bg"> -->
+      <div class="menuMobile_box">
+        <div id="imgAvatar" class="userStatus__img mobile"></div>
+        <div id="nick" class="userStatus__text mobile"></div>
+        <a class="menuMobile_item" href="page-videos-estudo.html">Estudos</a>
+        <a class="menuMobile_item" href="page-videos-lazer.html">Lazer</a>
+        <a class="menuMobile_item" href="#" href="#" id="sair" onClick="abreModalSair()">
+          <u>Sair</u>
+        </a>
+        <div class="menuMobile_fechar"></div>
+      </div>
+<!--     </div> -->
+
     <!-- Default dropright button -->
     <div class="btn-group dropright">
-      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btnMenu">
         <div id="imgAvatar" class="userStatus__img"></div>
       </button>
       <div class="dropdown-menu">
@@ -50,6 +65,8 @@
         <button class="escolhaUsuario" id="fun" onClick="timeToPlay()">Lazer</button>
       </section>
     </div>
+
+    
     <!-- Div importante: adiciona o modal -->
     <div class="modalHtml" id="modalHtml"></div>
     
