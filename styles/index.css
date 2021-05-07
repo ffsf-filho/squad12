@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 html, a, img, svg {
     cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;
 }
@@ -8,7 +10,6 @@ body {
     background-attachment: fixed;
     background-repeat: repeat-x;
     background-position: center;
-    /* background-size: contain; */
     background-color: #1B1821;
     font-family: 'Press Start 2P', monospace;
     display: flex;
@@ -19,44 +20,65 @@ body {
 main {
     position: relative;
     background-color: #1B1821;
-    box-shadow: 0.5rem 0.5rem 0 #1B1821;
+    box-shadow: 0.5rem 0.5rem 0 #041420;
     border-left: 0.2rem solid #6B54BF;
     border-right: 0.2rem solid #6B54BF;
     min-height: 100vh;
     max-height: 100%;
-    padding:1rem 2rem 2rem 2rem;
+    padding:1.5rem;
     width: 720px;
+}
+
+.imgLogoCamararoll {
+    width: 20rem;
+    height: 10rem;
+}
+
+#text-welcome{
+    margin-top: -5%;
 }
 
 h1 {
     color: #FFFFFF;
-    margin: 1rem 5rem 2rem 5rem;
+    margin: 5rem 0 0.5rem 0;
+    text-align: center;
+    text-shadow: 2px 2px #D941B0;
+}
+
+/*paragrafo avatar*/
+p {
+    color: #FFFFFF;
     position: relative;
     text-align: center;
     text-shadow: 2px 2px #D941B0;
 }
 
-/*Para o before ser absolute, o elemento pai (h1) tem que ser relative*/
-h1::before {
-    background: #D941B0;
-    border-radius: 8px;
-    content:'';
-    position: absolute; 
-    bottom: 3px;
-    left: 0;
-    height: 4px;
-    width: 100%;
+.subtitle {
+    color: #FFFFFF;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px #D941B0;
+}
+
+.description {
+    color: #FFFFFF;
+    font-family: monospace;
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.welcomeMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.imgLogoCamararoll {
-    margin-bottom: 1.5rem;
-    height: 6rem;
-    width: 12rem;
 }
 
 .sigin {
@@ -76,7 +98,8 @@ section {
     border: none;
     color: #1a1b1bfa;
     display: flex;
-    font-size: 1rem;
+    font-size: 0.75rem;
+    width: 20rem;
     height: 2rem;
     margin: 0.2rem 0;
     padding: 0.5rem;

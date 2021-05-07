@@ -12,11 +12,11 @@ if(objCamaraRoll== null){
     location.href="index.html" 
 } 
 else {
-    for(var i in objCamaraRoll){
-        usuario = objCamaraRoll[i].Users
-        id = objCamaraRoll[i].Id
-        personagem = objCamaraRoll[i].personagem
-    }
+  for(var i in objCamaraRoll){
+    usuario = objCamaraRoll[i].Users
+    id = objCamaraRoll[i].Id
+    personagem = objCamaraRoll[i].personagem
+  }
 }
 
 /*modal para sair/deslogar */
@@ -46,18 +46,18 @@ function abreModalSair(){
 
 // Remove o item do localstorage quando o usuário faz log-out e volta para página inicial
 function sair() { 
-    localStorage.removeItem("@camaraRoll-Users");
-    location.href="index.html"
+  localStorage.removeItem("@camaraRoll-Users");
+  location.href="index.html"
 }
 
 //Redireciona para página de vídeos de estudo
 function timeToStudy() {
-    location.href="page-videos-estudo.html"
+  location.href="page-videos-estudo.html"
 }
 
 //Redireciona para página de vídeos de lazer
 function timeToPlay () {
-    location.href="page-videos-lazer.html"
+  location.href="page-videos-lazer.html"
 }
 
 

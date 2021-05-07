@@ -110,6 +110,11 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   width: 100%;
 }
 
+.localizar-flex input::placeholder {
+  color: #1a1b1b86;
+  font-size: 14px;
+}
+
 .form-wrapper select {
   margin-top: 1rem;
   padding: 10px 15px;
@@ -173,9 +178,9 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
 
 /* Inicio estilos no js */
 #btnDeletaVideo {
-  background: #bae7ff;
+  background: #d7d4d8;
   border: none;
-  box-shadow: inset -6px -6px 0px #00a6ff;
+  box-shadow: inset -6px -6px 0px #dad6d5;
   color: #122432;
   font-size: 0.9rem;
   margin: 2rem 0;
