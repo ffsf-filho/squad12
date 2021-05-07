@@ -423,3 +423,38 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
     })
   }
 )
+
+
+
+let imgUrlAvatarMobile ="images/"
+//Inclui o Nick do usuário no mobile
+let nickNameMobile = document.getElementById("nickMobile")
+nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+
+//Troca a imagem do avatar no mobile
+if(personagem != ""){
+    imgUrlAvatarMobile += personagem
+    let imgDivAvatarMobile = document.getElementById("imgAvatarMobile")
+    imgDivAvatarMobile.style.backgroundImage = `url(${imgUrlAvatar})`
+}
+
+
+
+//Abre menu slide
+const menuSlide = document.querySelector(".menuMobile_box")
+const btnMenu = document.querySelector("#btnMenu")
+const menuDropD = document.querySelector(".dropdown-menu")
+const menuFechar = document.querySelector(".menuMobile_fechar")
+
+btnMenu.addEventListener("click", function() {
+  menuSlide.classList.add("menuMobile_open")
+
+  if( $(window).width() < 768){
+    menuDropD.style.display = "none"
+}   
+})
+
+//Fecha menu slide
+menuFechar.addEventListener("click", function() {
+  menuSlide.classList.remove("menuMobile_open")
+})
