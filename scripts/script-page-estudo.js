@@ -162,6 +162,7 @@ function adicionarVideoEstudo(){
         }
        
         else if (inputNomeVideoEstudo.value == "" && selectCategoriaVideoEstudo.value == 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") == false && inputUrlVideoEstudo.value.includes("youtube.com/") == false)){
+   
           wrongData.innerText = "";
           wrongDataNome.innerText = "";
           wrongDataCategoria.innerText = "";
@@ -172,8 +173,7 @@ function adicionarVideoEstudo(){
           inputNomeVideoEstudo.focus() 
         } 
         else if (inputNomeVideoEstudo.value == "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
-          console.log("erro")
-          
+ 
           wrongData.innerText = "";
           wrongDataNome.innerText = "";
           wrongDataCategoria.innerText = "";
@@ -185,7 +185,7 @@ function adicionarVideoEstudo(){
 
         } 
         else if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value == 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
-          
+
           wrongData.innerText = "";
           wrongDataNome.innerText = "";
           wrongDataCategoria.innerText = "";
@@ -449,31 +449,39 @@ document.addEventListener("keypress", function (event) {
 
 //Adicionar nova categoria na pagina de cadastro
 function adicionarCategoria() {
-  
+
   let input = document.getElementById("addOption")
   let select = document.getElementById("selectCategoriaVideoEstudo")
+  let newOption = document.createElement("option")   
+  
+  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
+          .then(response => { return response.json()})
+          .then(jsonBodyCategoria => { 
 
-  let newOption = document.createElement("option")
-  newOption.value = input.value
-  newOption.text = input.value
+                     
+            if(input.value != "") {
 
-  select.add(newOption)
-  input.value = ""
+            newOption.value = input.value
+            newOption.text = input.value
 
-  var cadastraCategoria = {
-    "IdUsuario": id,
-    "Categoria": newOption.value,
-    "Pagina": "estudo"
-  }
+            select.add(newOption)
+            input.value = ""
 
-  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
-    method: "POST", 
-    headers:{
-      "Content-type": "application/json"  
-    },
-    body: JSON.stringify(cadastraCategoria),
-  })
-}
+            var cadastraCategoria = {
+            "IdUsuario": id,
+            "Categoria": newOption.value,
+            "Pagina": "estudo"
+            }
+
+            fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
+            method: "POST", 
+            headers:{
+              "Content-type": "application/json"  
+            },
+            body: JSON.stringify(cadastraCategoria),
+            })}
+})}
+
     
 //Lista a categoria na pagina de cadastro
 fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
