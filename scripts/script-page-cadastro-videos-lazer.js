@@ -223,6 +223,11 @@ function videoLazer() {
   location.href="page-videos-lazer.html"
 }
 
+//Redireciona para página de cadastro de vídeos de lazer
+function criarVideoLazer(){
+  location.href="cadastro-video-lazer.html"
+}
+
 
 //Adiciona na página de cadastrar vídeos a funcionalidade de quando apertar a tecla "Enter" no teclado aciona o botão adicionar
 document.addEventListener("keypress", function (event) {
