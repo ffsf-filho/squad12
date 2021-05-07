@@ -132,7 +132,7 @@ const goToLogin = () => {
     let login = document.getElementById('login');
 
     if (login.onclick) {
-        location.href = "login.html"
+        location.href = "index.html"
     }
 }
 
@@ -142,7 +142,7 @@ const goToLoginCadastro = () => {
     let login = document.getElementById('loginCadastro');
 
     if (login.onclick) {
-        location.href = "login.html"
+        location.href = "index.html"
     }
 }
 
