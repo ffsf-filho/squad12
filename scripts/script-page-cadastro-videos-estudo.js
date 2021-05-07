@@ -226,7 +226,7 @@ function videoEstudo() {
 
 //Redireciona para página de cadastro vídeos de estudo
 function criarVideoEstudo() {
-  location.href="cadastro-videos-estudo.html"
+  location.href="cadastro-video-estudo.html"
 }
 
 
