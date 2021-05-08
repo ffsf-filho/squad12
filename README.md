@@ -26,7 +26,7 @@ Content
 
 ## Instructions
 ### Video with instructions for use
-  [<img src="https://img.youtube.com/vi/K0rOZ-dQpc8/maxresdefault.jpg" width="50%">](https://youtu.be/K0rOZ-dQpc8)
+  [![Camara-Roll a sua plataforma de estudo e lazer](https://img.youtube.com/vi/K0rOZ-dQpc8/maxresdefault.jpg)](http://www.youtube.com/watch?v=K0rOZ-dQpc8 "Vídeo de instuções de uso do Camara-Roll")
 
 </div>
 
