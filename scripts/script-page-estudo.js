@@ -21,7 +21,7 @@ else {
 
 //inclui o Nick do usuário
 let nickName = document.getElementById("nick")
-nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 // Remove o item do localstorage quando o usuário faz log-out e volta para página inicial
 function sair() { 
