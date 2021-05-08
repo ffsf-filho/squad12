@@ -25,7 +25,7 @@ Content
 <div id="Instructions">
 ## Instructions
 
-  <iframe width="950" height="468" src="https://www.youtube.com/embed/K0rOZ-dQpc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  [<img src="https://img.youtube.com/vi/K0rOZ-dQpc8/maxresdefault.jpg" width="50%">](https://youtu.be/K0rOZ-dQpc8>)
 
 </div>
 
