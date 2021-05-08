@@ -21,7 +21,7 @@ else {
 
 //inclui o Nick do usuário
 let nickName = document.getElementById("nick")
-nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 /*modal para sair/deslogar */
 function abreModalSair(){
@@ -282,7 +282,7 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
 let imgUrlAvatarMobile ="images/"
 //Inclui o Nick do usuário no mobile
 let nickNameMobile = document.getElementById("nickMobile")
-nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 //Troca a imagem do avatar no mobile
 if(personagem != ""){

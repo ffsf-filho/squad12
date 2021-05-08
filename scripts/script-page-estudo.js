@@ -21,7 +21,7 @@ else {
 
 //inclui o Nick do usuário
 let nickName = document.getElementById("nick")
-nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 // Remove o item do localstorage quando o usuário faz log-out e volta para página inicial
 function sair() { 
@@ -121,7 +121,6 @@ function abreModal(filmeId){
   })
 }
 
-
 //Pesquisar filmes já cadastrados
 function btnPesquisar(){
   var listaFilmes = document.querySelector('#listaFilmes');
@@ -132,11 +131,9 @@ function btnPesquisar(){
     .then(jsonBody => {
       const campoPesquisaFilme = document.querySelector("#pesquisaFilme");
       const filmePesquisado = campoPesquisaFilme.value;
-        
       function removerAcentosEspaco(str) {
         return str.normalize("NFD").replace(/[^a-zA-Zs]/g, "");
       }
-
       jsonBody.forEach(function(valorAtual, indice) {
         const valorAtualNome = valorAtual.Nome
         let resultadoPesquisa;   
@@ -158,7 +155,7 @@ function btnPesquisar(){
         }
       })
     }
- )
+    )
 }
 
 //Apaga vídeos da tela
@@ -261,7 +258,6 @@ document.addEventListener("keypress", function (event) {
   }
 })
 
-
 //Lista a categoria na pagina de videos
 fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
   .then(response => { return response.json()})
@@ -279,12 +275,10 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
   }
 )
 
-
-
 let imgUrlAvatarMobile ="images/"
 //Inclui o Nick do usuário no mobile
 let nickNameMobile = document.getElementById("nickMobile")
-nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 //Troca a imagem do avatar no mobile
 if(personagem != ""){
@@ -293,8 +287,6 @@ if(personagem != ""){
     imgDivAvatarMobile.style.backgroundImage = `url(${imgUrlAvatar})`
 }
 
-
-
 //Abre menu slide
 const menuSlide = document.querySelector(".menuMobile_box")
 const btnMenu = document.querySelector("#btnMenu")
@@ -302,7 +294,6 @@ const menuDropD = document.querySelector(".dropdown-menu")
 const menuFechar = document.querySelector(".menuMobile_fechar")
 
 btnMenu.addEventListener("click", function() {
-  
   if( $(window).width() < 768){
     menuSlide.classList.add("menuMobile_open")
     menuDropD.style.visibility = "hidden"

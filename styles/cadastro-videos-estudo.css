@@ -61,7 +61,7 @@ body {
 }
 
 .userStatus__text {
-  padding: 2px;
+  padding: 5px;
   color: #1B1821;
   text-shadow: 1px 1px #d34dafd0;
 }
@@ -72,8 +72,11 @@ body {
   text-shadow: 1px 1px #c468ab;
 }
 
+.divLinks{
+  padding: 3px 0px 3px 5px;
+}
+
 .links_drop_usuario {
-  padding: 2px;
   color: #1B1821;
   text-shadow: 1px 1px #c468ab;
 }
@@ -303,7 +306,6 @@ button:active {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
 
-
 #messageError { 
   color: rgb(255 160 160);
   /* display: none; */
@@ -320,7 +322,6 @@ button:active {
   font-weight: bold;
   font-size: 1rem;
   margin: 1rem;
-
 }
 
 #messageErrorCategoria { 
@@ -330,7 +331,16 @@ button:active {
   font-weight: bold;
   font-size: 1rem;
   margin: 1rem;
+}
 
+#messageNovaCategoria{
+  position: absolute;
+  color: rgb(255 160 160);
+  /* display: none; */
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 4rem -20rem;
 }
 
 #messageErrorUrl { 
@@ -340,7 +350,6 @@ button:active {
   font-weight: bold;
   font-size: 1rem;
   margin: 1rem;
-
 }
 
 #messageErrorCategoriaCadastrada { 
@@ -350,7 +359,5 @@ button:active {
   font-weight: bold;
   font-size: 1rem;
   margin: 1rem;
-
 }
-
 /* fim dos estilos no js */

@@ -60,7 +60,7 @@ body {
 }
 
 .userStatus__text {
-  padding: 2px;
+  padding: 5px;
   color: #1B1821;
   text-shadow: 1px 1px #d34dafd0;
 }
@@ -71,8 +71,11 @@ body {
   text-shadow: 1px 1px #c468ab;
 }
 
+.divLinks{
+  padding: 3px 0px 3px 5px;
+}
+
 .links_drop_usuario {
-  padding: 2px;
   color: #1B1821;
   text-shadow: 1px 1px #c468ab;
 }
@@ -178,11 +181,10 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   font-size: 0.9rem;
   margin-bottom: 0px;
   max-width: 280px;
-  overflow: hidden;              /* "overflow" value must be different from "visible" */
-  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
-
 
 /* Inicio estilos no js */
 #btnDeletaVideo {

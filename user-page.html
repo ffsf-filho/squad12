@@ -11,20 +11,20 @@
     <link rel="stylesheet" href="styles/perfil.css">
     <link rel="stylesheet" href="styles/responsive-categorias.css">
   </head>
-
+  
   <body>
     <!-- Mobile menu slide-->
-      <div class="menuMobile_box">
-        <div id="imgAvatarMobile" class="userStatus__img mobile"></div>
-        <div id="nickMobile" class="userStatus__text mobile"></div>
-        <a class="menuMobile_item" href="page-videos-estudo.html">Estudos</a>
-        <a class="menuMobile_item" href="page-videos-lazer.html">Lazer</a>
-        <a class="menuMobile_item" href="#" href="#" id="sair" onClick="abreModalSair()">
-          <u>Sair</u>
-        </a>
-        <div class="menuMobile_fechar"></div>
-      </div>
-
+    <div class="menuMobile_box">
+      <div id="imgAvatarMobile" class="userStatus__img mobile"></div>
+      <div id="nickMobile" class="userStatus__text mobile"></div>
+      <a class="menuMobile_item" href="page-videos-estudo.html">Estudos</a>
+      <a class="menuMobile_item" href="page-videos-lazer.html">Lazer</a>
+      <a class="menuMobile_item" href="#" href="#" id="sair" onClick="abreModalSair()">
+        <u>Sair</u>
+      </a>
+      <div class="menuMobile_fechar"></div>
+    </div>
+    
     <!-- Default dropright button -->
     <div class="btn-group dropright">
       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btnMenu">
@@ -33,11 +33,17 @@
       <div class="dropdown-menu">
         <!-- Dropdown menu links -->
         <div id="nick" class="userStatus__text"></div>
-        <a class="links_drop_usuario" href="page-videos-estudo.html">Estudos</a>
-        <a class="links_drop_usuario" href="page-videos-lazer.html">Lazer</a>
-        <a class="links_drop_usuario" href="#" href="#" id="sair" onClick="abreModalSair()">
-          <u>Sair</u>
-        </a>
+        <div class="divLinks">
+          <a class="links_drop_usuario" href="page-videos-estudo.html">Estudos</a>
+        </div>
+        <div class="divLinks">
+          <a class="links_drop_usuario" href="page-videos-lazer.html">Lazer</a>
+        </div>
+        <div class="divLinks">
+          <a class="links_drop_usuario" href="#" href="#" id="sair" onClick="abreModalSair()">
+            <u>Sair</u>
+          </a>
+        </div>        
       </div>
     </div>
       
@@ -63,7 +69,6 @@
         <button class="escolhaUsuario" id="fun" onClick="timeToPlay()">Lazer</button>
       </section>
     </div>
-
     
     <!-- Div importante: adiciona o modal -->
     <div class="modalHtml" id="modalHtml"></div>

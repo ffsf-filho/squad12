@@ -8,8 +8,9 @@
 Content
 =================
    * [About](#About)
-   * [Technologies](#Technologies)
+   * [Instructions](#Instructions)
    * [Downloading](#Downloading)
+   * [Technologies](#Technologies)
    * [StartingTheApplication](#Starting)
 
 <div id="About">    
@@ -18,6 +19,14 @@ Content
 ### This is a project done by @ ffsf-filho, @gabrielasertori, @lucasnsouza, 
 ### @marcelonader and @LuizGVM for the Dev Alura Training & Immersion Program, sponsored by (<strong><a href="https://www.fcamara.com.br/">FCamara</a></strong>)
 ### The project is a repository of films and study videos
+
+</div>
+
+<div id="Instructions">
+
+## Instructions
+### Video with instructions for use
+  [![Camara-Roll a sua plataforma de estudo e lazer](https://img.youtube.com/vi/K0rOZ-dQpc8/maxresdefault.jpg)](http://www.youtube.com/watch?v=K0rOZ-dQpc8 "Vídeo de instuções de uso do Camara-Roll")
 
 </div>
 
@@ -70,8 +79,7 @@ OR
 
 ### Features
 
-- [x] Homepage
-- [x] Login
+- [x] Homepage/Login
 - [x] Cadastro login
 - [x] Endpoint of outsystem Rest API
 - [x] Tela de vídeo para estudo
@@ -102,7 +110,7 @@ OR
         </a>
      </td>
      <td>
-        <a href="https://github.com/lucasnsouza">
+        <a href="https://github.com/lucasnsouza" target="_blank">
           <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/80481689?v=4" width="100px;" alt="Lucas Souza">
           <br />
           <sub>
@@ -111,7 +119,7 @@ OR
         </a>
      </td>
      <td>
-        <a href="https://github.com/marcelonader">
+        <a href="https://github.com/marcelonader" target="_blank">
           <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/80595683?v=4" width="100px;" alt="Marcelo Nader">
           <br />
           <sub>
@@ -120,7 +128,7 @@ OR
         </a>
      </td>
      <td>
-        <a href="https://github.com/LuizGVM">
+        <a href="https://github.com/LuizGVM" target="_blank">
           <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/83261651?v=4" width="100px;" alt="Luiz G. V. M.">
           <br />
           <sub>
