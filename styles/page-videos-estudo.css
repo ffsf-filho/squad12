@@ -175,8 +175,12 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
 }
 
 .title{
+  font-size: 0.9rem;
   margin-bottom: 0px;
   max-width: 280px;
+  overflow: hidden;              /* "overflow" value must be different from "visible" */
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 
@@ -186,7 +190,7 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   border: none;
   box-shadow: inset -6px -6px 0px #dad6d5;
   color: #122432;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 2rem 0;
   min-width: 10rem;
   min-height: 3rem;
@@ -209,6 +213,8 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   border:1px;
   border-style:double;
   box-shadow: inset -6px - 6px 0 #00a6ff;
+  font-size: 0.9rem;
+  height: 315px;
 }
 
 .modal {
