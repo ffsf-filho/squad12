@@ -164,7 +164,7 @@ document.addEventListener("keypress", function (event) {
   
       btn.click()
     }
-  })
+})
 
 //Adiciona na página de login-cadastro a funcionalidade de quando aperta a tecla "Enter" no teclado aciona o botão entrar
 document.addEventListener("keypress", function (event) {
@@ -174,4 +174,4 @@ document.addEventListener("keypress", function (event) {
   
       btn.click()
     }
-  })
+})
