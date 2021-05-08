@@ -110,6 +110,7 @@ function adicionarVideoLazer(){
           var videoCategoria = jsonBody[indice].Categoria
           var videoIdUsuario = jsonBody[indice].IdUsuario
           var categoriaId = jsonBody[indice].Id
+          var categoriaPagina = jsonBody[indice].Pagina
             
           var dadosVideoLazer = {
             "Nome": inputNomeVideoLazer.value,
@@ -118,7 +119,7 @@ function adicionarVideoLazer(){
             "IdCategoria": categoriaId,
             "Pagina": "lazer",
           }
-          if(selectCategoriaVideoLazer.value == videoCategoria && videoIdUsuario == id){
+          if(selectCategoriaVideoLazer.value == videoCategoria && videoIdUsuario == id  && categoriaPagina == "lazer"){
             fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
               method: "POST", 
               headers:{
