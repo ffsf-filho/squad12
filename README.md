@@ -8,8 +8,9 @@
 Content
 =================
    * [About](#About)
-   * [Technologies](#Technologies)
+   * [Instructions](Instructions)
    * [Downloading](#Downloading)
+   * [Technologies](#Technologies)
    * [StartingTheApplication](#Starting)
 
 <div id="About">    
@@ -18,6 +19,13 @@ Content
 ### This is a project done by @ ffsf-filho, @gabrielasertori, @lucasnsouza, 
 ### @marcelonader and @LuizGVM for the Dev Alura Training & Immersion Program, sponsored by (<strong><a href="https://www.fcamara.com.br/">FCamara</a></strong>)
 ### The project is a repository of films and study videos
+
+</div>
+
+<div id="Instructions">
+## Instructions
+
+  <iframe width="950" height="468" src="https://www.youtube.com/embed/K0rOZ-dQpc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </div>
 

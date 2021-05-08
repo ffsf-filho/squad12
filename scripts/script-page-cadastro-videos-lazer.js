@@ -21,7 +21,7 @@ else {
 
 //inclui o Nick do usuário
 let nickName = document.getElementById("nick")
-nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 /*modal para sair/deslogar */
 function abreModalSair(){
@@ -94,7 +94,14 @@ function adicionarVideoLazer(){
   var wrongDataNome = document.querySelector("#messageErrorNome")
   var wrongDataCategoria = document.querySelector("#messageErrorCategoria")
   var wrongDataUrl = document.querySelector("#messageErrorUrl")
-    
+  
+  //Limpa a mensagem de erro do campo nova cateogria 
+  let input = document.getElementById("addOption")
+  input.value = ""
+  input.style.backgroundColor = "#ffffff"    
+  let msgErro = document.getElementById("messageNovaCategoria")
+  msgErro.innerText = ""
+  
   if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){       
     fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
       .then(response => { return response.json()})
@@ -132,7 +139,10 @@ function adicionarVideoLazer(){
     wrongDataUrl.innerText = "";
     wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
     wrongData.style.display = "block"
-    inputNomeVideoLazer.focus() 
+    inputNomeVideoLazer.style.backgroundColor = "#ee6e6e"
+    inputNomeVideoLazer.focus()
+    selectCategoriaVideoLazer.style.backgroundColor = "#ee6e6e"
+    inputUrlVideoLazer.style.backgroundColor = "#ee6e6e"
   } 
   else if (inputNomeVideoLazer.value == "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){
     wrongData.innerText = "";
@@ -141,6 +151,7 @@ function adicionarVideoLazer(){
     wrongDataUrl.innerText = "";
     wrongDataNome.innerText = "Preencha com um nome válido"
     wrongData.style.display = "block"
+    inputNomeVideoLazer.style.backgroundColor = "#ee6e6e"
     inputNomeVideoLazer.focus()   
   } 
   else if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value == 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){
@@ -150,6 +161,7 @@ function adicionarVideoLazer(){
     wrongDataUrl.innerText = "";
     wrongDataCategoria.innerText = "Selecione uma categoria"
     wrongData.style.display = "block"
+    selectCategoriaVideoLazer.style.backgroundColor = "#ee6e6e"
     selectCategoriaVideoLazer.focus()   
   } 
   else if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") == false && inputUrlVideoLazer.value.includes("youtube.com/") == false)){
@@ -159,6 +171,7 @@ function adicionarVideoLazer(){
     wrongDataUrl.innerText = "";
     wrongDataUrl.innerText = "Insira uma URL válida"
     wrongData.style.display = "block"
+    inputUrlVideoLazer.style.backgroundColor = "#ee6e6e"
     inputUrlVideoLazer.focus()   
   }
   else if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value == 0 && (inputUrlVideoLazer.value.includes("youtu.be/") == false && inputUrlVideoLazer.value.includes("youtube.com/") == false)){
@@ -166,31 +179,38 @@ function adicionarVideoLazer(){
     wrongDataNome.innerText = "";
     wrongDataCategoria.innerText = "";
     wrongDataUrl.innerText = "";
-    wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+    wrongDataCategoria.innerText = "Selecione uma categoria"
+    wrongDataUrl.innerText = "Insira uma URL válida"
     wrongData.style.display = "block"
-    inputNomeVideoLazer.focus()  
+    selectCategoriaVideoLazer.style.backgroundColor = "#ee6e6e"
+    selectCategoriaVideoLazer.focus()
+    inputUrlVideoLazer.style.backgroundColor = "#ee6e6e"
   }   
   else if (inputNomeVideoLazer.value == "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") == false && inputUrlVideoLazer.value.includes("youtube.com/") == false)){
     wrongData.innerText = "";
     wrongDataNome.innerText = "";
     wrongDataCategoria.innerText = "";
     wrongDataUrl.innerText = "";
-    wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+    wrongDataNome.innerText = "Preencha com um nome válido"
+    wrongDataUrl.innerText = "Insira uma URL válida"
     wrongData.style.display = "block"
-    inputNomeVideoLazer.focus()  
+    inputNomeVideoLazer.style.backgroundColor = "#ee6e6e"
+    inputNomeVideoLazer.focus()
+    inputUrlVideoLazer.style.backgroundColor = "#ee6e6e"
   }
   else if (inputNomeVideoLazer.value == "" && selectCategoriaVideoLazer.value == 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){
     wrongData.innerText = "";
     wrongDataNome.innerText = "";
     wrongDataCategoria.innerText = "";
     wrongDataUrl.innerText = "";
-    wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+    wrongDataNome.innerText = "Preencha com um nome válido"
+    wrongDataCategoria.innerText = "Selecione uma categoria"   
     wrongData.style.display = "block"
-    inputNomeVideoLazer.focus()   
+    inputNomeVideoLazer.style.backgroundColor = "#ee6e6e"    
+    inputNomeVideoLazer.focus()
+    selectCategoriaVideoLazer.style.backgroundColor = "#ee6e6e"    
   } 
 }  
-
-
 
 /*Modal de inserção vídeos bem sucedida*/
 function abreModalInserirNovo(){
@@ -217,7 +237,6 @@ function abreModalInserirNovo(){
   })
 }
 
-
 //Redireciona para página de vídeos de lazer
 function videoLazer() {
   location.href="page-videos-lazer.html"
@@ -228,7 +247,6 @@ function criarVideoLazer(){
   location.href="cadastro-video-lazer.html"
 }
 
-
 //Adiciona na página de cadastrar vídeos a funcionalidade de quando apertar a tecla "Enter" no teclado aciona o botão adicionar
 document.addEventListener("keypress", function (event) {
   if (event.key == "Enter"){
@@ -237,36 +255,60 @@ document.addEventListener("keypress", function (event) {
   }
 })
 
-
-
 //Adicionar nova categoria na pagina de cadastro
 function adicionarCategoria() {
   let input = document.getElementById("addOption")
-  let select = document.getElementById("selectCategoriaVideoLazer")
-  let newOption = document.createElement("option")
+  let msgErro = document.getElementById("messageNovaCategoria")
 
   if(input.value != "") {
-    newOption.value = input.value
-    newOption.text = input.value
-    select.add(newOption)
-    input.value = ""
-
-    var cadastraCategoria = {
-      "IdUsuario": id,
-      "Categoria": newOption.value,
-      "Pagina": "lazer"
+    let select = document.getElementById("selectCategoriaVideoLazer")
+    let newOption = document.createElement("option")
+    let exiteCategoria = false
+    
+    //Verifica se a categoria a ser cadastrada já exite
+    Array.from(select.options).forEach(function(opcoes){
+      if(opcoes.text.toLowerCase() == input.value.toLowerCase()){
+        exiteCategoria = true //Se a nova categoria já existir
+        select[opcoes.index].selected = true
+      }
+    })
+    
+    if (!exiteCategoria){
+      newOption.value = input.value
+      newOption.text = input.value
+      select.add(newOption)
+      
+      var cadastraCategoria = {
+        "IdUsuario": id,
+        "Categoria": newOption.value,
+        "Pagina": "lazer"
+      }
+      
+      fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
+        method: "POST", 
+        headers:{
+          "Content-type": "application/json"  
+        },
+        body: JSON.stringify(cadastraCategoria),
+      })
+      
+      Array.from(select.options).forEach(function(opcoes){
+        if(opcoes.text == input.value){
+          select[opcoes.index].selected = true
+        }
+      })      
     }
 
-    fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
-      method: "POST", 
-      headers:{
-        "Content-type": "application/json"  
-      },
-      body: JSON.stringify(cadastraCategoria),
-    })
+    input.value = ""
+    msgErro.innerText = ""
+    input.style.backgroundColor = "#ffffff"    
+  } else {
+    msgErro.innerText = "Inserir um nome para nova categoria."
+    input.style.backgroundColor = "#ee6e6e"
+    input.focus()
   }
 }
-    
+
 //Lista a categoria na pagina de cadastro
 fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
   .then(response => { return response.json()})
@@ -275,7 +317,7 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
       var videoCategoria = jsonBody[indice].Categoria
       var videoIdUsuario = jsonBody[indice].IdUsuario
       var categoriaPagina = jsonBody[indice].Pagina
-
+      
       if(videoIdUsuario == id && categoriaPagina == "lazer") {
         var novaCategoria = document.querySelector("#selectCategoriaVideoLazer")
         novaCategoria.innerHTML = novaCategoria.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
@@ -284,11 +326,10 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
   }
 )
 
-
 let imgUrlAvatarMobile ="images/"
 //Inclui o Nick do usuário no mobile
 let nickNameMobile = document.getElementById("nickMobile")
-nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 //Troca a imagem do avatar no mobile
 if(personagem != ""){
@@ -296,8 +337,6 @@ if(personagem != ""){
   let imgDivAvatarMobile = document.getElementById("imgAvatarMobile")
   imgDivAvatarMobile.style.backgroundImage = `url(${imgUrlAvatar})`
 }
-
-
 
 //Abre menu slide
 const menuSlide = document.querySelector(".menuMobile_box")
