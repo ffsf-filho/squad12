@@ -17,7 +17,7 @@ Content
 
 ## About
 ### This is a project done by @ ffsf-filho, @gabrielasertori, @lucasnsouza, 
-### @marcelonader and @LuizGVM for the Dev Alura Training & Immersion Program, sponsored by (<strong><a href="https://www.fcamara.com.br/" target="_parent">FCamara</a></strong>)
+### @marcelonader and @LuizGVM for the Dev Alura Training & Immersion Program, sponsored by (<strong><a href="https://www.fcamara.com.br/">FCamara</a></strong>)
 ### The project is a repository of films and study videos
 
 </div>
@@ -25,14 +25,8 @@ Content
 <div id="Instructions">
 
 ## Instructions
+##
 ### Video with instructions for use
-          
-  <a href="https://youtu.be/K0rOZ-dQpc8" target="_parent">
-    <img style="border-radius: 50%;" src="https://img.youtube.com/vi/K0rOZ-dQpc8/maxresdefault.jpg" width="50%;" alt="Video with instructions for use">
-  </a>
-
-  [![Watch the video](https://img.youtube.com/vi/K0rOZ-dQpc8/maxresdefault.jpg)](https://youtu.be/K0rOZ-dQpc8)
-
   [<img src="https://img.youtube.com/vi/K0rOZ-dQpc8/maxresdefault.jpg" width="50%">](https://youtu.be/K0rOZ-dQpc8)
 
 </div>
