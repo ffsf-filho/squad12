@@ -268,18 +268,18 @@ function adicionarCategoria() {
   if(input.value != "") {
     let select = document.getElementById("selectCategoriaVideoLazer")
     let newOption = document.createElement("option")
-    let exiteCategoria = false
+    let existeCategoria = false
     
     
     //Verifica se a categoria a ser cadastrada já exite
     Array.from(select.options).forEach(function(opcoes){
       if(removerAcentosEspaco(opcoes.text.toLowerCase()) == removerAcentosEspaco(input.value.toLowerCase())){
-        exiteCategoria = true //Se a nova categoria já existir
+        existeCategoria = true //Se a nova categoria já existir
         select[opcoes.index].selected = true
       }
     })
     
-    if (!exiteCategoria){
+    if (!existeCategoria){
       newOption.value = input.value
       newOption.text = input.value
       select.add(newOption)
