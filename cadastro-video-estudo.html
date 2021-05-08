@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/cadastro-videos-estudo.css"> <!-- adicionei novo css por causa dos componentes do js-->
     <link rel="stylesheet" href="styles/responsive-cadastro-videos.css">
   </head>
+  
   <body>
     <!-- Mobile menu slide-->
     <div class="menuMobile_box">
@@ -49,10 +50,10 @@
         </div>
       </div>
     </div>
-
-      <!-- Div importante: adiciona o modal -->
+    
+    <!-- Div importante: adiciona o modal -->
     <div class="modalHtml" id="modalHtml"></div>
-
+    
     <!-- Gatinha do github -->
     <div class="github">
       <a href="https://github.com/ffsf-filho/squad12" title="Repositório no GitHub" target="_blank">
@@ -67,11 +68,12 @@
         </svg>
       </a>
     </div>
-
+    
     <!-- Campos de inserir vídeo (Nome no app, categoria do vídeo e url) -->
     <div class="form-wrapper">
       <h1 class="page-subtitle">Estudos</h1>
       <h2 class="addFilme_label">Qual video você gostaria de inserir?</h2>
+      
       <span id="messageErrorNome"></span>
       <label for="inputNomeVideoEstudo">Nome:</label>
       <input type="text" id="inputNomeVideoEstudo" placeholder="Escolha um nome para o vídeo">
@@ -87,6 +89,7 @@
       <input type="text" id="addOption" placeholder="Nome da nova categoria">
       <button onClick="adicionarCategoria()" id="addCategoria">Criar nova categoria</button>
       <div></div>
+      
       <span id="messageErrorUrl"></span>
       <div></div>
       <label for="inputUrlVideoEstudo">Link:</label>
@@ -97,7 +100,7 @@
       <button onClick="videoEstudo()">Voltar</button>
       <button onclick="adicionarVideoEstudo()" id="btnAdicionarVideoEstudo">Adicionar</button>
     </div>
-
+    
     <!-- Links necessários para o dropdown bootstrap funcionar -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -291,7 +291,7 @@ function adicionarCategoria() {
         }
       })
     }
-
+    
     input.value = ""
     msgErro.innerText = ""
     input.style.backgroundColor = "#ffffff"
