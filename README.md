@@ -25,7 +25,6 @@ Content
 <div id="Instructions">
 
 ## Instructions
-##
 ### Video with instructions for use
   [<img src="https://img.youtube.com/vi/K0rOZ-dQpc8/maxresdefault.jpg" width="50%">](https://youtu.be/K0rOZ-dQpc8)
 
