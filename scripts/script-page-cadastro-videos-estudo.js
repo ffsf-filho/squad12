@@ -110,6 +110,7 @@ function adicionarVideoEstudo(){
           var videoCategoria = jsonBody[indice].Categoria
           var videoIdUsuario = jsonBody[indice].IdUsuario
           var categoriaId = jsonBody[indice].Id
+          var categoriaPagina = jsonBody[indice].Pagina
             
           var dadosVideoEstudo = {
             "Nome": inputNomeVideoEstudo.value,
@@ -118,7 +119,7 @@ function adicionarVideoEstudo(){
             "IdCategoria": categoriaId,
             "Pagina": "estudo",
           }
-          if(selectCategoriaVideoEstudo.value == videoCategoria && videoIdUsuario == id){
+          if(selectCategoriaVideoEstudo.value == videoCategoria && videoIdUsuario == id && categoriaPagina == "estudo"){
             fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/videos", {
               method: "POST", 
               headers:{
