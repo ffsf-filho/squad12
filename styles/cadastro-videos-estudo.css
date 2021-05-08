@@ -354,5 +354,14 @@ button:active {
 
 }
 
+#messageErrorCategoriaCadastrada { 
+  color: rgb(255 160 160);
+  /* display: none; */
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem;
+
+}
 
 /* fim dos estilos no js */
