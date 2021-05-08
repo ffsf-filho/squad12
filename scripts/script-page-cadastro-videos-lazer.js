@@ -94,7 +94,14 @@ function adicionarVideoLazer(){
   var wrongDataNome = document.querySelector("#messageErrorNome")
   var wrongDataCategoria = document.querySelector("#messageErrorCategoria")
   var wrongDataUrl = document.querySelector("#messageErrorUrl")
-    
+  
+  //Limpa a mensagem de erro do campo nova cateogria 
+  let input = document.getElementById("addOption")
+  input.value = ""
+  input.style.backgroundColor = "#ffffff"    
+  let msgErro = document.getElementById("messageNovaCategoria")
+  msgErro.innerText = ""
+  
   if (inputNomeVideoLazer.value != "" && selectCategoriaVideoLazer.value != 0 && (inputUrlVideoLazer.value.includes("youtu.be/") || inputUrlVideoLazer.value.includes("youtube.com/"))){       
     fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
       .then(response => { return response.json()})

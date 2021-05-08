@@ -94,7 +94,14 @@ function adicionarVideoEstudo(){
   var wrongDataNome = document.querySelector("#messageErrorNome")
   var wrongDataCategoria = document.querySelector("#messageErrorCategoria")
   var wrongDataUrl = document.querySelector("#messageErrorUrl")
-    
+  
+  //Limpa a mensagem de erro do campo nova cateogria 
+  let input = document.getElementById("addOption")
+  input.value = ""
+  input.style.backgroundColor = "#ffffff"    
+  let msgErro = document.getElementById("messageNovaCategoria")
+  msgErro.innerText = ""  
+  
   if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
     fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
       .then(response => { return response.json()})
