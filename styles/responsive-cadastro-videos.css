@@ -1,16 +1,16 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     body {
         padding: 2rem;
         width: 410px;
     }
 
     .page-subtitle {
-        /* display: block; */
         font-size: 1.25rem;
         line-height: 2rem;
         margin-top: 150px;
     }
 
+    /* Começo do menu slide */
     .menuMobile_box {
         display: block;
         background-color: #ffffff;
@@ -67,6 +67,7 @@
         top: 2rem;
         right: 2rem;
     }
+    /* Fim do menu slide */
 
     .form-wrapper input {
         width: 100%;
@@ -85,6 +86,14 @@
     }
 }
 
+/* Permite scroll na orientação em paisagem */
+@media screen and (orientation: landscape) {
+    .menuMobile_box {
+        position: absolute;
+    }
+}
+
+/* Ajusta o modal na tela */
 @media screen and (max-width: 596px) {
     .modalBox {
         width: 90%;

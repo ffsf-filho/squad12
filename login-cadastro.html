@@ -5,16 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cadastro</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap">
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="styles/normalize.css"> <!--Normalize e reset para uniformizar o css dos navegadores-->
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/responsive-index.css"> <!--Arquivo para ficar todos os layouts responsivos-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap">
     </head>
     <body>
         <main>
+            <!-- Gatinha do github -->
             <div class="github">
                 <a href="https://github.com/ffsf-filho/squad12" title="Repositório no GitHub" target="_blank">
                     <svg width="80" height="80" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -49,34 +51,34 @@
                 <p>Selecione seu avatar</p>
                 <div class="divAvatar">
                     <label for="avatar-touro" class="labelAvatar">
-                        <input type="radio" name="avatar" id="avatar-touro" value="avatar-touro.png" tabindex="4">
+                        <input type="radio" name="avatar" id="avatar-touro" value="avatar-touro.png" checked="true">
                         <img src="images/avatar-touro.png" alt="avatar-touro" class="imgAvatar">
                     </label>
                     <label for="avatar-tubarao" class="labelAvatar">
-                        <input type="radio" name="avatar" id="avatar-tubarao" value="avatar-tubarao.png" tabindex="4">
+                        <input type="radio" name="avatar" id="avatar-tubarao" value="avatar-tubarao.png">
                         <img src="images/avatar-tubarao.png" alt="avatar-tubarao" class="imgAvatar">
                     </label>
                     <label for="avatar-porco" class="labelAvatar">
-                        <input type="radio" name="avatar" id="avatar-porco" value="avatar-porco.png" tabindex="4">
+                        <input type="radio" name="avatar" id="avatar-porco" value="avatar-porco.png">
                         <img src="images/avatar-porco.png" alt="avatar-porco" class="imgAvatar">
                     </label>
                     <label for="avatar-raposa" class="labelAvatar">
-                        <input type="radio" name="avatar" id="avatar-raposa" value="avatar-raposa.png" tabindex="4">
+                        <input type="radio" name="avatar" id="avatar-raposa" value="avatar-raposa.png">
                         <img src="images/avatar-raposa.png" alt="avatar-raposa" class="imgAvatar">
                     </label>
                     <label for="avatar-pinguim" class="labelAvatar">
-                        <input type="radio" name="avatar" id="avatar-pinguim" value="avatar-pinguim.png" checked="true" tabindex="4" >
+                        <input type="radio" name="avatar" id="avatar-pinguim" value="avatar-pinguim.png">
                         <img src="images/avatar-pinguim.png" alt="avatar-pinguim" class="imgAvatar">
                     </label>
                     <label for="avatar-guaxinim" class="labelAvatar">
-                        <input type="radio" name="avatar" id="avatar-guaxinim" value="avatar-guaxinim.png" tabindex="4">
+                        <input type="radio" name="avatar" id="avatar-guaxinim" value="avatar-guaxinim.png">
                         <img src="images/avatar-guaxinim.png" alt="avatar-guaxinim" class="imgAvatar">
                     </label>
                 </div>
-                <button id="btnEntrar" class="btn" onClick="loginCadastro()" tabindex="5">Concluir</button>
+                <button id="btnEntrar" class="btn" onClick="loginCadastro()">Concluir</button>
                 <div class="joinUS">
                     <label for="login" class="joinUS__label">Já é usuário?</label>
-                    <button class="btn" id="loginCadastro" onClick="goToLoginCadastro()" tabindex="6">Entrar</button>
+                    <button class="btn" id="loginCadastro" onClick="goToLoginCadastro()">Entrar</button>
                 </div>
             </section>
         </main>

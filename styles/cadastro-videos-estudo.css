@@ -34,8 +34,17 @@ body {
   width: 720px;
 }
 
+/* Menu slide no desktop */
 .menuMobile_box {
   display: none;
+}
+
+/*Gatinha do github*/
+.github{
+  position: absolute;
+  margin: 0;
+  right: 0;
+  top: 0;
 }
 
 /*dropdown div*/
@@ -88,14 +97,6 @@ body {
   height: 80px;
   width: 80px;
 } 
-
-/*Gatinha do github*/
-.github{
-  position: absolute;
-  margin: 0;
-  right: 0;
-  top: 0;
-}
 
 a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
@@ -308,7 +309,6 @@ button:active {
 
 #messageError { 
   color: rgb(255 160 160);
-  /* display: none; */
   font-family: monospace;
   font-weight: bold;
   font-size: 1rem;
@@ -317,7 +317,6 @@ button:active {
 
 #messageErrorNome { 
   color: rgb(255 160 160);
-  /* display: none; */
   font-family: monospace;
   font-weight: bold;
   font-size: 1rem;
@@ -326,7 +325,6 @@ button:active {
 
 #messageErrorCategoria { 
   color: rgb(255 160 160);
-  /* display: none; */
   font-family: monospace;
   font-weight: bold;
   font-size: 1rem;
@@ -336,7 +334,6 @@ button:active {
 #messageNovaCategoria{
   position: absolute;
   color: rgb(255 160 160);
-  /* display: none; */
   font-family: monospace;
   font-weight: bold;
   font-size: 1rem;
@@ -345,7 +342,6 @@ button:active {
 
 #messageErrorUrl { 
   color: rgb(255 160 160);
-  /* display: none; */
   font-family: monospace;
   font-weight: bold;
   font-size: 1rem;
@@ -354,7 +350,6 @@ button:active {
 
 #messageErrorCategoriaCadastrada { 
   color: rgb(255 160 160);
-  /* display: none; */
   font-family: monospace;
   font-weight: bold;
   font-size: 1rem;

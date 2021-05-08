@@ -6,9 +6,8 @@ html {
   background-attachment: fixed;
   background-repeat: repeat-x;
   background-position: center;
-  /* background-size: contain; */
   background-color: #1B1821; /*fallback*/  
-  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;;
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;
   display: flex;
   justify-content: center;
 }
@@ -35,8 +34,17 @@ body {
   width: 720px;
 }
 
+/* menu slide no desktop */
 .menuMobile_box {
   display: none;
+}
+
+/*Gatinha do github*/
+.github{
+  position: absolute;
+  margin:0 0 0 0;
+  right: 0;
+  top: 0;
 }
 
 .btn-group.dropright {
@@ -45,17 +53,11 @@ body {
   left: 1.5rem;
 }
 
-.container {
-  text-align: center;
-  margin: 3rem 0;
-}
-
 .btn.btn-secondary.dropdown-toggle {
   background-color: #1B1821;
 }
 
 .dropdown-menu {
-  /* display: none; */
   padding: 1px;
   margin-left: 2px;
   background-color: #FFFFFF;
@@ -146,14 +148,6 @@ body {
   font-family: 'Press Start 2P', monospace;
 }
 
-/*Gatinha do github*/
-.github{
-  position: absolute;
-  margin:0 0 0 0;
-  right: 0;
-  top: 0;
-}
-
 /* Estilo modal */
 .modal {
   background-color: rgba(0, 0, 0, .5);
@@ -228,4 +222,3 @@ body {
 .modalBox__botaoSair:hover {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
-/* Fim dos estilos no js */

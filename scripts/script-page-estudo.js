@@ -86,12 +86,15 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_videos/
         resultado = `<div id='cartao' class='cartao'><iframe width='280' height='157' src=${filmeUrl} 
         title='YouTube video player' frameborder='0' 
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen>
-        </iframe><p class='title'>${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
+        </iframe><p class='title' title="${filmeNome}">${filmeNome}</p><div><button type='button' id='btnDeletaVideo' onClick="abreModal(${filmeId})">Excluir vídeo</button>`
         listarFilmesNaTela(resultado)
+
+        
       }
-    })
-  }
-)
+    }
+  )})
+  
+
               
 function abreModal(filmeId){
   //Cria o modal
@@ -303,3 +306,4 @@ btnMenu.addEventListener("click", function() {
 menuFechar.addEventListener("click", function() {
   menuSlide.classList.remove("menuMobile_open")
 })
+
