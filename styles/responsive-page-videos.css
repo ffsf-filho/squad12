@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     body {
         width: 410px;
     }
@@ -90,6 +90,12 @@
     
     .form-wrapper button {
         width: 100%;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .menuMobile_box {
+        position: absolute;
     }
 }
 

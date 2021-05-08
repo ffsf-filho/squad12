@@ -1,12 +1,15 @@
-@media screen and (max-width: 768px) {
-    body {
-        width: 410px;
-    }
-
+/* Arruma o h1 embaixo do menu de usuario */
+@media  screen and (max-width: 830px) {
     .page-subtitle {
         font-size: 1.25rem;
         line-height: 2rem;
         margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    body {
+        width: 410px;
     }
 
     .menuMobile_box {
@@ -64,6 +67,12 @@
         position: absolute;
         top: 2rem;
         right: 2rem;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .menuMobile_box {
+        position: absolute;
     }
 }
 

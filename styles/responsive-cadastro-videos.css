@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     body {
         padding: 2rem;
         width: 410px;
@@ -82,6 +82,12 @@
 
     #messageNovaCategoria{
         margin: 3rem  -21rem;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .menuMobile_box {
+        position: absolute;
     }
 }
 
