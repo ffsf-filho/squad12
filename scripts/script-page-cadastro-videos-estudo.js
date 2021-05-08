@@ -260,6 +260,11 @@ function adicionarCategoria() {
   let input = document.getElementById("addOption")
   let msgErro = document.getElementById("messageNovaCategoria")
   
+
+  function removerAcentosEspaco(str) {
+    return str.normalize("NFD").replace(/[^a-zA-Zs]/g, "");
+  }
+     
   if(input.value != "") {
     let select = document.getElementById("selectCategoriaVideoEstudo")
     let newOption = document.createElement("option")
@@ -267,7 +272,7 @@ function adicionarCategoria() {
     
     //Verifica se a categoria a ser cadastrada já exite
     Array.from(select.options).forEach(function(opcoes){
-      if(opcoes.text.toLowerCase() == input.value.toLowerCase()){
+      if(removerAcentosEspaco(opcoes.text.toLowerCase()) == removerAcentosEspaco(input.value.toLowerCase())){
         exiteCategoria = true //Se a nova categoria já existir
         select[opcoes.index].selected = true
       }
