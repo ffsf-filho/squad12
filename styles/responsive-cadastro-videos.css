@@ -134,7 +134,7 @@
 }
 
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 769px) {
 
     .form-wrapper input::placeholder {
         color: #1a1b1b86;
