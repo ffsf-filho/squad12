@@ -180,6 +180,10 @@ a:hover, #github-icon, .userStatus__img, .dropdown-toggle:hover{
 .title{
   margin-bottom: 0px;
   max-width: 280px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
 }
 
 /* Inicio estilos no js */
