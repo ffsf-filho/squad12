@@ -23,8 +23,17 @@ Content
 </div>
 
 <div id="Instructions">
-## Instructions
 
+## Instructions
+### Video with instructions for use
+          
+  <a href="https://youtu.be/K0rOZ-dQpc8" target="_blank">
+    <sub>
+      <b>Video with instructions for use</b>
+    </sub>
+    <br />
+    <img style="border-radius: 50%;" src="https://img.youtube.com/vi/K0rOZ-dQpc8/maxresdefault.jpg" width="50%;" alt="Video with instructions for use">
+  </a>
   [<img src="https://img.youtube.com/vi/K0rOZ-dQpc8/maxresdefault.jpg" width="50%">](https://youtu.be/K0rOZ-dQpc8>)
 
 </div>
@@ -78,8 +87,7 @@ OR
 
 ### Features
 
-- [x] Homepage
-- [x] Login
+- [x] Homepage/Login
 - [x] Cadastro login
 - [x] Endpoint of outsystem Rest API
 - [x] Tela de vídeo para estudo
@@ -110,7 +118,7 @@ OR
         </a>
      </td>
      <td>
-        <a href="https://github.com/lucasnsouza">
+        <a href="https://github.com/lucasnsouza" target="_blank">
           <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/80481689?v=4" width="100px;" alt="Lucas Souza">
           <br />
           <sub>
@@ -119,7 +127,7 @@ OR
         </a>
      </td>
      <td>
-        <a href="https://github.com/marcelonader">
+        <a href="https://github.com/marcelonader" target="_blank">
           <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/80595683?v=4" width="100px;" alt="Marcelo Nader">
           <br />
           <sub>
@@ -128,7 +136,7 @@ OR
         </a>
      </td>
      <td>
-        <a href="https://github.com/LuizGVM">
+        <a href="https://github.com/LuizGVM" target="_blank">
           <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/83261651?v=4" width="100px;" alt="Luiz G. V. M.">
           <br />
           <sub>
