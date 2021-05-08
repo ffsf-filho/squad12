@@ -8,7 +8,7 @@
 Content
 =================
    * [About](#About)
-   * [Instructions](Instructions)
+   * [Instructions](#Instructions)
    * [Downloading](#Downloading)
    * [Technologies](#Technologies)
    * [StartingTheApplication](#Starting)
