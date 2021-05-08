@@ -60,11 +60,9 @@ function timeToPlay () {
   location.href="page-videos-lazer.html"
 }
 
-
-
 //Inclui o Nick do usuário no desktop
 let nickName = document.getElementById("nick")
-nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 //Troca a imagem do avatar no desktop
 if(personagem != ""){
@@ -73,11 +71,10 @@ if(personagem != ""){
   imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
 }
 
-
 let imgUrlAvatarMobile ="images/"
 //Inclui o Nick do usuário no mobile
 let nickNameMobile = document.getElementById("nickMobile")
-nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 //Troca a imagem do avatar no mobile
 if(personagem != ""){
@@ -85,8 +82,6 @@ if(personagem != ""){
   let imgDivAvatarMobile = document.getElementById("imgAvatarMobile")
   imgDivAvatarMobile.style.backgroundImage = `url(${imgUrlAvatar})`
 }
-
-
 
 //Abre menu slide
 const menuSlide = document.querySelector(".menuMobile_box")

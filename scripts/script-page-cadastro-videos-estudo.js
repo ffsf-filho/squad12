@@ -21,7 +21,7 @@ else {
 
 //inclui o Nick do usuário
 let nickName = document.getElementById("nick")
-nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickName.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 // Remove o item do localstorage quando o usuário faz log-out e volta para página inicial
 function sair() { 
@@ -61,7 +61,6 @@ if(personagem != ""){
   imgDivAvatar.style.backgroundImage = `url(${imgUrlAvatar})`
 }
 
-              
 function abreModal(filmeId){
   //Cria o modal
   const getModal = 
@@ -80,9 +79,8 @@ function abreModal(filmeId){
   //Insere e tira do html
   modalHtml.innerHTML = modalHtml.innerHTML + getModal
   modalHtml.addEventListener("click", function(evento) {
-
     if (evento.target.id == "modal" || evento.target.className == "modalBox__botao") {
-      modalHtml.innerHTML = ""
+        modalHtml.innerHTML = ""
     }
   })
 }
@@ -96,7 +94,14 @@ function adicionarVideoEstudo(){
   var wrongDataNome = document.querySelector("#messageErrorNome")
   var wrongDataCategoria = document.querySelector("#messageErrorCategoria")
   var wrongDataUrl = document.querySelector("#messageErrorUrl")
-    
+  
+  //Limpa a mensagem de erro do campo nova cateogria 
+  let input = document.getElementById("addOption")
+  input.value = ""
+  input.style.backgroundColor = "#ffffff"    
+  let msgErro = document.getElementById("messageNovaCategoria")
+  msgErro.innerText = ""  
+  
   if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
     fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
       .then(response => { return response.json()})
@@ -134,7 +139,10 @@ function adicionarVideoEstudo(){
     wrongDataUrl.innerText = "";
     wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
     wrongData.style.display = "block"
-    inputNomeVideoEstudo.focus() 
+    inputNomeVideoEstudo.style.backgroundColor = "#ee6e6e"
+    inputNomeVideoEstudo.focus()
+    selectCategoriaVideoEstudo.style.backgroundColor = "#ee6e6e"
+    inputUrlVideoEstudo.style.backgroundColor = "#ee6e6e"
   } 
   else if (inputNomeVideoEstudo.value == "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
     wrongData.innerText = "";
@@ -143,6 +151,7 @@ function adicionarVideoEstudo(){
     wrongDataUrl.innerText = "";
     wrongDataNome.innerText = "Preencha com um nome válido"
     wrongData.style.display = "block"
+    inputNomeVideoEstudo.style.backgroundColor = "#ee6e6e"
     inputNomeVideoEstudo.focus()   
   } 
   else if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value == 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
@@ -152,6 +161,7 @@ function adicionarVideoEstudo(){
     wrongDataUrl.innerText = "";
     wrongDataCategoria.innerText = "Selecione uma categoria"
     wrongData.style.display = "block"
+    selectCategoriaVideoEstudo.style.backgroundColor = "#ee6e6e"
     selectCategoriaVideoEstudo.focus()   
   } 
   else if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") == false && inputUrlVideoEstudo.value.includes("youtube.com/") == false)){
@@ -161,37 +171,46 @@ function adicionarVideoEstudo(){
     wrongDataUrl.innerText = "";
     wrongDataUrl.innerText = "Insira uma URL válida"
     wrongData.style.display = "block"
+    inputUrlVideoEstudo.style.backgroundColor = "#ee6e6e"
     inputUrlVideoEstudo.focus()   
   }
   else if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value == 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") == false && inputUrlVideoEstudo.value.includes("youtube.com/") == false)){
     wrongData.innerText = "";
     wrongDataNome.innerText = "";
     wrongDataCategoria.innerText = "";
-    wrongDataUrl.innerText = "";  
-    wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+    wrongDataUrl.innerText = ""; 
+    wrongDataCategoria.innerText = "Selecione uma categoria"
+    wrongDataUrl.innerText = "Insira uma URL válida"
     wrongData.style.display = "block"
-    inputNomeVideoEstudo.focus()  
-  }    
+    selectCategoriaVideoEstudo.style.backgroundColor = "#ee6e6e"
+    selectCategoriaVideoEstudo.focus()
+    inputUrlVideoEstudo.style.backgroundColor = "#ee6e6e"
+  }
   else if (inputNomeVideoEstudo.value == "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") == false && inputUrlVideoEstudo.value.includes("youtube.com/") == false)){
     wrongData.innerText = "";
     wrongDataNome.innerText = "";
     wrongDataCategoria.innerText = "";
     wrongDataUrl.innerText = "";
-    wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+    wrongDataNome.innerText = "Preencha com um nome válido"
+    wrongDataUrl.innerText = "Insira uma URL válida"
     wrongData.style.display = "block"
-    inputNomeVideoEstudo.focus()  
+    inputNomeVideoEstudo.style.backgroundColor = "#ee6e6e"
+    inputNomeVideoEstudo.focus()
+    inputUrlVideoEstudo.style.backgroundColor = "#ee6e6e"
   }
   else if (inputNomeVideoEstudo.value == "" && selectCategoriaVideoEstudo.value == 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){      
     wrongData.innerText = "";
     wrongDataNome.innerText = "";
     wrongDataCategoria.innerText = "";
     wrongDataUrl.innerText = "";
-    wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+    wrongDataNome.innerText = "Preencha com um nome válido"
+    wrongDataCategoria.innerText = "Selecione uma categoria"   
     wrongData.style.display = "block"
-    inputNomeVideoEstudo.focus()   
+    inputNomeVideoEstudo.style.backgroundColor = "#ee6e6e"    
+    inputNomeVideoEstudo.focus()
+    selectCategoriaVideoEstudo.style.backgroundColor = "#ee6e6e"    
   } 
 }  
-
 
 /*Modal de inserção vídeos bem sucedida*/
 function abreModalInserirNovo(){
@@ -218,7 +237,6 @@ function abreModalInserirNovo(){
   })
 }
 
-
 //Redireciona para página de vídeos de estudo
 function videoEstudo() {
   location.href="page-videos-estudo.html"
@@ -229,7 +247,6 @@ function criarVideoEstudo() {
   location.href="cadastro-video-estudo.html"
 }
 
-
 //Adiciona na página de cadastrar vídeos a funcionalidade de quando apertar a tecla "Enter" no teclado aciona o botão adicionar
 document.addEventListener("keypress", function (event) {
   if (event.key == "Enter"){
@@ -238,38 +255,65 @@ document.addEventListener("keypress", function (event) {
   }
 })
 
-      
-
 //Adicionar nova categoria na pagina de cadastro
 function adicionarCategoria() {
   let input = document.getElementById("addOption")
-  let select = document.getElementById("selectCategoriaVideoEstudo")
-  let newOption = document.createElement("option")   
+  let msgErro = document.getElementById("messageNovaCategoria")
   
-                      
+
+  function removerAcentosEspaco(str) {
+    return str.normalize("NFD").replace(/[^a-zA-Zs]/g, "");
+  }
+     
   if(input.value != "") {
-    newOption.value = input.value
-    newOption.text = input.value
-    select.add(newOption)
-    input.value = ""
-
-    var cadastraCategoria = {
-      "IdUsuario": id,
-      "Categoria": newOption.value,
-      "Pagina": "estudo"
-    }
-
-    fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
-      method: "POST", 
-      headers:{
-        "Content-type": "application/json"  
-      },
-      body: JSON.stringify(cadastraCategoria),
+    let select = document.getElementById("selectCategoriaVideoEstudo")
+    let newOption = document.createElement("option")
+    let exiteCategoria = false
+    
+    //Verifica se a categoria a ser cadastrada já exite
+    Array.from(select.options).forEach(function(opcoes){
+      if(removerAcentosEspaco(opcoes.text.toLowerCase()) == removerAcentosEspaco(input.value.toLowerCase())){
+        exiteCategoria = true //Se a nova categoria já existir
+        select[opcoes.index].selected = true
+      }
     })
+    
+    if (!exiteCategoria){
+      newOption.value = input.value
+      newOption.text = input.value
+      select.add(newOption)
+      
+      var cadastraCategoria = {
+        "IdUsuario": id,
+        "Categoria": newOption.value,
+        "Pagina": "estudo"
+      }
+      
+      fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
+        method: "POST", 
+        headers:{
+          "Content-type": "application/json"  
+        },
+        body: JSON.stringify(cadastraCategoria),
+      })
+      
+      Array.from(select.options).forEach(function(opcoes){
+        if(opcoes.text == input.value){
+          select[opcoes.index].selected = true
+        }
+      })
+    }
+    
+    input.value = ""
+    msgErro.innerText = ""
+    input.style.backgroundColor = "#ffffff"
+  } else {
+    msgErro.innerText = "Inserir um nome para nova categoria."
+    input.style.backgroundColor = "#ee6e6e"
+    input.focus()
   }
 }
 
-    
 //Lista a categoria na pagina de cadastro
 fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
   .then(response => { return response.json()})
@@ -278,7 +322,7 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
       var videoCategoria = jsonBody[indice].Categoria
       var videoIdUsuario = jsonBody[indice].IdUsuario
       var categoriaPagina = jsonBody[indice].Pagina
-
+      
       if(videoIdUsuario == id && categoriaPagina == "estudo") {
         var novaCategoria = document.querySelector("#selectCategoriaVideoEstudo")
         novaCategoria.innerHTML = novaCategoria.innerHTML + `<option value="${videoCategoria}" >${videoCategoria}</option>`
@@ -287,12 +331,10 @@ fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categor
   }
 )
 
-
-
 let imgUrlAvatarMobile ="images/"
 //Inclui o Nick do usuário no mobile
 let nickNameMobile = document.getElementById("nickMobile")
-nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Nick: ${usuario}</p>`
+nickNameMobile.innerHTML = `<p id="${id}" class="userStatus__text___label" > Usuário: ${usuario}</p>`
 
 //Troca a imagem do avatar no mobile
 if(personagem != ""){
@@ -301,8 +343,6 @@ if(personagem != ""){
   imgDivAvatarMobile.style.backgroundImage = `url(${imgUrlAvatar})`
 }
 
-
-
 //Abre menu slide
 const menuSlide = document.querySelector(".menuMobile_box")
 const btnMenu = document.querySelector("#btnMenu")
@@ -310,7 +350,6 @@ const menuDropD = document.querySelector(".dropdown-menu")
 const menuFechar = document.querySelector(".menuMobile_fechar")
 
 btnMenu.addEventListener("click", function() {
-  
   if( $(window).width() < 768){
     menuSlide.classList.add("menuMobile_open")
     menuDropD.style.visibility = "hidden"
