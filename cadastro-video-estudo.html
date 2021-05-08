@@ -17,7 +17,7 @@
     <div class="menuMobile_box">
       <div id="imgAvatarMobile" class="userStatus__img mobile"></div>
       <div id="nickMobile" class="userStatus__text mobile"></div>
-      <a class="menuMobile_item" href="user-page.html">Home</a>
+      <a class="menuMobile_item " href="user-page.html">Home</a>
       <a class="menuMobile_item" href="page-videos-estudo.html">Estudos</a>
       <a class="menuMobile_item" href="page-videos-lazer.html">Lazer</a>
       <a class="menuMobile_item" href="#" href="#" id="sair" onClick="abreModalSair()">
@@ -34,12 +34,20 @@
       <div class="dropdown-menu">
         <!-- Dropdown menu links -->
         <div id="nick" class="userStatus__text"></div>
-        <a class="links_drop_usuario" href="user-page.html">Home</a>
-        <a class="links_drop_usuario" href="page-videos-estudo.html">Estudos</a>
-        <a class="links_drop_usuario" href="page-videos-lazer.html">Lazer</a>
-        <a class="links_drop_usuario" href="#" id="sair" onclick="abreModalSair()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-          <u>Sair</u>
-        </a>
+        <div class="divLinks">
+          <a class="links_drop_usuario" href="user-page.html">Home</a>
+        </div>
+        <div class="divLinks">
+          <a class="links_drop_usuario" href="page-videos-estudo.html">Estudos</a>
+        </div>
+        <div class="divLinks">
+          <a class="links_drop_usuario" href="page-videos-lazer.html">Lazer</a>
+        </div>
+        <div class="divLinks">
+          <a class="links_drop_usuario" href="#" id="sair" onclick="abreModalSair()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <u>Sair</u>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -75,9 +83,9 @@
           <option value="" disabled selected hidden>Selecione a categoria do vídeo</option>
       </select>
       
-      
+      <span id="messageNovaCategoria"></span>
       <label for="selectCategoriaVideoEstudo">Nova categoria:</label>
-      <input type="text" id="addOption" placeholder="Crie uma nova categoria">
+      <input type="text" id="addOption" placeholder="Nome da nova categoria">
       <button onClick="adicionarCategoria()" id="addCategoria">Criar nova categoria</button>
       <div></div>
       <span id="messageErrorUrl"></span>
@@ -95,7 +103,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
     <script type="text/javascript" src="scripts/script-page-estudo.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

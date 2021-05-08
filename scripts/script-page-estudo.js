@@ -129,7 +129,6 @@ function adicionarVideoEstudo(){
   var wrongDataUrl = document.querySelector("#messageErrorUrl")
     
         if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
-         
           fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias")
           .then(response => { return response.json()})
           .then(jsonBody => { 
@@ -160,39 +159,36 @@ function adicionarVideoEstudo(){
           }
           )
         }
-       
         else if (inputNomeVideoEstudo.value == "" && selectCategoriaVideoEstudo.value == 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") == false && inputUrlVideoEstudo.value.includes("youtube.com/") == false)){
           wrongData.innerText = "";
           wrongDataNome.innerText = "";
           wrongDataCategoria.innerText = "";
           wrongDataUrl.innerText = "";
-
           wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
           wrongData.style.display = "block"
-          inputNomeVideoEstudo.focus() 
+          inputNomeVideoEstudo.style.backgroundColor = "#ee6e6e"
+          inputNomeVideoEstudo.focus()
+          selectCategoriaVideoEstudo.style.backgroundColor = "#ee6e6e"
+          inputUrlVideoEstudo.style.backgroundColor = "#ee6e6e"
         } 
         else if (inputNomeVideoEstudo.value == "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
-          console.log("erro")
-          
           wrongData.innerText = "";
           wrongDataNome.innerText = "";
           wrongDataCategoria.innerText = "";
           wrongDataUrl.innerText = "";
-  
           wrongDataNome.innerText = "Preencha com um nome válido"
           wrongData.style.display = "block"
+          inputNomeVideoEstudo.style.backgroundColor = "#ee6e6e"
           inputNomeVideoEstudo.focus()   
-
         } 
         else if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value == 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
-          
           wrongData.innerText = "";
           wrongDataNome.innerText = "";
           wrongDataCategoria.innerText = "";
           wrongDataUrl.innerText = "";
-    
           wrongDataCategoria.innerText = "Selecione uma categoria"
           wrongData.style.display = "block"
+          selectCategoriaVideoEstudo.style.backgroundColor = "#ee6e6e"
           selectCategoriaVideoEstudo.focus()   
         } 
         else if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") == false && inputUrlVideoEstudo.value.includes("youtube.com/") == false)){
@@ -201,45 +197,49 @@ function adicionarVideoEstudo(){
           wrongDataNome.innerText = "";
           wrongDataCategoria.innerText = "";
           wrongDataUrl.innerText = "";
-
           wrongDataUrl.innerText = "Insira uma URL válida"
           wrongData.style.display = "block"
+          inputUrlVideoEstudo.style.backgroundColor = "#ee6e6e"
           inputUrlVideoEstudo.focus()   
           }
         else if (inputNomeVideoEstudo.value != "" && selectCategoriaVideoEstudo.value == 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") == false && inputUrlVideoEstudo.value.includes("youtube.com/") == false)){
-
           wrongData.innerText = "";
           wrongDataNome.innerText = "";
           wrongDataCategoria.innerText = "";
           wrongDataUrl.innerText = "";
-  
-          wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+          //wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+          wrongDataCategoria.innerText = "Selecione uma categoria"
+          wrongDataUrl.innerText = "Insira uma URL válida"
           wrongData.style.display = "block"
-          inputNomeVideoEstudo.focus()  
+          selectCategoriaVideoEstudo.style.backgroundColor = "#ee6e6e"
+          selectCategoriaVideoEstudo.focus()
+          inputUrlVideoEstudo.style.backgroundColor = "#ee6e6e"
           }
-
-          
         else if (inputNomeVideoEstudo.value == "" && selectCategoriaVideoEstudo.value != 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") == false && inputUrlVideoEstudo.value.includes("youtube.com/") == false)){
-
           wrongData.innerText = "";
           wrongDataNome.innerText = "";
           wrongDataCategoria.innerText = "";
           wrongDataUrl.innerText = "";
-  
-          wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+          //wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+          wrongDataNome.innerText = "Preencha com um nome válido"
+          wrongDataUrl.innerText = "Insira uma URL válida"
           wrongData.style.display = "block"
-          inputNomeVideoEstudo.focus()  
+          inputNomeVideoEstudo.style.backgroundColor = "#ee6e6e"
+          inputNomeVideoEstudo.focus()
+          inputUrlVideoEstudo.style.backgroundColor = "#ee6e6e"
           }
         else if (inputNomeVideoEstudo.value == "" && selectCategoriaVideoEstudo.value == 0 && (inputUrlVideoEstudo.value.includes("youtu.be/") || inputUrlVideoEstudo.value.includes("youtube.com/"))){
-        
           wrongData.innerText = "";
           wrongDataNome.innerText = "";
           wrongDataCategoria.innerText = "";
           wrongDataUrl.innerText = "";
-  
-          wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+          //wrongData.innerText = "Verifique se todos os campos obrigatórios estão preenchidos corretamente."
+          wrongDataNome.innerText = "Preencha com um nome válido"
+          wrongDataCategoria.innerText = "Selecione uma categoria"
           wrongData.style.display = "block"
-          inputNomeVideoEstudo.focus()   
+          inputNomeVideoEstudo.style.backgroundColor = "#ee6e6e"
+          inputNomeVideoEstudo.focus()
+          selectCategoriaVideoEstudo.style.backgroundColor = "#ee6e6e"
         } 
 }  
 
@@ -304,11 +304,9 @@ function btnPesquisar(){
     .then(jsonBody => {
       const campoPesquisaFilme = document.querySelector("#pesquisaFilme");
       const filmePesquisado = campoPesquisaFilme.value;
-        
       function removerAcentosEspaco(str) {
         return str.normalize("NFD").replace(/[^a-zA-Zs]/g, "");
       }
-
       jsonBody.forEach(function(valorAtual, indice) {
         const valorAtualNome = valorAtual.Nome
         let resultadoPesquisa;   
@@ -330,7 +328,7 @@ function btnPesquisar(){
         }
       })
     }
- )
+    )
 }
 
 //Apaga vídeos da tela
@@ -450,27 +448,44 @@ document.addEventListener("keypress", function (event) {
 //Adicionar nova categoria na pagina de cadastro
 function adicionarCategoria() {
   let input = document.getElementById("addOption")
-  let select = document.getElementById("selectCategoriaVideoEstudo")
+  let msgErro = document.getElementById("messageNovaCategoria")
 
-  let newOption = document.createElement("option")
-  newOption.value = input.value
-  newOption.text = input.value
-
-  select.add(newOption)
-  input.value = ""
-
-  var cadastraCategoria = {
-    "IdUsuario": id,
-    "Categoria": newOption.value,
+  if(input.value != ""){
+    let select = document.getElementById("selectCategoriaVideoEstudo")
+    let newOption = document.createElement("option")
+    newOption.value = input.value
+    newOption.text = input.value
+    
+    select.add(newOption)
+    //input.value = ""
+  
+    var cadastraCategoria = {
+      "IdUsuario": id,
+      "Categoria": newOption.value,
+    }
+    
+    fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
+      method: "POST", 
+      headers:{
+        "Content-type": "application/json"  
+      },
+      body: JSON.stringify(cadastraCategoria),
+    })
+    
+    Array.from(select.options).forEach(function(opcoes){
+      if(opcoes.text == input.value){
+        select[opcoes.index].selected = true
+      }
+    })
+    
+    input.value = ""
+    msgErro.innerText = ""
+    input.style.backgroundColor = "#FFF"
+  } else {
+    msgErro.innerText = "Inserir um nome para nova categoria."
+    input.style.backgroundColor = "#ee6e6e"
+    input.focus()
   }
-
-  fetch("https://personal-9ucqet77.outsystemscloud.com/Squad12App/rest/api_categorias/categorias", {
-    method: "POST", 
-    headers:{
-      "Content-type": "application/json"  
-    },
-    body: JSON.stringify(cadastraCategoria),
-  })
 }
     
 //Lista a categoria na pagina de cadastro

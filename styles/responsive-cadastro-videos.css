@@ -79,6 +79,10 @@
     .form-wrapper button {
         height: 4rem;
     }
+
+    #messageNovaCategoria{
+        margin: 3rem  -21rem;
+    }
 }
 
 @media screen and (max-width: 596px) {

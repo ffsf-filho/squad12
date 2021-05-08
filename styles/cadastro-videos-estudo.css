@@ -61,7 +61,7 @@ body {
 }
 
 .userStatus__text {
-  padding: 2px;
+  padding: 5px;
   color: #1B1821;
   text-shadow: 1px 1px #d34dafd0;
 }
@@ -71,9 +71,12 @@ body {
   color: #1B1821;
   text-shadow: 1px 1px #c468ab;
 }
+.divLinks{
+  padding: 3px 0px 3px 5px;
+}
 
 .links_drop_usuario {
-  padding: 2px;
+  height: 40px;
   color: #1B1821;
   text-shadow: 1px 1px #c468ab;
 }
@@ -330,9 +333,17 @@ button:active {
   font-weight: bold;
   font-size: 1rem;
   margin: 1rem;
-
 }
 
+#messageNovaCategoria{
+  position: absolute;
+  color: rgb(255 160 160);
+  /* display: none; */
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 4rem -20rem;
+}
 #messageErrorUrl { 
   color: rgb(255 160 160);
   /* display: none; */
