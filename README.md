@@ -26,7 +26,7 @@ Content
 <div id="Pit">
   
 ## Pit
-  [![Pit Camara-Roll, a sua plataforma de estudo e lazer](https://img.youtube.com/vi/5kPQFVZNsOk/maxresdefault.jpg)](http://www.youtube.com/watch?v=5kPQFVZNsOk "Vídeo do Pit Camara-Roll")
+  [![Pit Camara-Roll, a sua plataforma de estudo e lazer](https://img.youtube.com/vi/GmCgmKZdT6s/maxresdefault.jpg)](http://www.youtube.com/watch?v=GmCgmKZdT6s "Vídeo do Pit Camara-Roll")
 
 </div>
 
