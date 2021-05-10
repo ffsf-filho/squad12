@@ -8,6 +8,7 @@
 Content
 =================
    * [About](#About)
+   * [Pit](#Pit)
    * [Instructions](#Instructions)
    * [Downloading](#Downloading)
    * [Technologies](#Technologies)
@@ -19,6 +20,13 @@ Content
 ### This is a project done by @ ffsf-filho, @gabrielasertori, @lucasnsouza, 
 ### @marcelonader and @LuizGVM for the Dev Alura Training & Immersion Program, sponsored by (<strong><a href="https://www.fcamara.com.br/">FCamara</a></strong>)
 ### The project is a repository of films and study videos
+
+</div>
+
+<div id="Pit">
+  
+## Pit
+  [![Pit Camara-Roll, a sua plataforma de estudo e lazer](https://img.youtube.com/vi/GmCgmKZdT6s/maxresdefault.jpg)](http://www.youtube.com/watch?v=GmCgmKZdT6s "Vídeo do Pit Camara-Roll")
 
 </div>
 
